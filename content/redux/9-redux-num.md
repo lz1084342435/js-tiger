@@ -1,3 +1,6 @@
+---
+title: redux-thunk 显示一个数字
+---
 
 前面的 redux-thunk 使用情况还是有点复杂，现在来给出一个 redux-thunk 的极简案例，就显示一个评论数。
 
