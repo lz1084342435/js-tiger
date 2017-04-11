@@ -1,8 +1,8 @@
-### Jekyll 框架
+# JS 独孤求败
 
-本书的采用 Jekyll 框架，用 Jekyll 搭建网站，参考：
+![](https://happypeter.github.io/digicity/images/book-cover.jpg)
 
-- [使用 Jekyll 快速搭建优秀的网站
-](http://haoduoshipin.com/v/113.html)
-- [如何使用 Jekyll 框架来自动加载布局文件
-](http://haoduoshipin.com/v/152.html)
+《 JS 独孤求败》是一本把你从零基础学员变成一个编程高手的厚厚的书。作者是 happypeter 。
+
+<!--  gitbook 使用参考： https://github.com/GuoYongfeng/book
+
