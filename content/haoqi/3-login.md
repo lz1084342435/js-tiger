@@ -18,4 +18,13 @@ https://haoqicat.com/aa-journey/16-reducer
 
 ### 刷新页面保持用户名不消失
 
-用 localstorge 去存储 userId ，每次重新加载都自动去服务器端再次取一下用户名即可。
+这部分也融入到 https://haoqicat.com/aa-journey 课程中了，所有的代码都在
+
+https://github.com/happypeter/aa-journey-demo
+
+所以未来：
+
+- https://github.com/happypeter/tiger
+- https://github.com/happypeter/tiger-api
+
+都可以删除了
