@@ -73,9 +73,6 @@
 
 * 好奇猫项目实战
   - [角色分工](./haoqi/1-role.md)
-  - [需求文档](./haoqi/2-request.md)
-  - [登录功能实现](./haoqi/3-login.md)
-  - [购物功能实现](./haoqi/4-cart.md)
 
 * REACT EXPRESS 综合项目
   - [创建 github 项目](./project/1-create.md)
