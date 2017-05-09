@@ -1,5 +1,5 @@
 ---
-title: 项目分工
+title: 项目实战
 ---
 
 ### 常见分工模式
@@ -34,3 +34,7 @@ team leader ： Peter 和 Newming 。负责项目架构和难点功课。
 - 要实现响应式。
 
 - 具体细节，参见需求文档和设计稿。
+
+### 具体代码实施过程
+
+- [好奇猫#双A之旅](https://haoqicat.com/aa-journey/)
