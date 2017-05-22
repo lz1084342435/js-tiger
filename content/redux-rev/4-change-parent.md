@@ -10,7 +10,7 @@ import React from 'react'
 class Child extends React.Component {
   render() {
     return(
-      <button onClick={this.props.changeParentState}>Child Button</button>
+      <button onClick={() => this.props.changeParentState('yellow')}>Child Button</button>
     )
   }
 }
@@ -25,21 +25,27 @@ class App extends React.Component {
     color: 'red'
   }
 
-  changeBgc() {
+  changeBgc(color) {
     this.setState({
-      color: 'green'
+      color: color
     })
   }
   render() {
     return(
       <div style={{'color': this.state.color}}>
         <div>App</div>
-        <Child  changeParentState={this.changeBgc} backGround={this.state.color} />
+        <Child  changeParentState={this.changeBgc} />
       </div>
     )
   }
 }
 
 export default App
-
 ```
+
+
+### redux-hello 项目中
+
+实现评论效果：
+
+- [go without redux](https://github.com/happypeter/redux-hello/commit/f9ab32451cfba2e0e6c5f25dead99dcb5214d932)
