@@ -3,6 +3,7 @@
 * Redux 入门教程（新版）
   - [什么是 Redux ？](./redux-rev/1-hello.md)
   - [基本环境准备](./redux-rev/2-setup.md)
+  - [内部 state 使用](./redux-rev/3-state.md)
 
 
 *  Linux 基础

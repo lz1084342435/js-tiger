@@ -1,7 +1,6 @@
 这一集不涉及 Redux ，我们只是使用每个组件自己的 State 来达成基本评论框效果。
 
-要求：不需要使用后台。直接把假数据设置到 state 变量里面。然后每次点提交按钮的时候
-，也只是修改组件内部的 state 达成跟 redux-tower-demo 中的评论框一样的效果。
+要求：不需要使用后台。直接把假数据设置到 state 变量里面。
 
 ### 任务一： 显示两条死的评论在页面上。
 
@@ -30,7 +29,7 @@ this.state = {
 }
 ```
 
-代码： **show comment list**
+代码： [two comments](https://github.com/happypeter/redux-hello/commit/20db7800a8d08cf3c9f0bc40f3dfc35277c795a2)
 
 ### 任务二：添加 form
 
