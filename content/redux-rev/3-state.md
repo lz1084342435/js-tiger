@@ -49,9 +49,9 @@ this.state = {
 handleSubmit(e) {
   e.preventDefault()
   let content = this.refs.content.value
-  let comments =   this.state.comments; // 需要添加 .slice()
-  comments.push(content);
-  this.setState({ comments });
+  let comments =   this.state.comments // 需要添加 .slice()
+  comments.push(content)
+  this.setState({ comments })
 }
 ```
 
