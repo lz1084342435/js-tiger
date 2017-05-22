@@ -40,4 +40,26 @@ this.state = {
 
 ### 任务三：发布评论
 
-代码: **submit comment**
+代码: [submit comment](https://github.com/happypeter/redux-hello/commit/23b7e9aa518f596e961c72362638b019e9d7d441)
+
+
+注意，不能直接使用下面的代码：
+
+```js
+handleSubmit(e) {
+  e.preventDefault()
+  let content = this.refs.content.value
+  let comments =   this.state.comments; // 需要添加 .slice()
+  comments.push(content);
+  this.setState({ comments });
+}
+```
+
+因为这样会直接修改 state 值。
+
+
+参考：
+
+- [为何不能直接修改 State](https://facebook.github.io/react/tutorial/tutorial.html#why-immutability-is-important)
+
+- [中文](https://beijiyang.github.io/react-tutorial-translation/chapter3/content2.html)
