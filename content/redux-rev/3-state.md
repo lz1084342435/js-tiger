@@ -40,7 +40,51 @@ this.state = {
 
 ### 任务三：发布评论
 
-代码: [submit comment](https://github.com/happypeter/redux-hello/commit/23b7e9aa518f596e961c72362638b019e9d7d441)
+发布评论的过程：
+
+- 点一下 submit 这个按钮，浏览器发成的 event （事件）就是 “表单提交（ form submit ）”
+- 事件触发之后，我们如何来写对应的”事件处理函数“一般会叫 handleXXX ，意思是”处理XXX事件“
+- 如何把”事件处理函数“跟事件本身绑定起来呢？纯 html 中用 action 属性来处理。但是有了 React 就不用 action 。用 onSubmit （ on 的意思就是”当发生“ ) 。参考 [官方文档](https://facebook.github.io/react/docs/forms.html)
+
+```
+  <form onSubmit={this.handleSubmit}
+```
+
+- 现在的问题是，每次提交，页面都会刷新，而我们写的是”单页面应用“，所以页面不允许刷新
+
+```
+e.preventDefault()
+```
+
+- 下一步就需要拿到用户填写的评论内容了，这个我们就不用 [refs](https://facebook.github.io/react/docs/refs-and-the-dom.html) 了。而[改用箭头函数](https://zhenyong.github.io/react/docs/more-about-refs.html)。
+
+```
+<input ref={(value) => { this.textInput = value} }
+```
+
+- 现在，报错如下：
+
+```
+'textInput' of null
+```
+
+意思是在 handleSubmit() 中 this 的值是 null （空）。
+
+- 这个的绑定形式是
+
+```
+constructor() {
+  super()
+  this.handleSubmit = this.handleSubmit.bind(this)
+}
+```
+
+
+代码:
+
+- 老的 refs 方式已经过时：[submit comment](https://github.com/happypeter/redux-hello/commit/23b7e9aa518f596e961c72362638b019e9d7d441)
+
+- [with spread and new refs](https://github.com/happypeter/redux-hello/commit/599262380567ad201d2c7318dcd3196accc2f02c)
 
 
 注意，不能直接使用下面的代码：
@@ -55,7 +99,7 @@ handleSubmit(e) {
 }
 ```
 
-因为这样会直接修改 state 值。
+因为这样会直接修改 state 值。可行的方式是用 slice() 或者用数组展开运算符。
 
 
 参考：

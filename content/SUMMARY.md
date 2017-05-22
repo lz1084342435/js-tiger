@@ -5,7 +5,6 @@
   - [基本环境准备](./redux-rev/2-setup.md)
   - [内部 state 使用](./redux-rev/3-state.md)
 
-
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)
   - [进入 Linux 命令行的黑色世界](./linux/2-hello-linux.md)
