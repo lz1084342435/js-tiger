@@ -4,6 +4,7 @@
   - [什么是 Redux ？](./redux-rev/1-hello.md)
   - [基本环境准备](./redux-rev/2-setup.md)
   - [内部 state 使用](./redux-rev/3-state.md)
+  - [不用 redux 实现组件间通信](./redux-rev/4-change-parent.md)
 
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)
