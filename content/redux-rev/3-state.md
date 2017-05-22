@@ -31,9 +31,11 @@ this.state = {
 
 代码： [two comments](https://github.com/happypeter/redux-hello/commit/20db7800a8d08cf3c9f0bc40f3dfc35277c795a2)
 
+注意：用数组的 Index 值做 key 是非常不好的习惯，一般用每条数据的 id 来做即可。
+
 ### 任务二：添加 form
 
-代码： **form styling**
+代码： [form styling](https://github.com/happypeter/redux-hello/commit/af4a6c86e81e00a59088226e67774702206ba225)
 
 
 ### 任务三：发布评论
