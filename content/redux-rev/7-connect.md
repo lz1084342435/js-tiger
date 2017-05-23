@@ -57,6 +57,10 @@ connect 完毕之后，PostBody 之中就多了一个属性：`this.props.commen
 
 代码: [dynamic data by react-redux](https://github.com/happypeter/redux-hello/commit/04fca61efb61d9919386310f6eff3d8d36b2d292)
 
+现在我们知道组件如何通过 connect 方法来动态订阅 store 数据了，所以各个组件中的 setState() 就可以删除了。
+
+- [remove setState()](https://github.com/happypeter/redux-hello/commit/6e30c7404c85ac164f91e773882b49a21753deef)
+
 ### 总结
 
-到目前为止，Redux 三大概念：Store/action/reducer 都已经了解了，然后通过 connect/Provider/mapStateToProps 来实现数据从 store 到组件的动态订阅也已经会了。这意味着 Redux 的核心思想已经完全介绍完毕。后续还有很多扩展技巧，但是它们也确实都是扩展技巧了，不是核心。
+到目前为止，Redux 三大概念：Store/action/reducer 都已经了解了，然后通过 connect/Provider/mapStateToProps 来实现数据从 store 到组件的动态订阅也已经会了。这意味着 Redux 的核心思想已经完全介绍完毕。
