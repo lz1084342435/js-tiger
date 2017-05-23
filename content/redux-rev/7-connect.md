@@ -1,6 +1,3 @@
-connect 订阅 store 数据
-
-
 首先明确一点，就是 redux 可以配合多种框架使用，并不是 react 的一部分。所以天然的 react 组件和 redux store 之间是没有任何关系的。这一节，我们就把他们二者 `connect` 起来。
 
 连接二者，需要一个专门的库，叫做 [react-redux](https://github.com/reactjs/react-redux)，这个是 React 官方的 Redux
@@ -39,8 +36,7 @@ const mapStateToProps = (state) => ({
 
 connect 完毕之后，PostBody 之中就多了一个属性：`this.props.comments`
 
-只有 connect 不能工作，因为 connect 的生效范围是由 `<Provider>` 组件决定的，所以
-代码中还需要添加
+只有 connect 不能工作（因为找不着 store），因为 connect 的生效范围是由 `<Provider>` 组件决定的( Provider 也是一个组件，只有被 Provider 包括起来的组件中才能找得着 store，也就是才能使用 connect)，所以代码中还需要添加
 
 ```
 <Provider store={store}>
@@ -59,7 +55,7 @@ connect 完毕之后，PostBody 之中就多了一个属性：`this.props.commen
 
 ### 代码
 
-代码: **dynamic data by react-redux**
+代码: [dynamic data by react-redux](https://github.com/happypeter/redux-hello/commit/04fca61efb61d9919386310f6eff3d8d36b2d292)
 
 ### 总结
 

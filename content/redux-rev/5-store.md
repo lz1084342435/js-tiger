@@ -236,12 +236,15 @@ export default PostBody;
 那么，初始条件下，是可以从 store 中读取评论数量的，但是为什么，store 数据更新后，这里的
 评论数量不会变？
 
-答案：就是这里的 store.getState() 没有再次被执行。
+答案：就是这里的 store.getState() 没有再次被执行（当然，即使 store.getState() 自动有了新值也不行的，因为 constructor() 只会执行一次）。
 
 好，那么如何得到更新后的评论数量呢？
 
-代码：**problem**
 
+### 总体框图
 
+总之，我们就是需要组件有这样的能力，也就是每当 store 中的数据有了变化，组件会自动重新 render 。
 
-![](./images/redux.jpg)
+问题的解决方案就在下图中（注意我们还没有碰的功能模块是哪一个）
+
+![](../images/redux.jpg)

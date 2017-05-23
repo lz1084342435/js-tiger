@@ -7,6 +7,7 @@
   - [不用 redux 实现组件间通信](./redux-rev/4-change-parent.md)
   - [Redux Store 数据大本营](./redux-rev/5-store.md)
   - [React 充电：组件何时会被再次 render](./redux-rev/6-rerender.md)
+  - [connect 订阅 store 数据](./redux-rev/7-connect.md)
 
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)
@@ -54,6 +55,7 @@
   - [用 POST 传复杂数据到服务器（ form 篇）](./http/8-form.md)
   - [用 POST 传复杂数据到服务器（ axios 篇）](./http/9-axios.md)
   - [梳理前台向后台传数据的四种形式](./http/10-four-ways.md)
+
 
 
 * COOKIE，SESSION 和登录态
