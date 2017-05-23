@@ -6,6 +6,7 @@
   - [内部 state 使用](./redux-rev/3-state.md)
   - [不用 redux 实现组件间通信](./redux-rev/4-change-parent.md)
   - [Redux Store 数据大本营](./redux-rev/5-store.md)
+  - [React 充电：组件何时会被再次 render](./redux-rev/6-rerender.md)
 
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)

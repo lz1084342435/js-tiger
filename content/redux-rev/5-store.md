@@ -99,13 +99,16 @@ function commentReducer(state = [], action) {
 
 下面的代码实现了，数据存储到 store.js 同时组件内部读取 store.js 中的数据成功。
 
-代码： [create store](https://github.com/happypeter/redux-hello/commit/e968d2a7ebe263bb91954a2ef6c93371babdd5d6)
+代码：
+
+- [create store](https://github.com/happypeter/redux-hello/commit/e968d2a7ebe263bb91954a2ef6c93371babdd5d6)
+
+- [bring comments back](https://github.com/happypeter/redux-hello/commit/9964a7eb13745f45bda9eac905cd0b1657d77c2a)
 
 
 ### 修改 Store 中的数据
 
-前面实现了从 Store 中通过 store.getState() 读数据。下面
-我们来实现修改数据的操作。这个主要通过 Redux 三大概念的，另外两个：action ， reducer 来配合使用。
+前面实现了从 Store 中通过 store.getState() 读数据。下面我们来实现修改数据的操作。这个主要通过 Redux 三大概念的，另外两个：action ， reducer 来配合使用。
 
 基本原理：组件发出 action ，action 触发 reducer ，真正修改
 数据，是通过 reducer 来完成。
@@ -136,30 +139,19 @@ action 对象有两个部分组成：
 store.dispatch(action)
 ```
 
-就可以发出 action 。
+dispatch 就是发出（分发）的意思，可以用它发出 action 。
 
 发出之后，需要有专门对应的 reducer 进行接收。
 
 ### Reducer
 
-下面这个就是一个 reducer
-
-```
-function commentReducer(state = [], action) {
-  // console.log(state, action);
-  switch (action.type) {
-    case 'ADD_COMMENT':
-      // console.log([...state, action.comment])
-      return [...state, action.comment]
-    default:
-      return state;
-  }
-}
-```
-
 它的作用就是接受 action ，然后根据 action 修改 store 中的数据。
 
-代码： **action reducer**
+代码： [action reducer](https://github.com/happypeter/redux-hello/commit/b6636fe1fd7e56823c8263476b07e7d47d230112)
+
+这样：每次 dispatch action 之后，reducer 都可以去修改 state 值了。
+
+整个 store 中存储的 state 值，我们会把它叫做**状态树** ( state tree ) 。状态树的具体值就是 store.getState() 的返回值。整个项目，只有一个状态树。
 
 
 ### 修改数据的时间维度的执行流程
@@ -249,3 +241,7 @@ export default PostBody;
 好，那么如何得到更新后的评论数量呢？
 
 代码：**problem**
+
+
+
+![](./images/redux.jpg)
