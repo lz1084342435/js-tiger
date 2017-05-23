@@ -51,3 +51,8 @@ export default App
 实现评论效果：
 
 - [go without redux](https://github.com/happypeter/redux-hello/commit/f9ab32451cfba2e0e6c5f25dead99dcb5214d932)
+
+
+### 参考资料
+
+- [You May Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
