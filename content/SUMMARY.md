@@ -8,6 +8,7 @@
   - [Redux Store 数据大本营](./redux-rev/5-store.md)
   - [React 充电：组件何时会被再次 render](./redux-rev/6-rerender.md)
   - [connect 订阅 store 数据](./redux-rev/7-connect.md)
+  - [处理多类数据](./redux-rev/8-reducer-composition.md)
 
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)
