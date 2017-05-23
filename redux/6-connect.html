@@ -194,6 +194,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.7" data-path="../redux-rev/7-connect.html">
+            
+                <a href="../redux-rev/7-connect.html">
+            
+                    
+                    connect 订阅 store 数据
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1319,7 +1332,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x9996;&#x5148;&#x660E;&#x786E;&#x4E00;&#x70B9;&#xFF0C;&#x5C31;&#x662F; redux &#x53EF;&#x4EE5;&#x914D;&#x5408;&#x591A;&#x79CD;&#x6846;&#x67B6;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x4E0D;&#x662F; react &#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x6240;&#x4EE5;&#x5929;&#x7136;&#x7684; react &#x7EC4;&#x4EF6;&#x548C; redux store &#x4E4B;&#x95F4;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5173;&#x7CFB;&#x7684;&#x3002;&#x8FD9;&#x4E00;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x628A;&#x4ED6;&#x4EEC;&#x4E8C;&#x8005; <code>connect</code> &#x8D77;&#x6765;&#x3002;</p>
+                                <p>connect &#x8BA2;&#x9605; store &#x6570;&#x636E;</p>
+<p>&#x9996;&#x5148;&#x660E;&#x786E;&#x4E00;&#x70B9;&#xFF0C;&#x5C31;&#x662F; redux &#x53EF;&#x4EE5;&#x914D;&#x5408;&#x591A;&#x79CD;&#x6846;&#x67B6;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x4E0D;&#x662F; react &#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x6240;&#x4EE5;&#x5929;&#x7136;&#x7684; react &#x7EC4;&#x4EF6;&#x548C; redux store &#x4E4B;&#x95F4;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5173;&#x7CFB;&#x7684;&#x3002;&#x8FD9;&#x4E00;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x628A;&#x4ED6;&#x4EEC;&#x4E8C;&#x8005; <code>connect</code> &#x8D77;&#x6765;&#x3002;</p>
 <p>&#x8FDE;&#x63A5;&#x4E8C;&#x8005;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x7684;&#x5E93;&#xFF0C;&#x53EB;&#x505A; <a href="https://github.com/reactjs/react-redux" target="_blank">react-redux</a>&#xFF0C;&#x8FD9;&#x4E2A;&#x662F; React &#x5B98;&#x65B9;&#x7684; Redux
 &#x5BF9; React &#x7684;&#x7ED1;&#x5B9A;&#x3002;</p>
 <h3 id="&#x5B89;&#x88C5;&#x4F7F;&#x7528;">&#x5B89;&#x88C5;&#x4F7F;&#x7528;</h3>
@@ -1401,7 +1415,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"connect 动态读取 store 数据","level":"3.2.6","depth":2,"next":{"title":"处理两类数据","level":"3.2.7","depth":2,"path":"redux/7-two.md","ref":"./redux/7-two.md","articles":[]},"previous":{"title":"React 充电：组件何时会被再次 render","level":"3.2.5","depth":2,"path":"redux/5-rerender.md","ref":"./redux/5-rerender.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/6-connect.md","mtime":"2017-04-11T12:51:19.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-23T02:22:42.555Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"connect 动态读取 store 数据","level":"3.2.6","depth":2,"next":{"title":"处理两类数据","level":"3.2.7","depth":2,"path":"redux/7-two.md","ref":"./redux/7-two.md","articles":[]},"previous":{"title":"React 充电：组件何时会被再次 render","level":"3.2.5","depth":2,"path":"redux/5-rerender.md","ref":"./redux/5-rerender.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/6-connect.md","mtime":"2017-05-23T07:23:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-23T07:25:35.798Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
