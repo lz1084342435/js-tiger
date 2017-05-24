@@ -1,6 +1,5 @@
 这一节来看看 redux 如何处理多类数据。
 
-
 ### 添加点赞功能
 
 目前 PostBody 组件中只显示评论，现在我们在添加一个点赞的按钮进来。
@@ -36,6 +35,14 @@ commentReducer => rootReducer
 
 
 ### 修改 reducer 的 ADD_COMMENTS 部分
+
+
+从 [中文官方文档的 reducer 部分](不要修改 state) 可以看到
+
+>不要修改 state
+
+意思是，reducer 函数中，只能修改 state 的拷贝，state 本身不能变。
+
 
 这里涉及到你先要对 defaultState 做一个拷贝再改，如果是数组的拷贝通常用 slice() 还有 ...spread 。我们这里 defaultState 是一个对象，用 Object.assign 还有 ...spread 。
 
