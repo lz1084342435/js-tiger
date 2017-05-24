@@ -1,0 +1,21 @@
+如果我们整个项目只用一个 reducer ，随着状态树变大，reducer 就会变得很复杂。那么如何进行 reducer 的拆分呢？这就涉及到 rootReducer/combineReducers 这些技巧了。
+
+
+拆分后，要达成两个目标：
+
+- 每个 reducer 负责一类数据，所以每个 reducer 都不会很大
+- 每个 reducer 修改的 state 值，都**不是**整个状态树
+
+
+### 创建 reducers/index.js 文件
+
+创建一下 redux/reducers/index.js 文件，把 reducer 的代码拷贝进去。
+
+- [create reducers](https://github.com/happypeter/redux-hello/commit/637492a945ae6827df8d2f66e041e73976fe28d8)
+
+
+
+
+### 参考资料
+
+- [官方的 combineReducers()文档](http://cn.redux.js.org/docs/recipes/reducers/UsingCombineReducers.html)
