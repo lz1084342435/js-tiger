@@ -21,8 +21,26 @@
 
 注意： combine 的意思是“合并”
 
+```
+const rootReducer = combineReducers({
+  comments: commentReducer,
+  likes: likeReducer
+})
+```
+
+上面的参数中，`comments` 是需要被更新的 state ，commentReducer 是负责更新它的 reducer ，同理 likes 和 likeReducer 也是这样的关系。最终的整个 App 的状态树，就是
+
+```
+{
+  comments,
+  likes
+}
+```
+
+后续在各个组件的 mapStateToProps(state) 函数中的 state 就是上面的这个值。
 
 
 ### 参考资料
 
 - [官方的 combineReducers()文档](http://cn.redux.js.org/docs/recipes/reducers/UsingCombineReducers.html)
+提出了很多值得注意的点，还是应该看一下的。
