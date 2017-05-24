@@ -48,4 +48,6 @@ commentReducer => rootReducer
 
 - [add comments works](https://github.com/happypeter/redux-hello/commit/f4c5fd6a60cb3fde7bd58bcf6248e8ea851b6b82) 这里采用的是”对象展开运算符“的方式。
 
+- [INCREMENT_LIKES](https://github.com/happypeter/redux-hello/commit/730893d5ff90f698a9b33919cbf306c403656066)
+
 参考文档： [redux 中文](http://cn.redux.js.org/docs/recipes/UsingObjectSpreadOperator.html)
