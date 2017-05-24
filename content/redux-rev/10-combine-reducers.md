@@ -13,6 +13,13 @@
 
 - [create reducers](https://github.com/happypeter/redux-hello/commit/637492a945ae6827df8d2f66e041e73976fe28d8)
 
+### 拆出两个 reducer
+
+每个 reducer 的 state 默认值都只是自己对应的那一部分数据。
+
+- [combineReducers](https://github.com/happypeter/redux-hello/commit/b77874d7e3364cd3e2db0ae0857086584f0ac9a3)
+
+注意： combine 的意思是“合并”
 
 
 
