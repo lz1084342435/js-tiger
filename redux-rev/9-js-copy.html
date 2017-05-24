@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="10-combine-reducers.html" />
+    
     
     <link rel="prev" href="8-reducer-composition.html" />
     
@@ -224,6 +226,19 @@
             
                     
                     JS 基础充电：拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10-combine-reducers.html">
+            
+                <a href="10-combine-reducers.html">
+            
+                    
+                    reducer 拆分
             
                 </a>
             
@@ -1431,10 +1446,14 @@ console.log(state)
 
             
                 
-                <a href="8-reducer-composition.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 处理多类数据">
+                <a href="8-reducer-composition.html" class="navigation navigation-prev " aria-label="Previous page: 处理多类数据">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="10-combine-reducers.html" class="navigation navigation-next " aria-label="Next page: reducer 拆分">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -1443,7 +1462,7 @@ console.log(state)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JS 基础充电：拷贝","level":"1.2.9","depth":2,"next":{"title":"Redux","level":"1.3","depth":1,"ref":"","articles":[{"title":"Hello Redux","level":"1.3.1","depth":2,"path":"redux/1-hello.md","ref":"./redux/1-hello.md","articles":[]},{"title":"搭建基本 React-Webpack 环境","level":"1.3.2","depth":2,"path":"redux/2-env.md","ref":"./redux/2-env.md","articles":[]},{"title":"内部 state 使用","level":"1.3.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},{"title":"Redux Store 数据大本营","level":"1.3.4","depth":2,"path":"redux/4-store.md","ref":"./redux/4-store.md","articles":[]},{"title":"React 充电：组件何时会被再次 render","level":"1.3.5","depth":2,"path":"redux/5-rerender.md","ref":"./redux/5-rerender.md","articles":[]},{"title":"connect 动态读取 store 数据","level":"1.3.6","depth":2,"path":"redux/6-connect.md","ref":"./redux/6-connect.md","articles":[]},{"title":"处理两类数据","level":"1.3.7","depth":2,"path":"redux/7-two.md","ref":"./redux/7-two.md","articles":[]},{"title":"联通 API","level":"1.3.8","depth":2,"path":"redux/8-api.md","ref":"./redux/8-api.md","articles":[]},{"title":"redux-thunk 显示一个数字","level":"1.3.9","depth":2,"path":"redux/9-redux-num.md","ref":"./redux/9-redux-num.md","articles":[]},{"title":"模拟登陆效果","level":"1.3.10","depth":2,"path":"redux/10-fake-login.md","ref":"./redux/10-fake-login.md","articles":[]}]},"previous":{"title":"处理多类数据","level":"1.2.8","depth":2,"path":"redux-rev/8-reducer-composition.md","ref":"./redux-rev/8-reducer-composition.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux-rev/9-js-copy.md","mtime":"2017-05-24T03:12:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-24T01:14:29.736Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JS 基础充电：拷贝","level":"1.2.9","depth":2,"next":{"title":"reducer 拆分","level":"1.2.10","depth":2,"path":"redux-rev/10-combine-reducers.md","ref":"./redux-rev/10-combine-reducers.md","articles":[]},"previous":{"title":"处理多类数据","level":"1.2.8","depth":2,"path":"redux-rev/8-reducer-composition.md","ref":"./redux-rev/8-reducer-composition.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux-rev/9-js-copy.md","mtime":"2017-05-24T03:12:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-24T01:14:29.736Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
