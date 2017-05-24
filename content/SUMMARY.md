@@ -10,6 +10,18 @@
   - [connect 订阅 store 数据](./redux-rev/7-connect.md)
   - [处理多类数据](./redux-rev/8-reducer-composition.md)
 
+* Redux
+  - [Hello Redux](./redux/1-hello.md)
+  - [搭建基本 React-Webpack 环境](./redux/2-env.md)
+  - [内部 state 使用](./redux/3-state.md)
+  - [Redux Store 数据大本营](./redux/4-store.md)
+  - [React 充电：组件何时会被再次 render](./redux/5-rerender.md)
+  - [connect 动态读取 store 数据](./redux/6-connect.md)
+  - [处理两类数据](./redux/7-two.md)
+  - [联通 API](./redux/8-api.md)
+  - [redux-thunk 显示一个数字](./redux/9-redux-num.md)
+  - [模拟登陆效果](./redux/10-fake-login.md)
+
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)
   - [进入 Linux 命令行的黑色世界](./linux/2-hello-linux.md)
@@ -70,17 +82,6 @@
   - [用户注册登录（ 前端功能 ）](./session/8-signup-p2.md)
   - [wiki](./session/session-wiki.md)
 
-* Redux
-  - [Hello Redux](./redux/1-hello.md)
-  - [搭建基本 React-Webpack 环境](./redux/2-env.md)
-  - [内部 state 使用](./redux/3-state.md)
-  - [Redux Store 数据大本营](./redux/4-store.md)
-  - [React 充电：组件何时会被再次 render](./redux/5-rerender.md)
-  - [connect 动态读取 store 数据](./redux/6-connect.md)
-  - [处理两类数据](./redux/7-two.md)
-  - [联通 API](./redux/8-api.md)
-  - [redux-thunk 显示一个数字](./redux/9-redux-num.md)
-  - [模拟登陆效果](./redux/10-fake-login.md)
 
 * 好奇猫项目实战
   - [角色分工](./haoqi/1-role.md)
