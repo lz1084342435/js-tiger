@@ -3,7 +3,6 @@
 - 添加 React-Router 进来，让首页显示多篇文章
 - 每篇文章拥有自己的点赞和评论
 
-
 ### 添加 React-Router
 
 区分出两个页面来。
@@ -30,15 +29,8 @@
 
 - [rm warning](https://github.com/happypeter/redux-hello/commit/8edd0d470ad73e4b4d86f48519428a9a6385da13)
 
-### 课下作业
 
-实现下面的 TODO 应用：
 
-![](http://digicity-1253322599.costj.myqcloud.com/todo.png)
+### 总结
 
-提示：
-
-- 使用 redux/combineReducers/mapStateToProps 等技术来实现
-- 图标可以到  http://www.flaticon.com/ 下载 svg
-- 每次点最下面的对勾，只显示已完成事项
-- 点对勾右边的列表按钮，显示所有事项
+目前 redux 的知识，除了做 ajax 请求需要的 redux-thunk 之外，基本都讲完了。redux-thunk 咱们下下节再讲。下面我们做一个 todo 的作业，来巩固一下前面的知识。

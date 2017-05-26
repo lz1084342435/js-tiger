@@ -12,6 +12,7 @@
   - [JS 基础充电：拷贝](./redux-rev/9-js-copy.md)
   - [reducer 拆分](./redux-rev/10-combine-reducers.md)
   - [关系型数据](./redux-rev/11-relation.md)
+  - [HOMEWORK：todo](./redux-rev/12-todo.md)
 
 * Redux
   - [Hello Redux](./redux/1-hello.md)
