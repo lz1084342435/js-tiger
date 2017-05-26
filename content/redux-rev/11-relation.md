@@ -10,6 +10,18 @@
 
 - [two pages](https://github.com/happypeter/redux-hello/commit/99da8c6b5289dfde5d165316a6c8ffc7cb0dea20)
 
+### 添加另一组评论，每篇 post 显示自己的评论
+
+- [show comments for each post](https://github.com/happypeter/redux-hello/commit/bb38c8dda47bc0c779438f6a8b94251e729289f4)
+
+- [fix PostBody](https://github.com/happypeter/redux-hello/commit/d1e8167cd8170886b5524c6ff962b6e0674226c4)
+
+### 点赞功能
+
+重新规划一下数据，把点赞功能也实现了
+
+- [INCREMENT_LIKES for each post](https://github.com/happypeter/redux-hello/commit/a1a5557f4bb94a00f39195b4cea475ee87997ea6)
+
 ### 课下作业
 
 实现下面的 TODO 应用：
