@@ -20,7 +20,13 @@
 
 重新规划一下数据，把点赞功能也实现了
 
-- [INCREMENT_LIKES for each post](https://github.com/happypeter/redux-hello/commit/a1a5557f4bb94a00f39195b4cea475ee87997ea6)
+- [INCREMENT_LIKES for each post](https://github.com/happypeter/redux-hello/commit/20a6ca3e15346523e461dfeab93fcccfca7bae96)
+
+### 首页
+
+添加首页
+
+- [Home](https://github.com/happypeter/redux-hello/commit/d6e687649f46e151240775d0e21347bc3b7d7714)
 
 ### 课下作业
 
