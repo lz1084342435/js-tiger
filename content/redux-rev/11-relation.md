@@ -28,6 +28,8 @@
 
 - [Home](https://github.com/happypeter/redux-hello/commit/d6e687649f46e151240775d0e21347bc3b7d7714)
 
+- [rm warning](https://github.com/happypeter/redux-hello/commit/8edd0d470ad73e4b4d86f48519428a9a6385da13)
+
 ### 课下作业
 
 实现下面的 TODO 应用：
