@@ -33,3 +33,34 @@
 
 - 代码：**todo style**
 - 代码：**avoid body scroll**
+- 已完成条目： **right tick for completed todo**
+
+### form 样式
+
+- **form styling**
+- **more form styling**
+
+### actions 样式
+
+- **Actions styling**
+
+### 展示所有的 todo 条目
+
+- **show todoList**
+
+注意：这一步里 Provider 的作用就是要让它所包裹的所有组件中的 mapStateToProps 中可以拿到 store 中的整个状态树，没有 Provider ，mapStateToProps 中的参数 state 就肯定为空了。
+
+
+### Actions 部分功能
+
+- **actions**
+
+
+### 添加 todo
+
+- **ADD_TODO**
+
+
+### 最终代码
+
+- https://github.com/happypeter/todo
