@@ -100,5 +100,13 @@ export default connect(mapStateToProps, {addComment})(CommentBox);
 
 - 代码: [dispatch with thunk](https://github.com/happypeter/redux-hello/commit/28772bb6bc31c81366033a4c8af36c73f7e64d6b)
 - 代码：**compose is not needed**
+- 代码：**ADD_COMMENT works again**
 
 有了上面的代码，可以看到 reducer 中有输出了，可见 dispatch 确实工作了，action 被发出了。
+
+
+### 异步操作
+
+Action Creator 中能够使用 dispatch ，目的主要就是服务异步操作。
+
+没有 thunk 之前，一旦用户点按钮，action 立即被发出，reducer 立即执行，store 立即改变。这个是 redux 默认工作机制。但是这种机制在很多情况下是不能满足要求的，例如，用户点按钮之后，action 中要携带的数据需要从网络上读取的这种情况。有了 thunk 之后，即使要等很长时间也没有问题，因为 dispatch 操作可以等待网络请求结束之后再去执行。
