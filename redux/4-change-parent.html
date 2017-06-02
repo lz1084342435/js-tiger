@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>什么是 Redux ？ · GitBook</title>
+        <title>不用 redux 实现组件间通信 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="2-setup.html" />
+    <link rel="next" href="5-store.html" />
     
+    
+    <link rel="prev" href="3-state.html" />
     
 
     </head>
@@ -114,7 +116,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="1-hello.html">
+        <li class="chapter " data-level="1.2.1" data-path="1-hello.html">
             
                 <a href="1-hello.html">
             
@@ -153,7 +155,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="4-change-parent.html">
+        <li class="chapter active" data-level="1.2.4" data-path="4-change-parent.html">
             
                 <a href="4-change-parent.html">
             
@@ -1290,7 +1292,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >什么是 Redux ？</a>
+        <a href=".." >不用 redux 实现组件间通信</a>
     </h1>
 </div>
 
@@ -1305,23 +1307,57 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x9996;&#x5148;&#x89E3;&#x51B3;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5B66; React &#x4E3A;&#x4F55;&#x8FD8;&#x8981;&#x5B66; Redux &#xFF1F;</p>
-<p>Redux &#x662F;&#x4E00;&#x4E2A;&#x914D;&#x5408; React &#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x6D41;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x8D1F;&#x8D23;&#x7EC4;&#x4EF6;&#x95F4;&#x901A;&#x4FE1;&#x3002;&#x53EA;&#x4F1A; React &#x662F;&#x4E0D;&#x80FD;&#x505A;&#x51FA;&#x590D;&#x6742;&#x7684;
-&#x6548;&#x679C;&#x7684;&#x3002;&#x4F60;&#x53EF;&#x80FD;&#x4E5F;&#x4F1A;&#x8BF4;&#xFF0C;&#x7EC4;&#x4EF6;&#x95F4;&#x901A;&#x4FE1;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;&#x7EC4;&#x4EF6;&#x4E92;&#x76F8;&#x64CD;&#x4F5C;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x662F;&#x53EF;&#x4EE5;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6CA1;&#x6709; Redux &#xFF0C;&#x7EC4;&#x4EF6;&#x95F4;&#x968F;&#x610F;&#x4E92;&#x76F8;&#x64CD;&#x4F5C;&#xFF0C;&#x5F88;&#x5FEB;&#x4EE3;&#x7801;&#x5C31;&#x4F1A;&#x53D8;&#x6210;&#x9762;&#x6761;&#x4EE3;&#x7801;&#x7684;&#x3002;</p>
-<h3 id="redux-&#x4F5C;&#x8005;">Redux &#x4F5C;&#x8005;</h3>
-<p>Redux &#x4F5C;&#x8005;&#x540D;&#x5B57;&#x53EB; <a href="https://github.com/gaearon" target="_blank">Dan</a> &#xFF0C;&#x662F; Redux &#x4E4B;&#x7236;&#xFF0C;&#x4F46;&#x662F;&#x73B0;&#x5728;&#x4ED6;&#x6709;
-&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x8EAB;&#x4EFD;&#xFF0C;&#x4ED6;&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x662F; Facebook &#x7684;&#x5458;&#x5DE5;&#xFF0C;&#x76EE;&#x524D;&#x662F; React &#x9879;&#x76EE;&#x8001;&#x5927;&#x3002;&#x4EE5;&#x524D; React &#x7684;&#x8001;&#x5927;&#xFF0C;
-<a href="https://github.com/petehunt" target="_blank">Pete</a> &#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x79BB;&#x804C;&#x4E86;&#xFF0C;&#x4F46;&#x662F; youtube &#x4E0A; Pete Hunt &#x540C;&#x5B66;&#x7684;&#x6F14;&#x8BB2;&#xFF0C;&#x4F9D;&#x7136;&#x662F;&#x5B66;&#x4E60; React &#x7684;&#x6700;&#x4F73;&#x5165;&#x95E8;&#x8D44;&#x6599;&#x3002;</p>
-<p>Dan &#x7684;&#x540D;&#x8A00;</p>
+                                <p>&#x4E0D;&#x7528; Redux &#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7EC4;&#x4EF6;&#x95F4;&#x901A;&#x4FE1;&#x5462;&#xFF1F;</p>
+<p>&#x7B54;&#x6848;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#x5C31;&#x4E00;&#x53E5;&#x8BDD;&#xFF1A;</p>
 <blockquote>
-<p>&#x4E00;&#x4E2A; React &#x7684; props &#x8FD8;&#x7528;&#x4E0D;&#x597D;&#x7684;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x662F;&#x4E0D;&#x5E94;&#x8BE5;&#x53BB;&#x5B66; Redux</p>
+<p>&#x901A;&#x8FC7;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;&#x7236;&#x7EC4;&#x4EF6;&#x7684; state &#xFF0C;&#x7136;&#x540E;&#x628A;&#x7236;&#x7EC4;&#x4EF6;&#x7684; state &#x4F5C;&#x4E3A;&#x6240;&#x6709;&#x5B50;&#x7EC4;&#x4EF6;&#x7684; props &#x503C;&#x4F20;&#x5165;&#x5404;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;</p>
 </blockquote>
-<p>Peter &#x7684;&#x610F;&#x89C1;&#xFF1A;React &#x5B66;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x81F3;&#x5C11;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6708;&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x5B66; Redux &#xFF0C;&#x662F;&#x6700;&#x4F73;&#x65F6;&#x673A;&#x3002;</p>
-<h3 id="&#x53C2;&#x8003;&#x8BFE;&#x7A0B;">&#x53C2;&#x8003;&#x8BFE;&#x7A0B;</h3>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x5B9E;&#x73B0;&#x4E86;&#x5404;&#x4E2A;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x95F4;&#x901A;&#x4FE1;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Child</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span>(
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> this.props.changeParentState(&apos;yellow&apos;)}&gt;Child Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+    )
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">super</span>()
+    <span class="hljs-keyword">this</span>.changeBgc = <span class="hljs-keyword">this</span>.changeBgc.bind(<span class="hljs-keyword">this</span>)
+  }
+
+  state = {
+    color: <span class="hljs-string">&apos;red&apos;</span>
+  }
+
+  changeBgc(color) {
+    <span class="hljs-keyword">this</span>.setState({
+      color: color
+    })
+  }
+  render() {
+    <span class="hljs-keyword">return</span>(
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{&apos;color&apos;:</span> <span class="hljs-attr">this.state.color</span>}}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>App<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Child</span>  <span class="hljs-attr">changeParentState</span>=<span class="hljs-string">{this.changeBgc}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    )
+  }
+}
+
+export default App
+</span></code></pre>
+<h3 id="redux-hello-&#x9879;&#x76EE;&#x4E2D;">redux-hello &#x9879;&#x76EE;&#x4E2D;</h3>
+<p>&#x5B9E;&#x73B0;&#x8BC4;&#x8BBA;&#x6548;&#x679C;&#xFF1A;</p>
 <ul>
-<li><a href="http://haoqicat.com/redux-tower" target="_blank">&#x5854;&#x9876;&#x4E0A;&#x7684; Redux</a> &#x8FD9;&#x95E8;&#x662F; Redux &#x5165;&#x95E8;&#x8BFE;&#x7A0B;</li>
-<li><a href="http://haoqicat.com/hand-in-hand-react" target="_blank">&#x624B;&#x7275;&#x624B;&#x8BFE;&#x7A0B;</a> &#x662F; Redux &#x5B9E;&#x6218;&#x8BFE;&#x7A0B;</li>
-<li><a href="https://egghead.io/courses/getting-started-with-redux" target="_blank">Dan &#x540C;&#x5B66;&#x81EA;&#x5DF1;&#x7684; Redux &#x5165;&#x95E8;&#x8BFE;&#x7A0B;</a></li>
+<li><a href="https://github.com/happypeter/redux-hello/commit/f9ab32451cfba2e0e6c5f25dead99dcb5214d932" target="_blank">go without redux</a></li>
+</ul>
+<h3 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h3>
+<ul>
+<li><a href="https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367" target="_blank">You May Not Need Redux</a></li>
 </ul>
 
                                 
@@ -1350,8 +1386,12 @@
 
             
                 
+                <a href="3-state.html" class="navigation navigation-prev " aria-label="Previous page: 内部 state 使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="2-setup.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 基本环境准备">
+                
+                <a href="5-store.html" class="navigation navigation-next " aria-label="Next page: Redux Store 数据大本营">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1362,7 +1402,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"什么是 Redux ？","level":"1.2.1","depth":2,"next":{"title":"基本环境准备","level":"1.2.2","depth":2,"path":"redux/2-setup.md","ref":"./redux/2-setup.md","articles":[]},"previous":{"title":"Redux 入门教程（新版）","level":"1.2","depth":1,"ref":"","articles":[{"title":"什么是 Redux ？","level":"1.2.1","depth":2,"path":"redux/1-hello.md","ref":"./redux/1-hello.md","articles":[]},{"title":"基本环境准备","level":"1.2.2","depth":2,"path":"redux/2-setup.md","ref":"./redux/2-setup.md","articles":[]},{"title":"内部 state 使用","level":"1.2.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},{"title":"不用 redux 实现组件间通信","level":"1.2.4","depth":2,"path":"redux/4-change-parent.md","ref":"./redux/4-change-parent.md","articles":[]},{"title":"Redux Store 数据大本营","level":"1.2.5","depth":2,"path":"redux/5-store.md","ref":"./redux/5-store.md","articles":[]},{"title":"React 充电：组件何时会被再次 render","level":"1.2.6","depth":2,"path":"redux/6-rerender.md","ref":"./redux/6-rerender.md","articles":[]},{"title":"connect 订阅 store 数据","level":"1.2.7","depth":2,"path":"redux/7-connect.md","ref":"./redux/7-connect.md","articles":[]},{"title":"处理多类数据","level":"1.2.8","depth":2,"path":"redux/8-reducer-composition.md","ref":"./redux/8-reducer-composition.md","articles":[]},{"title":"JS 基础充电：拷贝","level":"1.2.9","depth":2,"path":"redux/9-js-copy.md","ref":"./redux/9-js-copy.md","articles":[]},{"title":"reducer 拆分","level":"1.2.10","depth":2,"path":"redux/10-combine-reducers.md","ref":"./redux/10-combine-reducers.md","articles":[]},{"title":"关系型数据","level":"1.2.11","depth":2,"path":"redux/11-relation.md","ref":"./redux/11-relation.md","articles":[]},{"title":"HOMEWORK：todo","level":"1.2.12","depth":2,"path":"redux/12-todo.md","ref":"./redux/12-todo.md","articles":[]},{"title":"Hello redux-thunk","level":"1.2.13","depth":2,"path":"redux/13-thunk.md","ref":"./redux/13-thunk.md","articles":[]},{"title":"redux-thunk 的一个 Hello World","level":"1.2.14","depth":2,"path":"redux/14-hello-world.md","ref":"./redux/14-hello-world.md","articles":[]},{"title":"redux-hello 项目联通后台 API","level":"1.2.15","depth":2,"path":"redux/15-use-api.md","ref":"./redux/15-use-api.md","articles":[]},{"title":"Redux 结语","level":"1.2.16","depth":2,"path":"redux/16-redux-end.md","ref":"./redux/16-redux-end.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/1-hello.md","mtime":"2017-05-22T01:51:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T06:25:19.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"不用 redux 实现组件间通信","level":"1.2.4","depth":2,"next":{"title":"Redux Store 数据大本营","level":"1.2.5","depth":2,"path":"redux/5-store.md","ref":"./redux/5-store.md","articles":[]},"previous":{"title":"内部 state 使用","level":"1.2.3","depth":2,"path":"redux/3-state.md","ref":"./redux/3-state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/4-change-parent.md","mtime":"2017-05-23T01:27:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T06:25:19.641Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
