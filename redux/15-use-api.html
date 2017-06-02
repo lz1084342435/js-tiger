@@ -1351,7 +1351,15 @@ let post2Com = cc.filter(value =&gt; value.postId != &apos;1&apos; ).map(item =&
 });
 console.log(post1Com, post2Com);
 // [ &apos;hello1&apos;, &apos;hello11&apos; ] [ &apos;hello2&apos;, &apos;hello22&apos; ]
-</code></pre>
+</code></pre><h3 id="&#x63D0;&#x4EA4;&#x8BC4;&#x8BBA;">&#x63D0;&#x4EA4;&#x8BC4;&#x8BBA;</h3>
+<p>&#x5199;&#x4EE3;&#x7801;&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x62FF; curl &#x6D4B;&#x4E00;&#x4E0B; API &#x662F;&#x5426;&#x8FD8;&#x6D3B;&#x7740;&#xFF1A;</p>
+<pre><code>curl -X POST -H &apos;Content-Type: application/json&apos; -d &apos;{&quot;postId&quot;: &quot;2&quot;, &quot;commentBody&quot;: &quot;curl-test-xxx&quot;}&apos; http://redux-hello.haoduoshipin.com/comment
+{&quot;msg&quot;:&quot;&#x6DFB;&#x52A0;&#x6210;&#x529F;&quot;,&quot;comment&quot;:{&quot;__v&quot;:0,&quot;postId&quot;:&quot;2&quot;,&quot;commentBody&quot;:&quot;curl-test-xxx&quot;,&quot;_id&quot;:&quot;593112e817deb3614c29070e&quot;}}%
+</code></pre><p>&#x6D4B;&#x8BD5;&#x65E0;&#x8BEF;&#x4E4B;&#x540E;&#xFF0C;&#x5F00;&#x59CB;&#x5199;&#x4EE3;&#x7801;&#x3002;</p>
+<ul>
+<li><a href="https://github.com/happypeter/redux-hello/commit/3635b5bf767e9235134f0ba8ec77554d207d04f6" target="_blank">ADD_COMMENT</a></li>
+</ul>
+
                                 
                                 </section>
                             
@@ -1394,7 +1402,7 @@ console.log(post1Com, post2Com);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"redux-hello 项目联通后台 API","level":"1.2.15","depth":2,"next":{"title":"Redux 结语","level":"1.2.16","depth":2,"path":"redux/16-redux-end.md","ref":"./redux/16-redux-end.md","articles":[]},"previous":{"title":"redux-thunk 的一个 Hello World","level":"1.2.14","depth":2,"path":"redux/14-hello-world.md","ref":"./redux/14-hello-world.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/15-use-api.md","mtime":"2017-06-02T07:02:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T06:25:19.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"redux-hello 项目联通后台 API","level":"1.2.15","depth":2,"next":{"title":"Redux 结语","level":"1.2.16","depth":2,"path":"redux/16-redux-end.md","ref":"./redux/16-redux-end.md","articles":[]},"previous":{"title":"redux-thunk 的一个 Hello World","level":"1.2.14","depth":2,"path":"redux/14-hello-world.md","ref":"./redux/14-hello-world.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/15-use-api.md","mtime":"2017-06-02T07:43:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-02T06:25:19.641Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
