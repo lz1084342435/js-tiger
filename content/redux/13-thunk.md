@@ -109,4 +109,9 @@ export default connect(mapStateToProps, {addComment})(CommentBox);
 
 Action Creator 中能够使用 dispatch ，目的主要就是服务异步操作。
 
-没有 thunk 之前，一旦用户点按钮，action 立即被发出，reducer 立即执行，store 立即改变。这个是 redux 默认工作机制。但是这种机制在很多情况下是不能满足要求的，例如，用户点按钮之后，action 中要携带的数据需要从网络上读取的这种情况。有了 thunk 之后，即使要等很长时间也没有问题，因为 dispatch 操作可以等待网络请求结束之后再去执行。
+注：什么是异步操作（ async ）？实现异步操作的最主要的形式是？主要形式，就会回调函数（ call back ），更为流行的是使用 promise（axios） 。异步操作的很大的特点，就是非阻塞（ no-blocking ）。
+
+
+没有 thunk 之前，一旦用户点按钮，action 立即被发出，reducer 立即执行，store 立即改变。这个是 redux 默认工作机制。但是这种机制在很多情况下是不能满足要求的，例如，用户点按钮之后，action 中要携带的数据需要从网络上读取的这种情况。有了 thunk 之后，即使要等很长时间也没有问题，因为 dispatch 操作可以**等待**网络请求结束之后再去执行。
+
+下一步我们来实现一个 Hello World 案例。放到下一节中。
