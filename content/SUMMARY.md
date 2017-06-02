@@ -1,7 +1,7 @@
 # JS 独孤求败
 
 * Redux 入门教程（新版）
-  - [什么是 Redux ？](./redux-rev/1-hello.md)
+  - [什么是 Redux ？](./redux/1-hello.md)
   - [基本环境准备](./redux/2-setup.md)
   - [内部 state 使用](./redux/3-state.md)
   - [不用 redux 实现组件间通信](./redux/4-change-parent.md)
