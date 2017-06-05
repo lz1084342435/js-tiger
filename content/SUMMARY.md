@@ -18,6 +18,17 @@
   - [redux-hello 项目联通后台 API](./redux/15-use-api.md)
   - [Redux 结语](./redux/16-redux-end.md)
 
+
+* [Express 实作 API](./express/index.md)
+  - [Hello World](./express/1-hw.md)
+  - [React 牵手 Express](./express/2-with-react.md)
+  - [MongoDB 数据库](./express/3-mongodb.md)
+  - [打通全栈](./express/5-full-stack.md)
+  - [从前台传递参数给后台](./express/6-params.md)
+  - [展示一个用户的信息](./express/7-show-user.md)
+  - [总结后端部分](./express/8-express-wrapup.md)
+
+
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)
   - [进入 Linux 命令行的黑色世界](./linux/2-hello-linux.md)
@@ -44,14 +55,7 @@
   - [Hello](./react/hello.md)
 
 
-* 你好 Express
-  - [Hello World](./express/1-hw.md)
-  - [React 牵手 Express](./express/2-with-react.md)
-  - [MongoDB 数据库](./express/3-mongodb.md)
-  - [打通全栈](./express/5-full-stack.md)
-  - [从前台传递参数给后台](./express/6-params.md)
-  - [展示一个用户的信息](./express/7-show-user.md)
-  - [总结后端部分](./express/8-express-wrapup.md)
+
 
 * HTTP 基础
   - [HTTP 简介](./http/1-http-intro.md)

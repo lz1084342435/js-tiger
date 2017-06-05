@@ -44,4 +44,12 @@ git checkout old-stuff
 ### 为了 JS 基础部分的讲解可以参考
 
 
-https://github.com/ElemeFE/node-interview 
+https://github.com/ElemeFE/node-interview
+
+回调函数和 promise 都要好好讲讲，不然下面的代码就不好理解了
+
+```
+app.get('/about', (req, res) => {
+  res.send('this is about page')
+})
+```
