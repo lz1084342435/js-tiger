@@ -21,6 +21,8 @@
 
 * [Express 实作 API](./express/index.md)
   - [Hello World](./express/1-hw.md)
+  - [MongoDB 数据库](./express/2-mongodb.md)
+  - [Express 操作 MongoDB](./express/3-mongoose.md)
   - [React 牵手 Express](./express/2-with-react.md)
   - [MongoDB 数据库](./express/3-mongodb.md)
   - [打通全栈](./express/5-full-stack.md)

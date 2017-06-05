@@ -225,6 +225,35 @@ app.get('/', function(req, res){
 上面代码中 `req` 是 request **请求**的简写， `res` 是 response **响应**的简写 。`res.send('Hello World');`
 的作用是从后端向前端浏览器返回字符串 `Hello World` 。
 
+
+### 使用 nodemon 提高开发效率
+
+每次修改代码，然后刷新页面，会发现没有变化。解决这个问题，需要先关闭刚才已经启动的应用，然后再运行命令：
+
+```
+node index.js
+```
+
+让应用重新启动之后，我们所做的修改才能生效。若在应用开发过程中每次修改代码都要重启应用，那就太不方便了！莫担忧，可以借助工具 nodemon 排除烦恼。这个 nodemon 工具可以助力 node 应用的开发效率，因为它能监测 node 应用目录中的各个文件，若文件有改动，nodemon 会自动重启你的 node 应用，再也不用手动重启了。
+
+安装：
+
+```
+npm install -g nodemon
+```
+
+
+上面命令中用到了 -g 选项，说明要全局安装 nodemon 包，这样新创建的 node.js 应用都能使用 nodemon 运行起来了。
+
+尽然 nodemon 已经安装好了，那如何使用呢？非常简单，在应用根目录下，先终止运行 `node index.js` 命令，然后在命令行中输入一个新的命令：
+
+```
+nodemon index.js
+```
+
+通过 nodemon 命令启动应用之后，应用中的各个文件就被 nodemon 监测了。即使应用中要安装新的 npm 包，nodemon 也会重启应用。不妨试着修改一下 index.js 文件，看一下效果吧。
+
+
 ### 常见错误
 
 ```
