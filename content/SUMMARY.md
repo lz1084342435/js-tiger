@@ -23,12 +23,10 @@
   - [Hello World](./express/1-hw.md)
   - [MongoDB 数据库](./express/2-mongodb.md)
   - [Express 操作 MongoDB](./express/3-mongoose.md)
-  - [客户端读写数据库内容](./express/4-api-mongodb.md)
+  - [实现一套 RESTful API](./express/4-rest-api.md)
   - [解决跨域问题](./express/5-cors.md)
-  - [打通全栈](./express/5-full-stack.md)
-  - [从前台传递参数给后台](./express/6-params.md)
-  - [展示一个用户的信息](./express/7-show-user.md)
-  - [总结后端部分](./express/8-express-wrapup.md)
+  - [部署 API 到服务器](./express/6-deploy-api.md)
+  - [前端大框架搭建](./express/7-router.md)
 
 
 *  Linux 基础
