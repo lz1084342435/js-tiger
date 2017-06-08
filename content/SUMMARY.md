@@ -27,8 +27,35 @@
   - [解决跨域问题](./express/5-cors.md)
   - [部署 API 到服务器](./express/6-deploy-api.md)
   - [前端大框架搭建](./express/7-router.md)
+  - [发布文章](./express/8-submit-post.md)
+  - [首页文章列表](./express/9-post-list.md)
+  - [结语](./express/10-end.md)
 
 
+
+* HTTP 基础
+  - [HTTP 简介](./http/1-http-intro.md)
+  - [故事的起点：发起 HTTP 请求](./http/2-making-request.md)
+  - [HTTP 请求的格式](./http/3-request.md)
+  - [HTTP 响应的格式](./http/4-response.md)
+  - [查询字符串](./http/5-query-string.md)
+  - [GET 链接中嵌入参数传递到服务器端](./http/6-get-data.md)
+  - [跨域请求问题](./http/7-cors.md)
+  - [用 POST 传复杂数据到服务器（ form 篇）](./http/8-form.md)
+  - [用 POST 传复杂数据到服务器（ axios 篇）](./http/9-axios.md)
+  - [梳理前台向后台传数据的四种形式](./http/10-four-ways.md)
+
+
+* COOKIE，SESSION 和登录态
+  - [Cookie](./session/1-cookie.md)
+  - [Session](./session/2-session.md)
+  - [Express Session 接口实现登录功能(上半部分)](./session/3-session-demo-p1.md)
+  - [Express Session 接口实现登录功能(下半部分)](./session/4-session-demo-p2.md)
+  - [创建商品分类](./session/5-new-cat.md)
+  - [创建商品](./session/6-new-product.md)
+  - [用户注册登录（ API 功能 ）](./session/7-signup.md)
+  - [用户注册登录（ 前端功能 ）](./session/8-signup-p2.md)
+  - [wiki](./session/session-wiki.md)
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)
   - [进入 Linux 命令行的黑色世界](./linux/2-hello-linux.md)
@@ -55,49 +82,5 @@
   - [Hello](./react/hello.md)
 
 
-
-
-* HTTP 基础
-  - [HTTP 简介](./http/1-http-intro.md)
-  - [故事的起点：发起 HTTP 请求](./http/2-making-request.md)
-  - [HTTP 请求的格式](./http/3-request.md)
-  - [HTTP 响应的格式](./http/4-response.md)
-  - [查询字符串](./http/5-query-string.md)
-  - [GET 链接中嵌入参数传递到服务器端](./http/6-get-data.md)
-  - [跨域请求问题](./http/7-cors.md)
-  - [用 POST 传复杂数据到服务器（ form 篇）](./http/8-form.md)
-  - [用 POST 传复杂数据到服务器（ axios 篇）](./http/9-axios.md)
-  - [梳理前台向后台传数据的四种形式](./http/10-four-ways.md)
-
-
-
-* COOKIE，SESSION 和登录态
-  - [Cookie](./session/1-cookie.md)
-  - [Session](./session/2-session.md)
-  - [Express Session 接口实现登录功能(上半部分)](./session/3-session-demo-p1.md)
-  - [Express Session 接口实现登录功能(下半部分)](./session/4-session-demo-p2.md)
-  - [创建商品分类](./session/5-new-cat.md)
-  - [创建商品](./session/6-new-product.md)
-  - [用户注册登录（ API 功能 ）](./session/7-signup.md)
-  - [用户注册登录（ 前端功能 ）](./session/8-signup-p2.md)
-  - [wiki](./session/session-wiki.md)
-
-
 * 好奇猫项目实战
   - [角色分工](./haoqi/1-role.md)
-
-* REACT EXPRESS 综合项目
-  - [创建 github 项目](./project/1-create.md)
-  - [创建 express 的 Hello World](./project/2-express.md)
-  - [保存数据到 MongoDB](./project/3-mongodb.md)
-  - [RESTful API](./project/4-rest.md)
-  - [最简 Webpack React 环境](./project/5-webpack-react.md)
-  - [添加 React Router](./project/6-react-router.md)
-  - [实现首页文章列表](./project/7-postlist.md)
-  - [提交数据到服务器](./project/8-submit-data.md)
-  - [axios 专题讲解](./project/9-axios.md)
-  - [总结和展望](./project/10-end.md)
-  - [wiki](./project/wiki.md)
-
-* 启发
-  - [乔布斯斯坦福大学演讲](./inspire/jobs.md)

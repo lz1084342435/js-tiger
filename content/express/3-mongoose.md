@@ -15,7 +15,7 @@ npm install --save mongoose
 打开 `index.js` 文件，首先添加一行：
 
 ```
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 ```
 
 导入 `mongoose` 功能模块，然后添加一行代码：
@@ -29,7 +29,7 @@ mongoose.connect('mongodb://localhost:27017/express-kiss-api');
 然后，加入如下代码，判断连接是否成功：
 
 ```
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', console.log);
 db.once('open', function() {
   console.log('success!')
@@ -51,8 +51,8 @@ db.once('open', function() {
 新建一个文件 `models/post.js`，首先添加两行代码：
 
 ```
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 ```
 
 导入 `mongoose` 功能模块以及调用它提供的 [Schema()](http://mongoosejs.com/docs/api.html#index_Mongoose-Schema) 接口创建一个新的 [schema](http://mongoosejs.com/docs/guide.html)，每个 schema 会映射为 MongoDB 数据库中的一个 collection（集合），同时还能定义所映射集合包含的字段，以及字段的类型等规范。下面代码就创建了一个名为 `PostSchema` 的 schema, 并规定所映射的集合将包含三个字段：category、title 和 content，并且每个字段只能存储字符串类型的数据，其中 `title` 字段中存储的数据不能为空。
@@ -87,15 +87,15 @@ module.exports = mongoose.model('Post', PostSchema);
 打开文件 `index.js`, 添加代码：
 
 ```
-var Post = require('./models/post');
+const Post = require('./models/post')
 
 db.once('open', function() {
-  var post = new Post({title: 'mongoose usage'});
+  let post = new Post({title: 'mongoose usage'})
   post.save(function(err){
-    if(err) console.log(err);
+    if(err) console.log(err)
   })
-  console.log('success!');
-});
+  console.log('success!')
+})
 ```
 
 首先导入 Post model，然后创建一个新的 model 实例 `post`，其对应 `posts` 集合中的一条记录，最后数据保存到数据库。
@@ -109,7 +109,7 @@ Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in y
 解决办法是在连接 MongoDB 数据库 `mongoose.connect(...);` 之前，添加一行代码：
 
 ```
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise
 ```
 
 详情请参考 [promises](http://mongoosejs.com/docs/promises.html)
