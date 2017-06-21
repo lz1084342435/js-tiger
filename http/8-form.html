@@ -1265,6 +1265,26 @@ form &#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x662F; HTTP &#x5BA2;&#x6237;&#x7A
 </code></pre><p>&#x800C;&#xFF0C;&#x524D;&#x53F0;&#x8BF7;&#x6C42;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x5C31;&#x51B3;&#x5B9A;&#x4E86;&#xFF0C;&#x540E;&#x53F0; api &#x7684;&#x5339;&#x914D;&#x683C;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;</p>
 <pre><code>app.post(&apos;/login&apos;, ...)
 </code></pre><p>&#x5177;&#x4F53;&#x540E;&#x53F0; API &#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x90A3;&#x662F;&#x540E;&#x53F0;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x4E8B;&#x60C5;&#x4E86;&#x3002;</p>
+<h3 id="&#x9644;&#x5F55;&#xFF1B;&#x540E;&#x53F0;-expressjs-&#x4EE3;&#x7801;">&#x9644;&#x5F55;&#xFF1B;&#x540E;&#x53F0; expressjs &#x4EE3;&#x7801;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>)
+<span class="hljs-keyword">const</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;body-parser&apos;</span>)
+
+<span class="hljs-keyword">const</span> app = express()
+
+app.use(bodyParser.urlencoded({ extended: <span class="hljs-literal">false</span> }))
+<span class="hljs-comment">// parse application/x-www-form-urlencoded</span>
+
+
+
+app.post(<span class="hljs-string">&apos;/login&apos;</span>, (req, res) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;/login&apos;</span>, req.body)
+  res.json(req.body)
+})
+
+app.listen(<span class="hljs-number">3000</span>, () =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;3000.....&apos;</span>)
+})
+</code></pre>
 
                                 
                                 </section>
@@ -1308,7 +1328,7 @@ form &#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x662F; HTTP &#x5BA2;&#x6237;&#x7A
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"用 POST 传复杂数据到服务器（ form 篇）","level":"3.1.8","depth":2,"next":{"title":"用 POST 传复杂数据到服务器（ axios 篇）","level":"3.1.9","depth":2,"path":"http/9-axios.md","ref":"./http/9-axios.md","articles":[]},"previous":{"title":"跨域请求问题","level":"3.1.7","depth":2,"path":"http/7-cors.md","ref":"./http/7-cors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"http/8-form.md","mtime":"2017-06-05T03:09:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-14T01:18:05.933Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"用 POST 传复杂数据到服务器（ form 篇）","level":"3.1.8","depth":2,"next":{"title":"用 POST 传复杂数据到服务器（ axios 篇）","level":"3.1.9","depth":2,"path":"http/9-axios.md","ref":"./http/9-axios.md","articles":[]},"previous":{"title":"跨域请求问题","level":"3.1.7","depth":2,"path":"http/7-cors.md","ref":"./http/7-cors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"http/8-form.md","mtime":"2017-06-21T02:12:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-21T02:13:14.148Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
