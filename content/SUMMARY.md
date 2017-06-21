@@ -44,11 +44,12 @@
   - [用 POST 传复杂数据到服务器（ form 篇）](./http/8-form.md)
   - [用 POST 传复杂数据到服务器（ axios 篇）](./http/9-axios.md)
   - [梳理前台向后台传数据的四种形式](./http/10-four-ways.md)
+  - [Cookie](./http/11-cookie.md)
+  - [Session](./http/12-session.md)
+
 
 
 * COOKIE，SESSION 和登录态
-  - [Cookie](./session/1-cookie.md)
-  - [Session](./session/2-session.md)
   - [Express Session 接口实现登录功能(上半部分)](./session/3-session-demo-p1.md)
   - [Express Session 接口实现登录功能(下半部分)](./session/4-session-demo-p2.md)
   - [创建商品分类](./session/5-new-cat.md)

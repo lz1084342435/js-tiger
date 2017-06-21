@@ -12,10 +12,6 @@ Content-Type: application/json
 ```
 
 
-### 后台代码
-
-[查看 github#tiger 仓库](https://github.com/happypeter/tiger)
-
 ### 使用 curl 调试 api
 
 ```
@@ -110,3 +106,27 @@ ReactDOM.render(<App/>, document.getElementById('app'));
 ### 总结
 
 使用 axios 发送数据，是最为灵活和强大的一种方式，以后我们会用到的比较多。
+
+### 附录：后台 expressjs 代码
+
+```js
+const express = require('express')
+const bodyParser = require('body-parser')
+
+const app = express()
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+// parse application/x-www-form-urlencoded
+
+
+
+app.post('/login', (req, res) => {
+  console.log('/login', req.body)
+  res.json(req.body)
+})
+
+app.listen(3000, () => {
+  console.log('3000.....')
+})
+```

@@ -1,12 +1,9 @@
----
-title: session
----
-
 HTTP 本身就是个无状态协议，也就是你在一个 API 中设置一个变量，后一次请求再去访问这个 API 也拿不到这个变量了，服务器很健忘，马上就忘了客户端了。
 
-这样你想想，怎么去实现一个购物车呀？session ”会话“（或者也叫对话， session 的本意是“一段时间”）机制可以解决这个问题。
+这样，实现一个购物车相关的应用就变得不方便了。 session ”会话“（或者也叫对话， session 的本意是“一段时间”）机制可以解决这个问题。
 
 实际上 IT 界，每次引入一个新技术，都是为了解决一个实际问题的。例如，人们发明 cookie 就是为了解决，服务器和客户端互不相认的问题。但是 cookie 有了，新问题来了，那就 cookie 的存储能力有限，如果一个用户买了很多件商品，那么这些商品信息要存在哪里呢？
+
 
 ### Session 基本原理
 
@@ -17,13 +14,11 @@ HTTP 本身就是个无状态协议，也就是你在一个 API 中设置一个�
 
 ### 代码演示
 
-自己手动基于 cookie 机制，去服务器上开辟 session 比较麻烦。所以各大语言框架都有自己的 session 管理接口，例如，express 的接口就是 [express-session](https://github.com/expressjs/session) 。
-
+自己手动基于 cookie 机制，去服务器上开辟 session 比较麻烦。所以各大语言框架都有自己的 session 管理接口，例如，express 的接口就是 (express-session](https://github.com/expressjs/session) 。
 
 所以此时，peter 到服务器端，添加如下 API
 
-
-```js
+```
 const session = require('express-session')
 
 app.use(session({
@@ -41,35 +36,20 @@ app.post('/login', function(req, res){
 
 这样，就可以达成如下效果：
 
-- 浏览器从客户端发起请求，请求格式为
-
-```
+浏览器从客户端发起请求，请求格式为
 POST /login Content-Type: application/json {"username": "peter"}
-```
-
-- 这样，服务器端用
-
-```
+这样，服务器端用
 req.body.username
-```
+这一个变量，就可以接收到 peter 这个字符串了。
 
-这一个变量，就可以接收到 `peter` 这个字符串了。
-
-
-- 然后把 ”peter“ 这个字符串保持到 session 中，具体语句就是
-
-```
+然后把 ”peter“ 这个字符串保持到 session 中，具体语句就是
 req.session.username = username
-```
+之后，服务器会自动的把 sessionId 返回给浏览器，存储到 cookie 之中
 
-- 之后，服务器会自动的把 sessionId 返回给浏览器，存储到 cookie 之中
-  - 注意：req.session 接口，内置 cookie 功能
-
-- 这样，浏览器每次就可以认领自己的 session 来拿到自己的用户名了。
-
+注意：req.session 接口，内置 cookie 功能
+这样，浏览器每次就可以认领自己的 session 来拿到自己的用户名了。
 
 补充：Session 就是一段时间，从用户登录网站开始，到用户退出网站结束的这个时间区间，就叫一次会话。上面的 req.session 是一个临时的存储区域，这个存储区域的生命周期是一次会话。
-
 
 ### 使用 curl 测试
 
@@ -91,10 +71,9 @@ peter%
 
 上面信息重要是分两部分：请求和响应，具体来说：
 
-- 请求部分可以看到发出的请求是 `POST /login Content-Type: application/json {"username": "peter"}` 这个是符合 API 规范的，所以应该能够得到正确的返回
-- 响应的第一行 `< HTTP/1.1 200 OK` ，200 表示一切正常
+- 请求部分可以看到发出的请求是 POST /login Content-Type: application/json {"username": "peter"} 这个是符合 API 规范的，所以应该能够得到正确的返回
+- 响应的第一行 < HTTP/1.1 200 OK ，200 表示一切正常
 - set-cookie 是我们要查看的重点，我们可以看到 req.session 接口可以正确的返回 sessionId 给浏览器
-
 
 
 ### 总结
