@@ -46,17 +46,8 @@
   - [梳理前台向后台传数据的四种形式](./http/10-four-ways.md)
   - [Cookie](./http/11-cookie.md)
   - [Session](./http/12-session.md)
+  - [Session 应用实例：登录](./http/13-session-example.md)
 
-
-
-* COOKIE，SESSION 和登录态
-  - [Express Session 接口实现登录功能(上半部分)](./session/3-session-demo-p1.md)
-  - [Express Session 接口实现登录功能(下半部分)](./session/4-session-demo-p2.md)
-  - [创建商品分类](./session/5-new-cat.md)
-  - [创建商品](./session/6-new-product.md)
-  - [用户注册登录（ API 功能 ）](./session/7-signup.md)
-  - [用户注册登录（ 前端功能 ）](./session/8-signup-p2.md)
-  - [wiki](./session/session-wiki.md)
 *  Linux 基础
   - [Github Pages 创建个人网站](./linux/1-github-pages.md)
   - [进入 Linux 命令行的黑色世界](./linux/2-hello-linux.md)
