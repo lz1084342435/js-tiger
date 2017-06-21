@@ -1,7 +1,3 @@
----
-title: 用 POST 发复杂数据到服务器（ form 篇 ）
----
-
 浏览器中发 POST 请求，地址栏是无法做到的，通常有两种方式可以：一种就是用 html 的
 form ，另外一种是 HTTP 客户端，例如 axios/fetch 。今天我们先介绍 form 的这种形式。
 
@@ -87,3 +83,29 @@ app.post('/login', ...)
 ```
 
 具体后台 API 的实现，那是后台开发者的事情了。
+
+
+### 附录；后台 expressjs 代码
+
+
+
+```js
+const express = require('express')
+const bodyParser = require('body-parser')
+
+const app = express()
+
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/x-www-form-urlencoded
+
+
+
+app.post('/login', (req, res) => {
+  console.log('/login', req.body)
+  res.json(req.body)
+})
+
+app.listen(3000, () => {
+  console.log('3000.....')
+})
+```

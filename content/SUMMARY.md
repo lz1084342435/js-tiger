@@ -82,5 +82,10 @@
   - [Hello](./react/hello.md)
 
 
-* 好奇猫项目实战
-  - [角色分工](./haoqi/1-role.md)
+* 项目实战
+  - [角色分工](./project/1-role.md)
+  - [认证登录模块](./project/2-login.md)
+  - [登录态和退出登录](./project/3-logout.md)
+  - [对应出错情况](./project/4-error.md)
+  - [Search](./project/5-search.md)
+  - [后台：提交店面](./project/6-admin.md)

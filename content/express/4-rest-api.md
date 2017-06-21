@@ -22,9 +22,9 @@ API 的实现如下：
 app.get('/posts', (req, res) => {
   console.log('GET /posts........')
   Post.find().sort({'createdAt': -1}).exec(function(err, posts) {
-    if (err) return res.status(500).json({error: err.message});
+    if (err) return res.status(500).json({error: err.message})
     res.json({ posts })
-  });
+  })
 })
 ```
 
@@ -76,9 +76,9 @@ npm i --save body-parser
 
 
 ```
-var bodyParser = require('body-parser');
+var bodyParser = require('body-parser')
 ...
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 ```
 
 
@@ -90,7 +90,7 @@ app.post('/post', (req, res) => {
   console.log(`POST /post`, req.body)
   var post = new Post(req.body);
   post.save(function(err){
-    if(err) console.log(err);
+    if(err) console.log(err)
   })
 } )
 ```
@@ -124,18 +124,18 @@ PUT /post/:id
 app.put('/post/:id', function(req, res) {
     if (req.body.title === '') return res.status(400).json({error: '文章标题不能为空！'})
     Post.findById({_id: req.params.id}, function(err, post) {
-      if (err) return res.status(500).json({error:  err.message});
+      if (err) return res.status(500).json({error:  err.message})
       for (prop in req.body) {
-        post[prop] = req.body[prop];
+        post[prop] = req.body[prop]
       }
       post.save(function(err) {
-        if (err) return res.status(500).json({error: err.message});
+        if (err) return res.status(500).json({error: err.message})
         res.json({
           message: '文章更新成功了！'
-        });
-      });
-    });
-  });
+        })
+      })
+    })
+  })
 ```
 
 API 有了，一般先用 curl 测试一下
@@ -161,13 +161,13 @@ API 代码写成：
 ```
 app.delete('/posts/:id', function(req, res) {
   Post.findById({_id: req.params.id}, function(err, post) {
-    if (err) return res.status(500).json({error: err.message});
+    if (err) return res.status(500).json({error: err.message})
     post.remove(function(err){
-      if (err) return res.status(500).json({error: err.message});
-      res.json({ message: '文章已经删除了！' });
-    });
-  });
-});
+      if (err) return res.status(500).json({error: err.message})
+      res.json({ message: '文章已经删除了！' })
+    })
+  })
+})
 ```
 
 ### 总结
