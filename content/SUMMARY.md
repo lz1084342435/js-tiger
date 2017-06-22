@@ -20,16 +20,6 @@
 
 
 * [Express 实作 API](./express/index.md)
-  - [Hello World](./express/1-hw.md)
-  - [MongoDB 数据库](./express/2-mongodb.md)
-  - [Express 操作 MongoDB](./express/3-mongoose.md)
-  - [实现一套 RESTful API](./express/4-rest-api.md)
-  - [解决跨域问题](./express/5-cors.md)
-  - [部署 API 到服务器](./express/6-deploy-api.md)
-  - [前端大框架搭建](./express/7-router.md)
-  - [发布文章](./express/8-submit-post.md)
-  - [首页文章列表](./express/9-post-list.md)
-  - [结语](./express/10-end.md)
 
 
 
