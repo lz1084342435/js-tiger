@@ -1,13 +1,4 @@
 《 Express 实作 API 》
 
-要了解前后台分离的当代 APP 开发架构，了解 API 是必备知识。这里我们来上点后端课，了解一下如何用 nodejs 社区中最流行的 API 开发框架 Express 来制作 API 。会涉及到的技巧：
 
-- 用 Express 写一个简单的 Web 服务器
-- 制作简单的 API
-- 连接 MongoDB 数据库，进行数据读写
-- 使用 Curl 测试 API
-
-
-最后，用 React 作为前端技术框架，来用一下后台的 API ，做出一个漂亮简约的案例来，让用户可以进行文章的增删改查操作。
-
-课程定位是提高前端开发者的后台修养，所以不会讲的太深。
+- https://haoqicat.com/express-love-api/
