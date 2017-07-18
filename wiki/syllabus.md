@@ -14,3 +14,9 @@ JS 基础部分
 ES6 面向对象专题
 
 利用 class 关键字，引入面向对象编程
+
+
+一些基础知识的讲解也可以插入到书中：
+
+- [JSON 简介](https://www.youtube.com/watch?v=wI1CWzNtE-M)
+- [what is RESTful API](https://www.youtube.com/watch?v=Q-BpqyOT3a8)
