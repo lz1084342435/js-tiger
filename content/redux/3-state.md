@@ -62,8 +62,6 @@ e.preventDefault()
 <input ref={(value) => { this.textInput = value} }
 ```
 
-
-
 代码:
 
 - [submit comment](https://github.com/happypeter/redux-hello/commits)

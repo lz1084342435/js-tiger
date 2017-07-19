@@ -4,6 +4,8 @@ Redux 是数据流管理工具。使用 Redux 的最重要的一句话：
 
 后续我们会学的一切的技巧基本服务于一个关系：组件和 Store 的关系。
 
+课堂讲解小技巧：第一遍讲，过分强调细节会导致这部分讲解非常枯燥，所以第一遍可以简单点讲，重在实现功能，等大家把功能做出来后，再回过头来讲一遍概念。
+
 ### 为何要统一存放到 Store 中？
 
 把所有的数据都存放到 Store 中，然后所有的组件都订阅 Store 的数据。那么数据就有了 Single Source of Truth （唯一可信数据源）。这样的好处就是：
@@ -14,8 +16,7 @@ Redux 是数据流管理工具。使用 Redux 的最重要的一句话：
 
 注：先把上一节的代码回滚一下：
 
-- [revert change parent code](https://github.com/happypeter/redux-hello/commit/22e0a1767e4cb42ddfe16551575633b9293ade93)
-
+- [revert without redux](https://github.com/happypeter/redux-hello/commits)
 
 ### 创建 Store ？
 
@@ -40,7 +41,7 @@ npm i --save redux
 到 store.js 中先导入
 
 ```
-import { createStore } from 'redux';
+import { createStore } from 'redux'
 ```
 
 我们可想象到的就是， store.js 中会做这样的导出
@@ -101,9 +102,8 @@ function commentReducer(state = [], action) {
 
 代码：
 
-- [create store](https://github.com/happypeter/redux-hello/commit/e968d2a7ebe263bb91954a2ef6c93371babdd5d6)
+- [createStore](https://github.com/happypeter/redux-hello/commits)
 
-- [bring comments back](https://github.com/happypeter/redux-hello/commit/9964a7eb13745f45bda9eac905cd0b1657d77c2a)
 
 
 ### 修改 Store 中的数据
@@ -147,7 +147,7 @@ dispatch 就是发出（分发）的意思，可以用它发出 action 。
 
 它的作用就是接受 action ，然后根据 action 修改 store 中的数据。
 
-代码： [action reducer](https://github.com/happypeter/redux-hello/commit/b6636fe1fd7e56823c8263476b07e7d47d230112)
+代码： [dispatch action](https://github.com/happypeter/redux-hello/commits
 
 这样：每次 dispatch action 之后，reducer 都可以去修改 state 值了。
 
@@ -202,6 +202,10 @@ const store = createStore(commentReducer, comments);
 
 当 `return [...state, action.comment]` 执行之后，
 store.getState() 的值就被改变了。
+
+代码：
+
+- [ADD_COMMENT works](https://github.com/happypeter/redux-hello/commits)
 
 ### 思考一个问题
 

@@ -55,11 +55,14 @@ connect 完毕之后，PostBody 之中就多了一个属性：`this.props.commen
 
 ### 代码
 
-代码: [dynamic data by react-redux](https://github.com/happypeter/redux-hello/commit/04fca61efb61d9919386310f6eff3d8d36b2d292)
+代码:
+
+- [react-redux works](https://github.com/happypeter/redux-hello/commits)
+- [remove setState()](https://github.com/happypeter/redux-hello/commits)
+- [add store for store.dispatch](https://github.com/happypeter/redux-hello/commits)
 
 现在我们知道组件如何通过 connect 方法来动态订阅 store 数据了，所以各个组件中的 setState() 就可以删除了。
 
-- [remove setState()](https://github.com/happypeter/redux-hello/commit/6e30c7404c85ac164f91e773882b49a21753deef)
 
 ### 总结
 

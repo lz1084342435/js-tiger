@@ -6,39 +6,49 @@
 
 这样就实现了各个兄弟组件间通信。
 
-```js
-import React from 'react'
+### 子组件修改父组件的 state
 
-class Child extends React.Component {
+下面先写一个例子，演示子组件去修改父组件的 state 值：
+
+```js
+import React, { Component } from 'react';
+
+
+class Child extends Component {
+
+  handleClick = () => {
+    this.props.changeColor('green')
+  }
+
   render() {
-    return(
-      <button onClick={() => this.props.changeParentState('yellow')}>Child Button</button>
-    )
+    return (
+      <div style={{ 'border' : '3px solid red' }}>
+        <button onClick={this.handleClick}>Child button</button>
+      </div>
+    );
   }
 }
 
-class App extends React.Component {
-  constructor() {
-    super()
-    this.changeBgc = this.changeBgc.bind(this)
-  }
-
+class App extends Component {
   state = {
-    color: 'red'
+    bgColor: 'yellow'
   }
 
-  changeBgc(color) {
+  changeBackground = (color) => {
     this.setState({
-      color: color
+      bgColor: color
     })
   }
+
   render() {
-    return(
-      <div style={{'color': this.state.color}}>
-        <div>App</div>
-        <Child  changeParentState={this.changeBgc} />
+    return (
+      <div style={{ 'border' : '3px solid green',
+                    'padding' : '20px',
+                    'backgroundColor' : this.state.bgColor
+      }}>
+        <Child changeColor={this.changeBackground} />
       </div>
-    )
+    );
   }
 }
 
@@ -50,7 +60,9 @@ export default App
 
 实现评论效果：
 
-- [go without redux](https://github.com/happypeter/redux-hello/commit/f9ab32451cfba2e0e6c5f25dead99dcb5214d932)
+- [go without redux](https://github.com/happypeter/redux-hello/commits)
+
+- [show comment num](https://github.com/happypeter/redux-hello/commits)
 
 
 ### 参考资料
