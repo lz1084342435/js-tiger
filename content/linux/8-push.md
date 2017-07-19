@@ -97,8 +97,11 @@ Please make sure you have the correct access rights
 具体操作如下：
 
 - 首先本地运行 `ssh-keygen` 命令，可以在 ~/.ssh 文件夹下生产 ssh key
+  注：`~` 就是用户主目录，也就是类似 `/home/peter` 这个位置
 - 到 `~/.ssh/id_rsa.pub` 也就是公钥文件中，拷贝公钥字符串
 - 把字符串粘贴到 github.com -> setting -> ssh keys -> add
+  注：保存前要删除公钥末尾的换行符
+
 
 这样添加 ssh key 的工作就完成了，以后我们执行 git push 这样的命令就不会看到如下错误了：
 

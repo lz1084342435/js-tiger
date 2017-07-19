@@ -6,7 +6,14 @@ title: Atom 编辑器
 
 ### 安装
 
-深度系统上，到 atom.io 网站，下载 .deb 的包，进行安装。
+深度系统上
+
+```
+sudo apt-get update
+sudo apt-get install atom
+```
+
+然后重启命令行，运行 atom 命令，如果可以打开成功，表示安装就完毕了。
 
 ### 打开一个项目
 

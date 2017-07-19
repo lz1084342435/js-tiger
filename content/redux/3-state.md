@@ -2,7 +2,7 @@
 
 要求：不需要使用后台。直接把假数据设置到 state 变量里面。
 
-### 任务一： 显示两条死的评论在页面上。
+### 任务一： 显示两条死的评论在页面上
 
 这里的体现出 React 的特点，就是所有的组件显示出来的动态数据，都要存放到 state 值之中。
 
@@ -29,13 +29,13 @@ this.state = {
 }
 ```
 
-代码： [two comments](https://github.com/happypeter/redux-hello/commit/20db7800a8d08cf3c9f0bc40f3dfc35277c795a2)
+代码： [two comments](https://github.com/happypeter/redux-hello/commits)
 
 注意：用数组的 Index 值做 key 是非常不好的习惯，一般用每条数据的 id 来做即可。
 
 ### 任务二：添加 form
 
-代码： [form styling](https://github.com/happypeter/redux-hello/commit/af4a6c86e81e00a59088226e67774702206ba225)
+代码： [form styling](https://github.com/happypeter/redux-hello/commits)
 
 
 ### 任务三：发布评论
@@ -62,30 +62,14 @@ e.preventDefault()
 <input ref={(value) => { this.textInput = value} }
 ```
 
-- 现在，报错如下：
-
-```
-'textInput' of null
-```
-
-意思是在 handleSubmit() 中 this 的值是 null （空）。
-
-- 这个的绑定形式是
-
-```
-constructor() {
-  super()
-  this.handleSubmit = this.handleSubmit.bind(this)
-}
-```
 
 
 代码:
 
-- 老的 refs 方式已经过时：[submit comment](https://github.com/happypeter/redux-hello/commit/23b7e9aa518f596e961c72362638b019e9d7d441)
+- [submit comment](https://github.com/happypeter/redux-hello/commits)
+- [reset form](https://github.com/happypeter/redux-hello/commits)
 
-- [with spread and new refs](https://github.com/happypeter/redux-hello/commit/599262380567ad201d2c7318dcd3196accc2f02c)
-
+### 不可写性 immutability
 
 注意，不能直接使用下面的代码：
 
@@ -104,6 +88,7 @@ handleSubmit(e) {
 
 参考：
 
+- [Four Immutable Approaches to Consider](https://medium.com/@housecor/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5)
 - [为何不能直接修改 State](https://facebook.github.io/react/tutorial/tutorial.html#why-immutability-is-important)
 
 - [中文](https://beijiyang.github.io/react-tutorial-translation/chapter3/content2.html)

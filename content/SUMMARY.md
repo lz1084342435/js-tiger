@@ -39,7 +39,7 @@
   - [Session 应用实例：登录](./http/13-session-example.md)
 
 *  Linux 基础
-  - [Github Pages 创建个人网站](./linux/1-github-pages.md)
+  - [使用 gitbook 来做笔记](./linux/.md)
   - [进入 Linux 命令行的黑色世界](./linux/2-hello-linux.md)
   - [文件系统结构](./linux/3-file-sys.md)
   - [文件操作](./linux/4-file-man.md)
