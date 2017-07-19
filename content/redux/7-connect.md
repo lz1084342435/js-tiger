@@ -11,8 +11,6 @@ npm i --save react-redux
 
 具体的使用的主要涉及两个接口 Provider 和 connect 。
 
-
-
 ```
 export default connect(mapStateToProps)(PostBody);
 ```
@@ -60,6 +58,8 @@ connect 完毕之后，PostBody 之中就多了一个属性：`this.props.commen
 - [react-redux works](https://github.com/happypeter/redux-hello/commits)
 - [remove setState()](https://github.com/happypeter/redux-hello/commits)
 - [add store for store.dispatch](https://github.com/happypeter/redux-hello/commits)
+- [state to props](https://github.com/happypeter/redux-hello/commits)
+
 
 现在我们知道组件如何通过 connect 方法来动态订阅 store 数据了，所以各个组件中的 setState() 就可以删除了。
 
