@@ -1,7 +1,6 @@
 首先明确一点，就是 redux 可以配合多种框架使用，并不是 react 的一部分。所以天然的 react 组件和 redux store 之间是没有任何关系的。这一节，我们就把他们二者 `connect` 起来。
 
-连接二者，需要一个专门的库，叫做 [react-redux](https://github.com/reactjs/react-redux)，这个是 React 官方的 Redux
-对 React 的绑定。
+连接二者，需要一个专门的库，叫做 [react-redux](https://github.com/reactjs/react-redux)，这个是 React 官方的 Redux 对 React 的绑定。
 
 ### 安装使用
 
