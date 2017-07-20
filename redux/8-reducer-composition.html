@@ -988,22 +988,27 @@
 <h3 id="&#x6DFB;&#x52A0;&#x70B9;&#x8D5E;&#x529F;&#x80FD;">&#x6DFB;&#x52A0;&#x70B9;&#x8D5E;&#x529F;&#x80FD;</h3>
 <p>&#x76EE;&#x524D; PostBody &#x7EC4;&#x4EF6;&#x4E2D;&#x53EA;&#x663E;&#x793A;&#x8BC4;&#x8BBA;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5728;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x70B9;&#x8D5E;&#x7684;&#x6309;&#x94AE;&#x8FDB;&#x6765;&#x3002;</p>
 <ul>
-<li><a href="https://github.com/happypeter/redux-hello/commit/e77624e16b89a08bb4d0783d7fb1d5122913b37f" target="_blank">add like button</a></li>
+<li><a href="https://github.com/happypeter/redux-hello/commits" target="_blank">add likes button</a></li>
+</ul>
+<h3 id="store-&#x4E2D;&#x5B58;&#x5165;&#x591A;&#x7C7B;&#x6570;&#x636E;">Store &#x4E2D;&#x5B58;&#x5165;&#x591A;&#x7C7B;&#x6570;&#x636E;</h3>
+<p>&#x5728;&#x53BB;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; likeReducer &#xFF0C;&#x7136;&#x540E; reducers/index.js &#x4E2D;&#x8FD9;&#x6837;&#x5199;</p>
+<pre><code>import likeReducer from &apos;./like&apos;
+import commentReducer from &apos;./comment&apos;
+import { combineReducers } from &apos;redux&apos;
+
+
+const rootReducer = combineReducers({
+  comments: commentReducer,
+  likes: likeReducer
+})
+
+
+export default rootReducer
+</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;&#x4E0A;&#x9762;&#x7684; <code>comments</code> &#x548C; <code>likes</code> &#x6700;&#x7EC8;&#x5BF9;&#x5E94;&#x4E86; store.getState() &#x8F93;&#x51FA;&#x7684;&#x72B6;&#x6001;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x4E24;&#x4E2A; key &#x3002;</p>
+<ul>
+<li><a href="https://github.com/happypeter/redux-hello/commits" target="_blank">state tree with more data</a></li>
 </ul>
 <h3 id="&#x663E;&#x793A;0&#x8D5E;">&#x663E;&#x793A;&#x201C;0&#x8D5E;&#x201D;</h3>
-<p>&#x8FD9;&#x4E2A;&#x5C31;&#x8981;&#x6765;&#x4FEE;&#x6539;&#x4E00;&#x4E0B; store &#x4E2D;&#x7684;&#x6570;&#x636E;&#x521D;&#x59CB;&#x503C;&#x7684;&#x5185;&#x5BB9;&#x4E86;</p>
-<pre><code>comments = [&apos;hello1&apos;, &apos;hello2&apos;]
-</code></pre><p>&#x8981;&#x6539;&#x4E3A;</p>
-<pre><code>defaultState = {
-  comments: [&apos;hello1&apos;, &apos;hello2&apos;],
-  likes: 0
-}
-</code></pre><p>&#x5BF9;&#x5E94;&#x7684; reducer &#x7684;&#x547D;&#x540D;&#x4E5F;&#x8981;&#x6539;&#x4E00;&#x4E0B;&#x4E86;&#x3002;</p>
-<pre><code>commentReducer =&gt; rootReducer
-</code></pre><ul>
-<li><a href="https://github.com/happypeter/redux-hello/commit/79c5e8c367f40262dc2a1335ba21ecbfa780a639" target="_blank">state tree with more data</a></li>
-</ul>
-<p>&#x6709;&#x4E86;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x8BFB;&#x53D6; store &#x4E2D;&#x7684; defaultState &#x6CA1;&#x6709;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x4F46;&#x662F; reducer &#x672C;&#x8EAB;&#x5374;&#x5931;&#x6548;&#x4E86;&#x3002;</p>
 <h3 id="&#x4FEE;&#x6539;-reducer-&#x7684;-addcomments-&#x90E8;&#x5206;">&#x4FEE;&#x6539; reducer &#x7684; ADD_COMMENTS &#x90E8;&#x5206;</h3>
 <p>&#x4ECE; <a href="&#x4E0D;&#x8981;&#x4FEE;&#x6539;%20state">&#x4E2D;&#x6587;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x7684; reducer &#x90E8;&#x5206;</a> &#x53EF;&#x4EE5;&#x770B;&#x5230;</p>
 <blockquote>
@@ -1061,7 +1066,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"处理多类数据","level":"1.2.8","depth":2,"next":{"title":"JS 基础充电：拷贝","level":"1.2.9","depth":2,"path":"redux/9-js-copy.md","ref":"./redux/9-js-copy.md","articles":[]},"previous":{"title":"connect 订阅 store 数据","level":"1.2.7","depth":2,"path":"redux/7-connect.md","ref":"./redux/7-connect.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/8-reducer-composition.md","mtime":"2017-06-05T03:09:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-19T11:04:57.050Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"处理多类数据","level":"1.2.8","depth":2,"next":{"title":"JS 基础充电：拷贝","level":"1.2.9","depth":2,"path":"redux/9-js-copy.md","ref":"./redux/9-js-copy.md","articles":[]},"previous":{"title":"connect 订阅 store 数据","level":"1.2.7","depth":2,"path":"redux/7-connect.md","ref":"./redux/7-connect.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/8-reducer-composition.md","mtime":"2017-07-20T01:44:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-20T01:44:16.651Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
