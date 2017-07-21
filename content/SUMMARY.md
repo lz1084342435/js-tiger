@@ -1,5 +1,8 @@
 # JS 独孤求败
 
+* 吮指项目实战
+  - [登录模块](./shunzhi/1-login.md)
+
 * Redux 入门教程（新版）
   - [什么是 Redux ？](./redux/1-hello.md)
   - [基本环境准备](./redux/2-setup.md)
@@ -10,8 +13,7 @@
   - [connect 订阅 store 数据](./redux/7-connect.md)
   - [处理多类数据](./redux/8-reducer-composition.md)
   - [JS 基础充电：拷贝](./redux/9-js-copy.md)
-  - [reducer 拆分](./redux/10-combine-reducers.md)
-  - [关系型数据](./redux/11-relation.md)
+  - [数据关系](./redux/10-relation.md)
   - [HOMEWORK：todo](./redux/12-todo.md)
   - [Hello redux-thunk](./redux/13-thunk.md)
   - [redux-thunk 的一个 Hello World](./redux/14-hello-world.md)
