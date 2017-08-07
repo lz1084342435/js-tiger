@@ -3,7 +3,7 @@
 * Vuex 入门教程
   - [Vuejs 简介](./vue/1-intro.md)
   - [Vue 环境搭建](./vue/2-env.md)
-  - [数据](./3-data.md)
+  - [数据](./vue/3-data.md)
 
 * 吮指项目实战
   - [登录模块](./shunzhi/1-login.md)
