@@ -1,5 +1,8 @@
 # JS 独孤求败
 
+* Vuex 入门教程
+  - [Vue 环境搭建](./vue/2-env)
+
 * 吮指项目实战
   - [登录模块](./shunzhi/1-login.md)
 
