@@ -2,6 +2,7 @@
 
 * Vuex 入门教程
   - [Vue 环境搭建](./vue/2-env)
+  - [数据](./3-data)
 
 * 吮指项目实战
   - [登录模块](./shunzhi/1-login.md)

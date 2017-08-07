@@ -49,3 +49,48 @@ vue init webpack vuex-demo
   - https://github.com/airbnb/javascript
 
 对于 Peter 来说，二者最大的区别就是，写不写分号，Peter 不喜欢写分号，所以选择 Standard 。
+
+### 路由 vue-router
+
+
+把历史从 hash 历史，改为 `/历史` （标准说法应该叫 history 历史，因为使用 history 这个包来达成的）。
+
+如何启动 `history 历史` 呢？
+
+```
+mode: history
+```
+
+参考：https://router.vuejs.org/zh-cn/essentials/history-mode.html
+
+
+### 充电：Standard 标准的执行
+
+代码报错：
+
+```
+Missing space before value for key 'name'  
+  src/router/index.js:13:12
+        name:'Home',
+```
+
+意思是：在 name 键的值之前，少一个空格。这个不是 js 语法错误，这个是 Standard 代码风格的要求。
+
+
+### router-link
+
+- https://router.vuejs.org/zh-cn/api/router-link.html
+
+
+### 添加新的组件
+
+到 Post.vue 里面，添加两个子组件 PostBody.vue CommentBox.vue 。
+
+这里采用：https://cn.vuejs.org/v2/guide/components.html#局部注册
+
+
+### CSS 相关知识
+
+如果组件内的 CSS ，不希望影响其他组件，那就加上 `scoped` 属性。
+
+scope 的意思是“作用域”，scoped 意思是”被限制作用域的“
