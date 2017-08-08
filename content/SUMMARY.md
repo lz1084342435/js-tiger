@@ -4,6 +4,8 @@
   - [Vuejs 简介](./vue/1-intro.md)
   - [Vue 环境搭建](./vue/2-env.md)
   - [数据](./vue/3-data.md)
+  - [提交评论](./vue/4-submit.md)
+  - [使用 props](./vue/5-props.md)
 
 * 吮指项目实战
   - [登录模块](./shunzhi/1-login.md)
