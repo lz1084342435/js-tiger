@@ -6,9 +6,12 @@
   - [数据](./vue/3-data.md)
   - [提交评论](./vue/4-submit.md)
   - [使用 props](./vue/5-props.md)
+  - [数据存入 store](./vue/6-store.md)
+  - [修改 store 数据](./vue/7-mutation.md)
 
 * 吮指项目实战
   - [登录模块](./shunzhi/1-login.md)
+  - [部署项目到 now](./shunzhi/deploy.md)
 
 * Redux 入门教程（新版）
   - [什么是 Redux ？](./redux/1-hello.md)
