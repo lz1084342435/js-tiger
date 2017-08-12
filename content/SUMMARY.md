@@ -1,38 +1,12 @@
 # JS 独孤求败
 
-* Vuex 入门教程
-  - [Vuejs 简介](./vue/1-intro.md)
-  - [Vue 环境搭建](./vue/2-env.md)
-  - [数据](./vue/3-data.md)
-  - [提交评论](./vue/4-submit.md)
-  - [使用 props](./vue/5-props.md)
-  - [数据存入 store](./vue/6-store.md)
-  - [修改 store 数据](./vue/7-mutation.md)
-
 * 吮指项目实战
   - [登录模块](./shunzhi/1-login.md)
   - [部署项目到 now](./shunzhi/deploy.md)
 
-* Redux 入门教程（新版）
-  - [什么是 Redux ？](./redux/1-hello.md)
-  - [基本环境准备](./redux/2-setup.md)
-  - [内部 state 使用](./redux/3-state.md)
-  - [不用 redux 实现组件间通信](./redux/4-change-parent.md)
-  - [Redux Store 数据大本营](./redux/5-store.md)
-  - [React 充电：组件何时会被再次 render](./redux/6-rerender.md)
-  - [connect 订阅 store 数据](./redux/7-connect.md)
-  - [处理多类数据](./redux/8-reducer-composition.md)
-  - [JS 基础充电：拷贝](./redux/9-js-copy.md)
-  - [数据关系](./redux/10-relation.md)
-  - [HOMEWORK：todo](./redux/12-todo.md)
-  - [Hello redux-thunk](./redux/13-thunk.md)
-  - [redux-thunk 的一个 Hello World](./redux/14-hello-world.md)
-  - [redux-hello 项目联通后台 API](./redux/15-use-api.md)
-  - [Redux 结语](./redux/16-redux-end.md)
-
+* [Redux 入门教程](./redux/index.md)
 
 * [Express 实作 API](./express/index.md)
-
 
 
 * HTTP 基础
