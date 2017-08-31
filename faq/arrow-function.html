@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>super() 是干嘛的？ · GitBook</title>
+        <title>胖箭头函数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="es6-module.html" />
     
-    
-    <link rel="prev" href="class-inheritance.html" />
+    <link rel="prev" href="template-str.html" />
     
 
     </head>
@@ -193,7 +191,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9" data-path="super.html">
+        <li class="chapter " data-level="1.9" data-path="super.html">
             
                 <a href="super.html">
             
@@ -258,7 +256,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="arrow-function.html">
+        <li class="chapter active" data-level="1.14" data-path="arrow-function.html">
             
                 <a href="arrow-function.html">
             
@@ -301,7 +299,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >super() 是干嘛的？</a>
+        <a href=".." >胖箭头函数</a>
     </h1>
 </div>
 
@@ -316,36 +314,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="super-&#x65B9;&#x6CD5;&#x5728;&#x7C7B;&#x7EE7;&#x627F;&#x4E2D;&#x7684;&#x4F5C;&#x7528;">super() &#x65B9;&#x6CD5;&#x5728;&#x7C7B;&#x7EE7;&#x627F;&#x4E2D;&#x7684;&#x4F5C;&#x7528;</h3>
-<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x6765;&#x770B;&#xFF0C;&#x65E2;&#x7136;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x88AB;&#x7EE7;&#x627F;&#xFF0C;&#x90A3;&#x4E48;&#x5C5E;&#x6027;&#x5F53;&#x7136;&#x4E5F;&#x5E94;&#x8BE5;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x7EE7;&#x627F;&#x7684;&#x3002;</p>
-<pre><code>class Person {
-  constructor() {
-    this.weight = &quot;around 100kg&quot;;
-    this.height = &quot;around 170cm&quot;;
-  }
+                                <p>&#x80D6;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF08; arrow function ) &#x662F;&#x975E;&#x5E38;&#x5E38;&#x7528;&#x7684;&#x3002;&#x4ECE;&#x6B64;&#x6211;&#x4EEC;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5199;&#x7684;&#x66F4;&#x4E3A;&#x7B80;&#x77ED;&#xFF0C;&#x540C;&#x65F6;&#x7701;&#x53BB;&#x4E86;&#x7ED1;&#x5B9A; this &#x7684;&#x9EBB;&#x70E6;&#x3002;</p>
+<p>&#x539F;&#x672C;&#x51FD;&#x6570;&#x6211;&#x4EEC;&#x8981;&#x5199;&#x6210;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myFun = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(name)
 }
-class Men extends Person {
-  constructor() {
-    super();
-    this.gender = &quot;Male&quot;;
-  }
+</code></pre>
+<p>&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x5199;&#x6210;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myFun = (name) =&gt; {
+  <span class="hljs-built_in">console</span>.log(name)
 }
 
-let peter = new Men;
-console.log(peter.weight);
-</code></pre><p>&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709; super() &#x8C03;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x5B50;&#x7C7B;&#x4E2D;&#x5C31;&#x4E0D;&#x5141;&#x8BB8;&#x4F7F;&#x7528; this &#xFF0C;&#x62A5;&#x9519;&#x4FE1;&#x606F;&#x662F;</p>
-<pre><code>repl: &apos;this&apos; is not allowed before super()
-   8 |   constructor() {
-   9 |     // super();
-&gt; 10 |     this.gender = &quot;Male&quot;;
-     |     ^
-  11 |   }
-  12 | }
-</code></pre><p>&#x90A3;&#x4E48;&#xFF0C;super() &#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
-<p>&#x7B54;&#x6848;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#x7684;&#xFF1A;&#x5B50;&#x7C7B;&#x7684; this &#x662F;&#x57FA;&#x4E8E;&#x7236;&#x7C7B;&#x7684; this &#x7684;&#xFF08;&#x5148;&#x521B;&#x5EFA;&#x7236;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5728;&#x4E0A;&#x9762;&#x8FDB;&#x884C;&#x589E;&#x52A0;&#xFF09;
-&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;&#x7236;&#x7C7B;&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B50;&#x7C7B;&#x662F;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x3002;&#x800C; super() &#x6307;&#x7684;&#x5C31;&#x662F;&#x7236;&#x7C7B;&#x7684;
-constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#xFF0C;&#x95EE;&#x9898;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#x3002;</p>
-<p>&#x7ECF;&#x9A8C;&#x5C31;&#x662F;&#xFF1A;&#x5B50;&#x7C7B;&#x7684; constructor() &#x4E2D;&#x5FC5;&#x987B;&#x5148;&#x547C;&#x53EB; super() &#xFF0C;&#x7136;&#x540E;&#x624D;&#x80FD;&#x4F7F;&#x7528; this &#x3002;</p>
+myFun(<span class="hljs-string">&apos;happypeter&apos;</span>)
+</code></pre>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x53C2;&#x6570;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x628A;&#x62EC;&#x53F7;&#x53BB;&#x6389;&#xFF0C;&#x5199;&#x6210;</p>
+<pre><code>const myFun = name =&gt; {
+  console.log(name)
+}
+
+myFun(&apos;happypeter&apos;)
+</code></pre><p>&#x540C;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x91CC;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x53EA;&#x6709;&#x4E00;&#x6761;&#xFF0C;&#x90A3;&#x4E48;&#x82B1;&#x62EC;&#x53F7;&#x4E5F;&#x53EF;&#x7701;&#x53BB;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myFun = name =&gt;
+  <span class="hljs-built_in">console</span>.log(name)
+
+myFun(<span class="hljs-string">&apos;happypeter&apos;</span>)
+</code></pre>
+<p>&#x65E2;&#x7136;&#xFF0C;&#x8BED;&#x53E5;&#x5F88;&#x5C11;&#xFF0C;&#x90A3;&#x4E48;&#x5199;&#x5230;&#x4E00;&#x884C;&#x4E0A;&#x4E5F;&#x53EF;&#x4EE5;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myFun = name =&gt; <span class="hljs-built_in">console</span>.log(name)
+
+myFun(<span class="hljs-string">&apos;happypeter&apos;</span>)
+</code></pre>
+<p>&#x5982;&#x679C;&#xFF0C;&#x6211;&#x5E0C;&#x671B;&#x51FD;&#x6570;&#x6700;&#x7EC8;&#x8FD4;&#x56DE; name &#x7684;&#x4E24;&#x500D;&#x3002;&#x90A3;&#x6211;&#x53EF;&#x4EE5;&#x5199;&#x6210;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myFun = name =&gt; {
+  <span class="hljs-keyword">return</span> name + name
+}
+
+<span class="hljs-built_in">console</span>.log(myFun(<span class="hljs-string">&apos;happypeter&apos;</span>))
+</code></pre>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x597D;&#x5904;&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31; return &#x6700;&#x540E;&#x7684;&#x90A3;&#x4E2A;&#x4E1C;&#x897F;&#x3002;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5199;&#x6210;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myFun = name =&gt; name + name
+</code></pre>
+<h3 id="&#x4E3A;&#x4F55;&#x8981;&#x628A;&#x51FD;&#x6570;&#x5F04;&#x5F97;&#x8FD9;&#x4E48;&#x7B80;&#x77ED;">&#x4E3A;&#x4F55;&#x8981;&#x628A;&#x51FD;&#x6570;&#x5F04;&#x5F97;&#x8FD9;&#x4E48;&#x7B80;&#x77ED;</h3>
+<p>&#x56E0;&#x4E3A; JS &#x7279;&#x522B;&#x5F3A;&#x8C03;<strong>&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7ECF;&#x5E38;&#x5F04;&#x4E00;&#x4E9B;&#x65E0;&#x540D;&#x51FD;&#x6570;&#xFF0C;&#x4F5C;&#x4E3A;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x9AD8;&#x9636;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x4F20;&#x6765;&#x4F20;&#x53BB;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x65F6;&#x8BED;&#x53E5;&#x7684;&#x7B80;&#x77ED;&#x5C31;&#x663E;&#x5F97;&#x975E;&#x5E38;&#x6709;&#x5FC5;&#x8981;&#x4E86;&#x3002;</p>
+<h3 id="&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x597D;&#x5904;&#xFF1A;this-&#x7A7F;&#x900F;">&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x597D;&#x5904;&#xFF1A;this &#x7A7F;&#x900F;</h3>
+<p>&#x8001;&#x7684;&#x51FD;&#x6570;&#x5199;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x7ECF;&#x5E38; bind(this) &#xFF0C;&#x56E0;&#x4E3A; this &#x662F;&#x4E0D;&#x7A7F;&#x900F;&#x7684;&#xFF0C;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x9ED8;&#x8BA4;&#x53EF;&#x4EE5;&#x8BA9;&#x7236;&#x4F5C;&#x7528;&#x57DF;&#x7684; this &#x76F4;&#x63A5;<em>&#x7A7F;&#x900F;</em>&#x8FDB;&#x6765;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981; bind(this) &#x3002;</p>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<ul>
+<li><a href="http://es6.ruanyifeng.com/#docs/function#&#x7BAD;&#x5934;&#x51FD;&#x6570;" target="_blank">http://es6.ruanyifeng.com/#docs/function#&#x7BAD;&#x5934;&#x51FD;&#x6570;</a></li>
+<li><a href="http://haoduoshipin.com/v/211.html" target="_blank">http://haoduoshipin.com/v/211.html</a></li>
+</ul>
 
                                 
                                 </section>
@@ -373,14 +390,10 @@ constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&
 
             
                 
-                <a href="class-inheritance.html" class="navigation navigation-prev " aria-label="Previous page: 如何使用类的继承？">
+                <a href="template-str.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 模板字符串">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="es6-module.html" class="navigation navigation-next " aria-label="Next page: ES6 模块怎么用？">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -389,7 +402,7 @@ constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"super() 是干嘛的？","level":"1.9","depth":1,"next":{"title":"ES6 模块怎么用？","level":"1.10","depth":1,"path":"faq/es6-module.md","ref":"./faq/es6-module.md","articles":[]},"previous":{"title":"如何使用类的继承？","level":"1.8","depth":1,"path":"faq/class-inheritance.md","ref":"./faq/class-inheritance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/super.md","mtime":"2017-08-31T06:26:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-31T08:52:26.020Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"胖箭头函数","level":"1.14","depth":1,"previous":{"title":"模板字符串","level":"1.13","depth":1,"path":"faq/template-str.md","ref":"./faq/template-str.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/arrow-function.md","mtime":"2017-08-31T08:52:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-31T08:52:26.020Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
