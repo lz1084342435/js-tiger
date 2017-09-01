@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>什么是对象展开运算符？ · GitBook</title>
+        <title>Create-react-app 是什么？ · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="es-stage.html" />
+    <link rel="next" href="react-hello-world.html" />
     
     
-    <link rel="prev" href="object-keys.html" />
+    <link rel="prev" href="nodejs-project.html" />
     
 
     </head>
@@ -349,7 +349,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.21" data-path="object-spread.html">
+        <li class="chapter " data-level="1.21" data-path="object-spread.html">
             
                 <a href="object-spread.html">
             
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.27" data-path="create-react-app.html">
+        <li class="chapter active" data-level="1.27" data-path="create-react-app.html">
             
                 <a href="create-react-app.html">
             
@@ -496,7 +496,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >什么是对象展开运算符？</a>
+        <a href=".." >Create-react-app 是什么？</a>
     </h1>
 </div>
 
@@ -511,25 +511,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><strong>&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;</strong> &#xFF08;&#x4E5F;&#x5C31;&#x662F;<strong>&#x4E09;&#x4E2A;&#x70B9;</strong>&#xFF09; &#x4F5C;&#x7528;&#x8DDF; Object.assign &#x5F88;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x8D77;&#x6765;&#x66F4;&#x7B80;&#x5355;&#x50BB;&#x74DC;&#x5316;&#x3002;</p>
-<h3 id="&#x4F5C;&#x7528;">&#x4F5C;&#x7528;</h3>
-<p>&#x7B2C;&#x4E00;&#xFF0C;&#x62FC;&#x63A5;&#x3002;</p>
-<pre><code>let aa = { a: 1 }
-let bb = { b: 2 }
-let cc = { ...aa, ...bb }
-/* { a: 1, b: 2 }*/
-</code></pre><p>&#x7B2C;&#x4E8C;&#xFF0C;&#x8986;&#x76D6;&#x3002;</p>
-<p>&#x53EF;&#x4EE5;&#x5BF9;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x4E00;&#x5B9A;&#x7684;&#x4FEE;&#x6539;&#x3002;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> aa = { a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span> }
-<span class="hljs-comment">// &#x73B0;&#x5728;&#x6211;&#x60F3;&#x5F97;&#x5230;&#x4E00;&#x4E2A; { a: 1, b: 3}</span>
-<span class="hljs-keyword">let</span> bb = { b: <span class="hljs-number">3</span> }
-<span class="hljs-keyword">let</span> cc = { ...aa, ...bb }
-</code></pre>
-<p>&#x4E0A;&#x9762; cc &#x5C31;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
-<p>&#x7B2C;&#x4E09;&#xFF0C;&#x4FDD;&#x62A4;&#x539F;&#x59CB;&#x503C;&#x4E0D;&#x53D7;&#x4FEE;&#x6539;&#x3002;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5F97;&#x5230;&#x4E00;&#x4E2A; aa &#x7684;&#x4FEE;&#x6539;&#x7248;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x5B9E;&#x7528;&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x4E0D;&#x4FEE;&#x6539;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; aa &#x5E76;&#x6CA1;&#x6709;&#x88AB;&#x6539;&#x53D8;&#x3002;</p>
-<p>&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x8BA9; <a href="http://redux.js.org/docs/recipes/UsingObjectSpreadOperator.html" target="_blank">redux &#x5BF9;&#x5B83;&#x975E;&#x5E38;&#x9752;&#x7750;</a></p>
-<h3 id="&#x517C;&#x5BB9;&#x6027;">&#x517C;&#x5BB9;&#x6027;</h3>
-<p>&#x76EE;&#x524D;&#xFF0C;<a href="https://github.com/tc39/proposal-object-rest-spread" target="_blank">&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;&#x8FD8;&#x6CA1;&#x6709;&#x8FDB;&#x5165; ES &#x6807;&#x51C6;</a> &#x3002;&#x6240;&#x4EE5;&#x5404;&#x5927;&#x6D4F;&#x89C8;&#x5668;&#x548C; Nodejs &#x90FD;&#x4E0D;&#x652F;&#x6301;&#x5B83;&#x3002;&#x597D;&#x5728;&#xFF0C;&#x672A;&#x6765;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684; create-react-app &#x73AF;&#x5883;&#x662F;&#x652F;&#x6301;&#x5B83;&#x7684;&#x3002;</p>
+                                <p>&#x5B98;&#x7F51;&#x5728; <a href="https://github.com/facebookincubator/create-react-app" target="_blank">https://github.com/facebookincubator/create-react-app</a> &#x3002;</p>
+<p>&#x7B80;&#x79F0; cra &#x3002;cra &#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x8005;&#x5C31;&#x662F;&#x76EE;&#x524D; react &#x9879;&#x76EE;&#x7684;&#x8001;&#x5927; Dan &#xFF0C;&#x4EE5;&#x53CA; facebook &#x516C;&#x53F8;&#x7684;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x5458;&#x5DE5;&#x3002;</p>
+<p>cra &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x53D1; React &#x9879;&#x76EE;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x65E0;&#x9700;&#x914D;&#x7F6E;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x5F00;&#x53D1;-react-&#x9879;&#x76EE;&#x66FE;&#x7ECF;&#x5F88;&#x9EBB;&#x70E6;">&#x5F00;&#x53D1; React &#x9879;&#x76EE;&#x66FE;&#x7ECF;&#x5F88;&#x9EBB;&#x70E6;</h3>
+<p>&#x6CA1;&#x6709; cra &#x4E4B;&#x524D;&#xFF0C;&#x5F00;&#x53D1; React &#x9700;&#x8981;&#x81EA;&#x5DF1;&#x642D;&#x5EFA;&#x4E0B;&#x9762;&#x7684;&#x73AF;&#x5883;&#xFF1A;</p>
+<ul>
+<li>&#x9700;&#x8981;&#x914D;&#x7F6E; Webpack &#xFF0C;&#x6765;&#x628A;&#x591A;&#x4E2A; JS &#x6E90;&#x6587;&#x4EF6;&#x6253;&#x5305;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</li>
+<li>&#x9700;&#x8981;&#x914D;&#x7F6E; Babel&#xFF0C;&#x6765;&#x7F16;&#x8BD1; ES6</li>
+<li>&#x9700;&#x8981;&#x914D;&#x7F6E; Babel&#xFF0C;&#x6765;&#x7F16;&#x8BD1; JSX</li>
+<li>&#x53E6;&#x5916;&#x8FD8;&#x6709;&#x5F88;&#x591A; webpack &#x914D;&#x7F6E;&#x8981;&#x6765;&#x81EA;&#x5DF1;&#x505A;&#xFF0C;&#x4EE5;&#x4FBF;&#x80FD;&#x591F;&#x5904;&#x7406; svg/css/html &#x7B49;&#x5404;&#x79CD;&#x6587;&#x4EF6;&#x7C7B;&#x578B;</li>
+</ul>
+<p>&#x603B;&#x662F;&#x662F;&#x975E;&#x5E38;&#x9EBB;&#x70E6;&#x3002;&#x800C; cra &#x5C31;&#x5305;&#x542B; Webpack+Babel &#xFF0C;&#x800C;&#x4E14;&#x5176;&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x90FD;&#x662F;&#x9876;&#x7EA7;&#x9AD8;&#x624B;&#x5E2E;&#x6211;&#x4EEC;&#x7CBE;&#x5FC3;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x3002;</p>
+<h3 id="&#x6709;&#x4E86;-cra-&#xFF0C;&#x6211;&#x4EEC;&#x5F00;&#x53D1;&#x5C31;&#x7701;&#x5FC3;&#x4E86;">&#x6709;&#x4E86; cra &#xFF0C;&#x6211;&#x4EEC;&#x5F00;&#x53D1;&#x5C31;&#x7701;&#x5FC3;&#x4E86;</h3>
+<p>&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x662F;&#xFF0C;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; React &#x9879;&#x76EE;</p>
+<pre><code>create-react-app react-demo
+</code></pre><p>&#x751F;&#x6210;&#x7684;&#x811A;&#x624B;&#x67B6;&#x9879;&#x76EE;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; react-demo &#xFF0C;&#x5B83;&#x9996;&#x5148;&#x662F;&#x4E00;&#x4E2A; nodejs &#x9879;&#x76EE;&#xFF0C;&#x800C;&#x4E14;&#x5176;&#x4E2D; package.json &#x548C; node_modules &#x4E2D;&#x5DF2;&#x7ECF;&#x4E3A;&#x6211;&#x4EEC;&#x5B89;&#x88C5;&#x597D;&#x4E86;&#xFF0C;&#x5F00;&#x53D1; React &#x7684;&#x5E38;&#x7528;&#x7684;&#x5305;&#x3002;&#x53E6;&#x5916;&#x5C31;&#x662F;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x5C0F;&#x7684; react &#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x4E0A;&#x9762;&#x7EE7;&#x7EED;&#x5F00;&#x53D1;&#x4E86;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;&#x6DD8;&#x5B9D;&#x955C;&#x50CF;">&#x4F7F;&#x7528;&#x6DD8;&#x5B9D;&#x955C;&#x50CF;</h3>
+<p>&#x7528;&#x672C;&#x6765;&#x7684;&#x56FD;&#x5916;&#x955C;&#x50CF;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x521B;&#x5EFA;&#x5931;&#x8D25;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x5148;&#x8FD0;&#x884C;</p>
+<pre><code>npm config set registry https://registry.npm.taobao.org
+</code></pre><h3 id="&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;">&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;</h3>
+<p>&#x751F;&#x6210;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x4F1A;&#x6709;</p>
+<ul>
+<li><p>yarn.lock&#xFF0C;&#x8FD9;&#x4E2A;&#x5982;&#x679C;&#x4F60;&#x7684;&#x7CFB;&#x7EDF;&#x4E0A;&#x88C5;&#x4E86; yarn &#x5C31;&#x4F1A;&#x6709;&#xFF0C;yarn &#x662F;&#x8DDF; npm &#x7C7B;&#x4F3C;&#x7684;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#xFF0C;&#x4E5F;&#x662F;&#x7528;&#x6765;&#x88C5; npm &#x5305;&#x7684;&#x3002;</p>
+</li>
+<li><p>public &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x653E; html &#x548C;&#x56FE;&#x6807;&#x7684;</p>
+</li>
+<li>src &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x6240;&#x6709; js &#x4EE3;&#x7801;&#x90FD;&#x653E;&#x5230;&#x8FD9;&#x91CC;</li>
+</ul>
 
                                 
                                 </section>
@@ -557,12 +566,12 @@ let cc = { ...aa, ...bb }
 
             
                 
-                <a href="object-keys.html" class="navigation navigation-prev " aria-label="Previous page: Object.keys 如何用？">
+                <a href="nodejs-project.html" class="navigation navigation-prev " aria-label="Previous page: 如何创建一个 Nodejs 项目？">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="es-stage.html" class="navigation navigation-next " aria-label="Next page: E6/ES7/ES8/Stage0/ES2015/ES2017 都是什么？">
+                <a href="react-hello-world.html" class="navigation navigation-next " aria-label="Next page: 如何创建一个 React 的 Hello World">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -573,7 +582,7 @@ let cc = { ...aa, ...bb }
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"什么是对象展开运算符？","level":"1.21","depth":1,"next":{"title":"E6/ES7/ES8/Stage0/ES2015/ES2017 都是什么？","level":"1.22","depth":1,"path":"faq/es-stage.md","ref":"./faq/es-stage.md","articles":[]},"previous":{"title":"Object.keys 如何用？","level":"1.20","depth":1,"path":"faq/object-keys.md","ref":"./faq/object-keys.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/object-spread.md","mtime":"2017-09-01T02:55:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-01T08:08:33.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create-react-app 是什么？","level":"1.27","depth":1,"next":{"title":"如何创建一个 React 的 Hello World","level":"1.28","depth":1,"path":"faq/react-hello-world.md","ref":"./faq/react-hello-world.md","articles":[]},"previous":{"title":"如何创建一个 Nodejs 项目？","level":"1.26","depth":1,"path":"faq/nodejs-project.md","ref":"./faq/nodejs-project.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/create-react-app.md","mtime":"2017-09-01T07:03:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-01T08:08:33.360Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
