@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>super() 是干嘛的？ · GitBook</title>
+        <title>E6/ES7/ES8/Stage0/ES2015/ES2017 都是什么？ · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="es6-module.html" />
     
-    
-    <link rel="prev" href="class-inheritance.html" />
+    <link rel="prev" href="object-spread.html" />
     
 
     </head>
@@ -193,7 +191,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9" data-path="super.html">
+        <li class="chapter " data-level="1.9" data-path="super.html">
             
                 <a href="super.html">
             
@@ -362,7 +360,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.22" data-path="es-stage.html">
+        <li class="chapter active" data-level="1.22" data-path="es-stage.html">
             
                 <a href="es-stage.html">
             
@@ -405,7 +403,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >super() 是干嘛的？</a>
+        <a href=".." >E6/ES7/ES8/Stage0/ES2015/ES2017 都是什么？</a>
     </h1>
 </div>
 
@@ -420,36 +418,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="super-&#x65B9;&#x6CD5;&#x5728;&#x7C7B;&#x7EE7;&#x627F;&#x4E2D;&#x7684;&#x4F5C;&#x7528;">super() &#x65B9;&#x6CD5;&#x5728;&#x7C7B;&#x7EE7;&#x627F;&#x4E2D;&#x7684;&#x4F5C;&#x7528;</h3>
-<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x6765;&#x770B;&#xFF0C;&#x65E2;&#x7136;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x88AB;&#x7EE7;&#x627F;&#xFF0C;&#x90A3;&#x4E48;&#x5C5E;&#x6027;&#x5F53;&#x7136;&#x4E5F;&#x5E94;&#x8BE5;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x7EE7;&#x627F;&#x7684;&#x3002;</p>
-<pre><code>class Person {
-  constructor() {
-    this.weight = &quot;around 100kg&quot;;
-    this.height = &quot;around 170cm&quot;;
-  }
-}
-class Men extends Person {
-  constructor() {
-    super();
-    this.gender = &quot;Male&quot;;
-  }
-}
-
-let peter = new Men;
-console.log(peter.weight);
-</code></pre><p>&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709; super() &#x8C03;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x5B50;&#x7C7B;&#x4E2D;&#x5C31;&#x4E0D;&#x5141;&#x8BB8;&#x4F7F;&#x7528; this &#xFF0C;&#x62A5;&#x9519;&#x4FE1;&#x606F;&#x662F;</p>
-<pre><code>repl: &apos;this&apos; is not allowed before super()
-   8 |   constructor() {
-   9 |     // super();
-&gt; 10 |     this.gender = &quot;Male&quot;;
-     |     ^
-  11 |   }
-  12 | }
-</code></pre><p>&#x90A3;&#x4E48;&#xFF0C;super() &#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
-<p>&#x7B54;&#x6848;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#x7684;&#xFF1A;&#x5B50;&#x7C7B;&#x7684; this &#x662F;&#x57FA;&#x4E8E;&#x7236;&#x7C7B;&#x7684; this &#x7684;&#xFF08;&#x5148;&#x521B;&#x5EFA;&#x7236;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5728;&#x4E0A;&#x9762;&#x8FDB;&#x884C;&#x589E;&#x52A0;&#xFF09;
-&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;&#x7236;&#x7C7B;&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B50;&#x7C7B;&#x662F;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x3002;&#x800C; super() &#x6307;&#x7684;&#x5C31;&#x662F;&#x7236;&#x7C7B;&#x7684;
-constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#xFF0C;&#x95EE;&#x9898;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#x3002;</p>
-<p>&#x7ECF;&#x9A8C;&#x5C31;&#x662F;&#xFF1A;&#x5B50;&#x7C7B;&#x7684; constructor() &#x4E2D;&#x5FC5;&#x987B;&#x5148;&#x547C;&#x53EB; super() &#xFF0C;&#x7136;&#x540E;&#x624D;&#x80FD;&#x4F7F;&#x7528; this &#x3002;</p>
+                                <p>&#x804A;&#x804A;&#x6BD4;&#x8F83;&#x6DF7;&#x4E71;&#x7684; JS &#x7248;&#x672C;&#x547D;&#x540D;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x628A;&#x8001;&#x7248;&#x672C;&#x7684; JS &#x53EB; ES5&#xFF0C;&#x628A;&#x65B0;&#x7248;&#x672C;&#x7684; JS &#x53EB; ES6 &#x3002;&#x8FD9;&#x4E2A;&#x53EB;&#x6CD5;&#x4E00;&#x76F4;&#x5230;&#x4ECA;&#x5929;&#xFF08;2017&#x5E74;&#xFF09;&#x4E5F;&#x4F9D;&#x7136;&#x662F;&#x6700;&#x6D41;&#x884C;&#x7684;&#x53EB;&#x6CD5;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x53EB;&#x6CD5;&#x5176;&#x5B9E;&#x5B98;&#x65B9;&#x65E9;&#x5DF2;&#x7ECF;&#x53D6;&#x6D88;&#x4E86;&#x3002;</p>
+<p>&#x5B98;&#x65B9;&#x5728; 2015&#x5E74;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B9A;&#x7A3F;&#x4E86;&#x4E00;&#x4E0B; ES &#x6807;&#x51C6;&#xFF0C;&#x540C;&#x65F6;&#x5B98;&#x65B9;&#x7ED9;&#x7684;&#x540D;&#x5B57;&#x662F; ES2015 &#xFF0C;&#x540C;&#x65F6; JS &#x5B98;&#x65B9;&#x51B3;&#x5B9A;&#x653E;&#x5F03;&#x4F7F;&#x7528; ES6/ES7 &#x8FD9;&#x79CD;&#x53EB;&#x6CD5;&#xFF0C;&#x800C;&#x6BCF;&#x5E74;&#x63A8;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7248;&#x672C;&#x7684; JS &#x6807;&#x51C6;&#xFF0C;&#x5206;&#x522B;&#x53EB;&#x505A;&#xFF0C;ES2015, ES2016, ES2017 &#xFF0C;&#x4F46;&#x662F;&#x4E1A;&#x754C;&#x4E5F;&#x6709;&#x4E00;&#x79CD;&#x5BF9;&#x5E94;&#xFF1A;</p>
+<ul>
+<li>ES6 === ES2015</li>
+<li>ES7 === ES2016</li>
+<li>ES8 === ES2017</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x6240;&#x8C13;&#x7684; ES7 &#x5C31;&#x662F;,2016&#x5E74;&#x5B9A;&#x7A3F;&#x7684; ES &#x6807;&#x51C6;&#x3002;</p>
+<h3 id="stage03">Stage0~3</h3>
+<p>&#x8FD9;&#x4E2A;&#x662F;<strong>&#x8BA8;&#x8BBA;&#x9636;&#x6BB5;</strong>&#xFF0C;&#x6700;&#x65B0;&#x7684; JS &#x7279;&#x6027;&#x80AF;&#x5B9A;&#x662F;&#x4E0D;&#x4F1A;&#x5B9A;&#x7A3F;&#x5230;&#x771F;&#x6B63;&#x7684; ES &#x6807;&#x51C6;&#x4E2D;&#x7684;&#xFF0C;&#x5B83;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;&#x56DB;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x8BA8;&#x8BBA;&#xFF0C;&#x624D;&#x80FD;&#x6700;&#x7EC8;&#x5B9A;&#x7A3F;&#x5230; ES &#x4E2D;&#x3002;&#x5176;&#x4E2D; Stage0 &#x662F;&#x6700;&#x521D;&#x9636;&#x6BB5;&#xFF0C;&#x968F;&#x7740; Stage &#x7684;&#x9012;&#x589E;&#xFF0C;&#x8BA4;&#x4E3A;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x5C31;&#x8D8A;&#x6765;&#x8D8A;&#x6210;&#x719F;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;<a href="https://github.com/tc39/proposal-object-rest-spread" target="_blank">&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;</a> &#xFF0C;&#x76EE;&#x524D;&#x5904;&#x4E8E; Stage3 &#x8BA8;&#x8BBA;&#x9636;&#x6BB5;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x5B83;&#x65E2;&#x4E0D;&#x5C5E;&#x4E8E; ES6 &#x4E5F;&#x4E0D;&#x5C5E;&#x4E8E; ES7 &#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x6CA1;&#x5B9A;&#x7A3F;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x5176;&#x5B9E;&#x4E5F;&#x88AB;&#x73AF;&#x5883;&#x652F;&#x6301;&#x4E86;&#x3002;&#x4F8B;&#x5982;&#xFF0C;node v8.4.0 &#x4E2D;&#x5C31;&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x4E86;&#x5BF9;&#x8C61;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;&#x3002;&#x5176;&#x4ED6;&#x7684;&#x5F88;&#x591A;&#x6CA1;&#x6709;&#x771F;&#x6B63;&#x8FDB;&#x6807;&#x51C6;&#x7684; JS &#x7279;&#x6027;&#x5176;&#x5B9E;&#x4E5F;&#x6216;&#x591A;&#x6216;&#x5C11;&#x7684;&#x88AB;&#x5404;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;&#x4E86;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x73AF;&#x5883;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x8BA8;&#x8BBA;&#x4E2D;&#x7279;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Babel &#x7F16;&#x8BD1;&#x540E;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#x3002;</p>
 
                                 
                                 </section>
@@ -477,14 +459,10 @@ constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&
 
             
                 
-                <a href="class-inheritance.html" class="navigation navigation-prev " aria-label="Previous page: 如何使用类的继承？">
+                <a href="object-spread.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 什么是对象展开运算符？">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="es6-module.html" class="navigation navigation-next " aria-label="Next page: ES6 模块怎么用？">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -493,7 +471,7 @@ constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"super() 是干嘛的？","level":"1.9","depth":1,"next":{"title":"ES6 模块怎么用？","level":"1.10","depth":1,"path":"faq/es6-module.md","ref":"./faq/es6-module.md","articles":[]},"previous":{"title":"如何使用类的继承？","level":"1.8","depth":1,"path":"faq/class-inheritance.md","ref":"./faq/class-inheritance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/super.md","mtime":"2017-08-31T06:26:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-01T03:20:16.670Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"E6/ES7/ES8/Stage0/ES2015/ES2017 都是什么？","level":"1.22","depth":1,"previous":{"title":"什么是对象展开运算符？","level":"1.21","depth":1,"path":"faq/object-spread.md","ref":"./faq/object-spread.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/es-stage.md","mtime":"2017-09-01T03:19:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-01T03:20:16.670Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
