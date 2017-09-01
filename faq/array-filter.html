@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="object-assign.md" />
+    <link rel="next" href="object-assign.html" />
     
     
     <link rel="prev" href="array-map.html" />
@@ -310,9 +310,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" data-path="object-assign.md">
+        <li class="chapter " data-level="1.18" data-path="object-assign.html">
             
-                <span>
+                <a href="object-assign.html">
             
                     
                     如何使用 Object.assign ？
@@ -372,7 +372,7 @@
 <h3 id="mdn-&#x5B98;&#x65B9;&#x5B9A;&#x4E49;">MDN &#x5B98;&#x65B9;&#x5B9A;&#x4E49;</h3>
 <p>&gt;
 The filter() method creates a new array with all elements that pass the test implemented by the provided function.</p>
-<p>&#x7FFB;&#x8BD1;&#xFF1A;filter() &#x65B9;&#x6CD5;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7531;&#x7B26;&#x5408;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x6D4B;&#x8BD5;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x7FFB;&#x8BD1;&#xFF1A;filter() &#x65B9;&#x6CD5;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7531;&#x7B26;&#x5408;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x6D4B;&#x8BD5;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x3002;</p>
 <h3 id="&#x6253;&#x602A;">&#x6253;&#x602A;</h3>
 <p>&#x6709;&#x6570;&#x7EC4;</p>
 <pre><code>let a = [3, 4, 21, 11]
@@ -383,6 +383,12 @@ The filter() method creates a new array with all elements that pass the test imp
 <span class="hljs-keyword">let</span> b = a.filter(t =&gt; t &gt; <span class="hljs-number">10</span>)
 <span class="hljs-built_in">console</span>.log(b)
 </code></pre>
+<h3 id="&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;">&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> words = [<span class="hljs-string">&quot;spray&quot;</span>, <span class="hljs-string">&quot;limit&quot;</span>, <span class="hljs-string">&quot;elite&quot;</span>, <span class="hljs-string">&quot;exuberant&quot;</span>, <span class="hljs-string">&quot;destruction&quot;</span>, <span class="hljs-string">&quot;present&quot;</span>]
+
+<span class="hljs-keyword">const</span> longWords = words.filter(word =&gt; word.length &gt; <span class="hljs-number">6</span>)
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4F1A;&#x8F93;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BCD;&#x6570;&#x5927;&#x4E8E;6&#x7684;&#x5355;&#x8BCD;&#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;&#x3002;</p>
 
                                 
                                 </section>
@@ -415,7 +421,7 @@ The filter() method creates a new array with all elements that pass the test imp
                 </a>
                 
                 
-                <a href="object-assign.md" class="navigation navigation-next " aria-label="Next page: 如何使用 Object.assign ？">
+                <a href="object-assign.html" class="navigation navigation-next " aria-label="Next page: 如何使用 Object.assign ？">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -426,7 +432,7 @@ The filter() method creates a new array with all elements that pass the test imp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数组的 filter 方法如何用？","level":"1.17","depth":1,"next":{"title":"如何使用 Object.assign ？","level":"1.18","depth":1,"path":"faq/object-assign.md","ref":"./faq/object-assign.md","articles":[]},"previous":{"title":"数组的 map 方法","level":"1.16","depth":1,"path":"faq/array-map.md","ref":"./faq/array-map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/array-filter.md","mtime":"2017-09-01T01:48:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-01T01:48:15.717Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数组的 filter 方法如何用？","level":"1.17","depth":1,"next":{"title":"如何使用 Object.assign ？","level":"1.18","depth":1,"path":"faq/object-assign.md","ref":"./faq/object-assign.md","articles":[]},"previous":{"title":"数组的 map 方法","level":"1.16","depth":1,"path":"faq/array-map.md","ref":"./faq/array-map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/array-filter.md","mtime":"2017-09-01T01:53:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-01T01:53:50.694Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
