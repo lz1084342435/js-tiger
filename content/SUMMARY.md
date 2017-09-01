@@ -30,3 +30,4 @@
 - [React 组件是什么？](./faq/react-component.md)
 - [组件中的 JSX 语法怎么用？](./faq/react-jsx.md)
 - [项目如何进行组件化拆分？](./faq/many-components.md)
+- [常见运行错误有哪些？](./faq/common-errors.md)
