@@ -3,14 +3,13 @@ Object.assign 方法用于对象的合并，将源对象（source）的所有可
 
 ### 例子
 
-
 ```js
-var target = { a: 1 };
+var target = { a: 1 }
 
-var source1 = { b: 2 };
-var source2 = { c: 3 };
+var source1 = { b: 2 }
+var source2 = { c: 3 }
 
-Object.assign(target, source1, source2);
+Object.assign(target, source1, source2)
 console.log(target) // {a:1, b:2, c:3}
 ```
 
@@ -19,11 +18,15 @@ console.log(target) // {a:1, b:2, c:3}
 但是如何合并过程中有重复的 key （键），那么后者会覆盖前者。
 
 ```js
-var target = { a: 1 };
+var target = { a: 1 }
 
-var source1 = { b: 2, c: 2 };
-var source2 = { c: 3 };
+var source1 = { b: 2, c: 2 }
+var source2 = { c: 3 }
 
-Object.assign(target, source1, source2);
+Object.assign(target, source1, source2)
 console.log(target) // {a:1, b:2, c:3}
 ```
+
+### 类似接口
+
+**对象展开运算符** 跟 Object.assign 作用类似。

@@ -18,3 +18,6 @@
 - [数组的 filter 方法如何用？](./faq/array-filter.md)
 - [如何将数组逆序（ reverse ）输出？](./faq/array-reverse.md)
 - [如何使用 Object.assign ？](./faq/object-assign.md)
+- [Object.keys 如何用？](./faq/object-keys.md)
+- [什么是对象展开运算符？](./faq/object-spread.md)
+- [E6/ES7/ES8/Stage0/ES2015/ES2017 都是什么？](./faq/es-stage.md)
