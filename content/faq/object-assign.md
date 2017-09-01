@@ -27,6 +27,16 @@ Object.assign(target, source1, source2)
 console.log(target) // {a:1, b:2, c:3}
 ```
 
+### 拷贝一个对象
+
+Object.assign 经常用来 copy 一个对象。
+
+``
+let obj = { a: 1 }
+let objCopy = Object.assign({}, obj)
+console.log(objCopy)
+```
+
 ### 类似接口
 
 **对象展开运算符** 跟 Object.assign 作用类似。
