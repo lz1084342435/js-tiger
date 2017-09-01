@@ -35,8 +35,6 @@
   - [安装 nodejs](./linux/9-install-node.md)
   - [初试 webpack](./linux/10-webpack.md)
 
-* ES6 和面向对象编程
-  - [Hello ES6](./es6/es6-intro.md)
 
 * React 前端框架
 

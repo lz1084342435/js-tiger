@@ -1,4 +1,3 @@
-### 问：什么是 nodejs ？
 
 nodejs 是 many things 。
 
@@ -29,3 +28,9 @@ node index.js
 一个 web 项目，都有前端代码和后端组成，前台代码都是用 html+css+js 来写的，但是传统上由于本地机器不能运行 JS ，所以后台代码是不能用 JS 来写的，于是我们还要学另外一种语言才能写 Web 程序，通常用来写 Web 后台程序的语言有：PHP , Java ，C# ，Python ，Ruby ，Go ...
 
 所以 Nodejs 的意义就在于，现在开发者终于只用学一种语言，就可以同时进行前端和后端的开发了。
+
+### NVM
+
+NVM 的全称是**Node 版本管理器**，可以用来安装和管理多个 nodejs 版本。
+
+注：nodejs 安装方式虽多，但是用 nvm 安装是最为专业的一种。

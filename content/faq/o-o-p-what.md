@@ -1,34 +1,3 @@
----
-title: 面向对象，来了
----
-
-### 进入 ES6 的实质性学习
-
-参考书：http://es6.ruanyifeng.com/
-
-ES6 的很多新特性，就是在原有的 ES5 基础上添加了**语法糖** ，也就是用 ES5 可实现
-但是如果用 ES6 的语法来实现，就会看起来代码更简介明了。关于这些小的语法糖，Peter 的
-建议是不用一次都学会，因为用老的 ES5 语法（写到 ES6 ）项目中，也是完全合法。
-
-具体就是指书中的这些章节：
-
-- let和const命令
-- 变量的解构赋值
-- 字符串的扩展
-- 正则的扩展
-- 数值的扩展
-- 数组的扩展
-- 函数的扩展
-- 对象的扩展
-
-这些可以逐步学习，逐步用到项目中。但是，对于我们后续要开始的 Nodejs + Reactjs
-这个方向的学习，目前必须要掌握的主要是：
-
-- 模块化开发，import/export
-- 面向对象编程，class 关键字的使用
-
-其实这两个知识点也是紧密相关的，我们先从面向对象编程开始学起。
-
 ### Object Oriented Programming 面向对象编程
 
 参考：http://haoqicat.com/o-o-js
@@ -38,19 +7,16 @@ ES6 的很多新特性，就是在原有的 ES5 基础上添加了**语法糖** 
 
 ### OOP: 类和对象
 
-类（ class ）是多个对象（ object ）的抽象，对象是类的实例。人，就可以是一个类
-，比如人可以有名字，身高这些属性，但是没有具体值，所以说类可以理解为一个空的木桶。
-对象是类的实例，具体的一个人，就可以叫做
+类（ class ）是多个对象（ object ）的抽象，对象是类的实例。人，就可以是一个类，比如人可以有名字，身高这些属性，但是没有具体值，所以说类可以理解为一个空的木桶。 对象是类的实例，具体的一个人，就可以叫做
 
 >人这个类的一个对象
 
-例如，Peter 就可以是人这个类的一个对象。对象的特点是有具体数据的，例如，给定
-一个人 Peter ，那我们可以得到他的具体的姓名，身高的具体值。所以对象可以理解为
-木桶中装的水。
+例如，Peter 就可以是人这个类的一个对象。对象的特点是有具体数据的，例如，给定一个人 Peter ，那我们可以得到他的具体的姓名，身高的具体值。所以对象可以理解为木桶中装的水。
 
 
-下面用代码的形式来表述一下类和对象的关系。在面向对象编程的过程中，我们都是先定义
-类
+### 动手
+
+下面用代码的形式来表述一下类和对象的关系。在面向对象编程的过程中，我们都是先定义类
 
 ```
 class Person {
@@ -60,7 +26,7 @@ class Person {
 }
 ```
 
-上面 name 就是一个**属性** ，constructor() 是一个方法。
+class 关键字是 ES6 的新特性。上面 name 就是一个**属性** ，constructor() 是一个方法。
 
 
 有了类之后，我们就可以实例化出，无穷多个对象了
@@ -69,14 +35,14 @@ class Person {
 let peter = new Person('happypeter');
 
 console.log(peter.name);
-  ```
+```
 
-上面 `new` 是一个关键字，意思是“新建一个该类的实例” 。得到的 `peter` 就是
-一个对象，我们可以得到 peter 中的 name 的具体值。
+上面 `new` 是一个关键字，意思是“新建一个该类的实例” 。得到的 `peter` 就是一个对象（就是类的实例），我们可以得到 peter 中的 name 的具体值。
 
-下面我们对一些不太好理解的点，再详细解释一下：
 
 ### constructor 构造函数
+
+构造函数也是面向对象编程的一个术语。
 
 一个类里面可以定义多个方法，如下
 
@@ -95,6 +61,8 @@ let peter = new Person;
 上面 `constructor` 是一个特殊的方法（拼写是严格的），它的特点是在对象
 被创建的时候，也就 `let peter = new Person` 这一句执行的时候，自动被
 呼叫的一个方法。而其他的方法，都不会被自动执行。
+
+注： constructor 的英文本意：构造者。
 
 同时，constructor 也可以接受参数，如下
 
@@ -131,9 +99,10 @@ let peter = new Person;
 peter.sayHello('lily');
 ```
 
+
 ### this 关键字
 
-this 指的就是当然对象
+this 指的就是当前对象
 
 ```
 class Person {
@@ -167,10 +136,32 @@ peter.sayName();
 
 这样 sayName() 函数中就可以拿到 this.name 的值了。
 
-### es6入门
 
-- let,const
-- 解构赋值
-- 箭头函数
-- 字符串模板
-- Default + Rest + Spread
+### 出一个题
+
+我们来构造一个类，叫 Dog 。然后 new 一个对象，叫 doudou ，要求
+
+```
+doudou.sayName()
+# 输出 doudou
+```
+
+运行环境使用 nodejs 。
+
+答案是：
+
+```js
+class Dog {
+  constructor (name) {
+    this.name = name
+  }
+  sayHello () {
+    console.log(this.name)
+  }
+}
+
+let doudou = new Dog('doudou')
+let feifei = new Dog('feifei')
+doudou.sayHello()
+feifei.sayHello()
+```
