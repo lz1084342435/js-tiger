@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>CSS 的组织 · GitBook</title>
+        <title>this 的常见使用方式是？ · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="common-errors.html" />
+    <link rel="next" href="class-inheritance.html" />
     
     
-    <link rel="prev" href="many-components.html" />
+    <link rel="prev" href="o-o-p-what.html" />
     
 
     </head>
@@ -180,7 +180,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="this.html">
+        <li class="chapter active" data-level="1.8" data-path="this.html">
             
                 <a href="this.html">
             
@@ -505,7 +505,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.33" data-path="css-org.html">
+        <li class="chapter " data-level="1.33" data-path="css-org.html">
             
                 <a href="css-org.html">
             
@@ -613,7 +613,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >CSS 的组织</a>
+        <a href=".." >this 的常见使用方式是？</a>
     </h1>
 </div>
 
@@ -628,43 +628,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x5728; React &#x7EC4;&#x4EF6;&#x5316;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;CSS &#x7684;&#x4E66;&#x5199;&#x8DDF;&#x4F20;&#x7EDF;&#x601D;&#x8DEF;&#x5DEE;&#x522B;&#x5F88;&#x5927;&#xFF1A;</p>
-<ul>
-<li>&#x57FA;&#x672C;&#x4E0D;&#x7528;&#x5168;&#x5C40; CSS</li>
-<li>&#x57FA;&#x672C;&#x4E0D;&#x5355;&#x72EC;&#x590D;&#x7528; CSS</li>
-<li>&#x800C;&#x8981;&#x8DDF; html &#x4E00;&#x8D77;&#x590D;&#x7528;&#xFF08;&#x4EE5;&#x7EC4;&#x4EF6;&#x4E3A;&#x5355;&#x4F4D;&#x590D;&#x7528;&#xFF09;</li>
-<li>&#x6574;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;class &#x540D;&#x4E0D;&#x91CD;&#x590D;</li>
-</ul>
-<p>&#x6458;&#x81EA;&#xFF1A;<a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#post-processing-css" target="_blank">https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#post-processing-css</a></p>
-<blockquote>
-<p>Generally, we recommend that you don&#x2019;t reuse the same CSS classes across different components.</p>
-<p>&#x603B;&#x4F53;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x518D;&#x4E0D;&#x540C;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684; CSS &#x7684; class &#x540D;&#x3002;</p>
-</blockquote>
-<h3 id="&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x5904;&#x7406;">&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x5904;&#x7406;</h3>
-<p>&#x6CE8;&#x610F;&#xFF0C;&#x5728; create-react-app &#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x4EFB;&#x610F; css &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x90FD;&#x662F;&#x5168;&#x5C40;&#x6709;&#x6548;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x5B9A;&#x8981;&#x4E3B;&#x8981;&#x907F;&#x514D; class &#x4F7F;&#x7528;&#x91CD;&#x590D;&#x3002;</p>
-<p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x6E05;&#x5355;&#xFF1A;</p>
-<ul>
-<li>&#x5168;&#x5C40; CSS &#x57FA;&#x672C;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;<ul>
-<li>a: text-decoration, p: margin: 0, h1: margin: 0 &#x8FD9;&#x6837;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x8FD9;&#x6837;&#x7684;<strong>&#x91CD;&#x7F6E;&#x6027;&#x4EE3;&#x7801;</strong> &#x4E0D;&#x8981;&#x7528;&#x3002;&#x76F4;&#x63A5;&#x5199;&#x5230;&#x5404;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684; css &#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x91CD;&#x590D;&#xFF0C;&#x4F46;&#x662F;&#x4EE3;&#x7801;&#x4E5F;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x7684;&#x6E05;&#x6670;&#x3002;</li>
-</ul>
-</li>
-<li>&#x5168;&#x5C40; CSS &#x4E2D;&#x4E0D;&#x597D;&#x5E72;&#x6389;&#x7684;&#xFF0C;&#x57FA;&#x672C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5C31;&#x662F; type-face &#x5B9A;&#x4E49;&#xFF08;&#x4E2D;&#x6587;&#x7F51;&#x7AD9;&#x5F88;&#x5C11;&#x7528;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x7528;&#x5230;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FD8;&#x662F;&#x5199;&#x5230;&#x5168;&#x5C40; CSS &#x4E2D;&#x7684;&#x3002;</li>
-<li>body {margin: 0} &#x76F4;&#x63A5;&#x5199;&#x5230; index.html &#x4E2D;&#x7684; style &#x6807;&#x7B7E;&#x91CC;&#x5373;&#x53EF;</li>
-</ul>
-<p>&#x603B;&#x4E4B;&#xFF0C;&#x9664;&#x975E;&#x6781;&#x4E2A;&#x522B;&#x60C5;&#x51B5;&#xFF0C;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x5168;&#x5C40; CSS &#x3002;</p>
-<h3 id="&#x6587;&#x4EF6;&#x7EC4;&#x7EC7;&#x89C4;&#x8303;">&#x6587;&#x4EF6;&#x7EC4;&#x7EC7;&#x89C4;&#x8303;</h3>
-<p>&#x5230; components &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x521B;&#x5EFA;</p>
-<pre><code>mkdir CommentBox/
-</code></pre><p>&#x91CC;&#x9762;&#x653E;&#x7EC4;&#x4EF6;&#x6587;&#x4EF6;&#xFF0C;CommentBox.js &#x548C;&#x5BF9;&#x5E94;&#x7684; css &#x6587;&#x4EF6;&#xFF0C;comment-box.css</p>
-<p>&#x603B;&#x4E4B;</p>
-<ul>
-<li>&#x7EC4;&#x4EF6;&#x6587;&#x4EF6;&#x540D;&#x7528;&#x9A86;&#x9A7C;&#x5B57;&#x4F53;&#xFF0C;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;</li>
-<li>&#x5BF9;&#x5E94;&#x7684; css &#x6587;&#x4EF6;&#xFF0C;&#x5168;&#x90E8;&#x5C0F;&#x5199;&#xFF0C;&#x4E2D;&#x5212;&#x7EBF;&#x9694;&#x5F00;&#x3002;</li>
-</ul>
-<h3 id="&#x89C6;&#x9891;">&#x89C6;&#x9891;</h3>
-<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
-<p><a href="https://github.com/happypeter/dj-demos/tree/master/many-components" target="_blank">https://github.com/happypeter/dj-demos/tree/master/many-components</a></p>
+                                <h1 id="this-&#x7684;&#x5E38;&#x89C1;&#x4F7F;&#x7528;">this &#x7684;&#x5E38;&#x89C1;&#x4F7F;&#x7528;</h1>
+<p>&#x5982;&#x679C;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x4E2A; class</p>
+<pre><code>class Person {
+  name = &apos;peter&apos;
 
+  sayHello () {
+    console.log(&apos;hello&apos;)
+  }
+}
+</code></pre><p>&#x90A3;&#x4E48;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x60F3;&#x5728; Person &#x5185;&#x90E8;&#x7684;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528; sayHello &#x6216;&#x8005; name &#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x662F;&#x4E0D;&#x884C;&#x7684;</p>
+<pre><code>class Person {
+  name = &apos;peter&apos;
+
+  sayHello () {
+    console.log(&apos;hello&apos;)
+  }
+
+  render () {
+    sayHello()
+    console.log(name)
+  }
+}
+</code></pre><p>&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x8BF4; sayHello &#x548C; name &#x90FD;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x3002;</p>
+<p>&#x6DFB;&#x52A0; this &#x5173;&#x952E;&#x5B57;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</p>
+<pre><code>class Person {
+  name = &apos;peter&apos;
+
+  sayHello () {
+    console.log(&apos;hello&apos;)
+  }
+
+  render () {
+    this.sayHello()
+    console.log(this.name)
+  }
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -691,12 +692,12 @@
 
             
                 
-                <a href="many-components.html" class="navigation navigation-prev " aria-label="Previous page: 项目如何进行组件化拆分？">
+                <a href="o-o-p-what.html" class="navigation navigation-prev " aria-label="Previous page: 什么是面向对象编程？">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="common-errors.html" class="navigation navigation-next " aria-label="Next page: 常见运行错误有哪些？">
+                <a href="class-inheritance.html" class="navigation navigation-next " aria-label="Next page: 如何使用类的继承？">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -707,7 +708,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CSS 的组织","level":"1.33","depth":1,"next":{"title":"常见运行错误有哪些？","level":"1.34","depth":1,"path":"faq/common-errors.md","ref":"./faq/common-errors.md","articles":[]},"previous":{"title":"项目如何进行组件化拆分？","level":"1.32","depth":1,"path":"faq/many-components.md","ref":"./faq/many-components.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/css-org.md","mtime":"2017-09-04T02:35:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-04T06:20:25.132Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"this 的常见使用方式是？","level":"1.8","depth":1,"next":{"title":"如何使用类的继承？","level":"1.9","depth":1,"path":"faq/class-inheritance.md","ref":"./faq/class-inheritance.md","articles":[]},"previous":{"title":"什么是面向对象编程？","level":"1.7","depth":1,"path":"faq/o-o-p-what.md","ref":"./faq/o-o-p-what.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/this.md","mtime":"2017-09-04T06:20:12.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-04T06:20:25.132Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
