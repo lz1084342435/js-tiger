@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>模板字符串 · GitBook</title>
+        <title>组件内的列表和 key 如何使用？ · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="arrow-function.html" />
     
-    
-    <link rel="prev" href="destructuring.html" />
+    <link rel="prev" href="state.html" />
     
 
     </head>
@@ -258,7 +256,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.14" data-path="template-str.html">
+        <li class="chapter " data-level="1.14" data-path="template-str.html">
             
                 <a href="template-str.html">
             
@@ -622,7 +620,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.42" data-path="list-key.html">
+        <li class="chapter active" data-level="1.42" data-path="list-key.html">
             
                 <a href="list-key.html">
             
@@ -665,7 +663,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >模板字符串</a>
+        <a href=".." >组件内的列表和 key 如何使用？</a>
     </h1>
 </div>
 
@@ -680,18 +678,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x4EE5;&#x524D;&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6211;&#x4EEC;&#x7528; <code>+</code> &#xFF0C;&#x8BED;&#x53E5;&#x957F;&#xFF0C;&#x800C;&#x4E14;&#x603B;&#x662F;&#x5FD8;&#x5199;&#x7A7A;&#x683C;&#x3002;</p>
-<pre><code>const name = &apos;happypeter&apos;
-let str = &apos;My Name is &apos; + name
-</code></pre><p>&#x73B0;&#x5728;&#x6709;&#x4E86;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5C31;&#x975E;&#x5E38;&#x8212;&#x670D;&#x4E86;&#x3002;</p>
-<pre><code>const name = &apos;happypeter&apos;
-let str = `My Name
-  is ${name}`
-</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x5F15;&#x53F7;&#x4E0D;&#x662F;&#x5355;&#x5F15;&#x53F7;&#xFF0C;&#x800C;&#x662F;<strong>&#x5012;&#x5F15;&#x53F7;</strong> &#x3002;&#x5012;&#x5F15;&#x53F7;&#x91CC;&#x9762;&#x4E0D;&#x4EC5;&#x4EC5;&#x53EF;&#x4EE5;&#x5199;&#x53D8;&#x91CF;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x52A0;&#x6362;&#x884C;&#x3002;</p>
-<p>&#x53C2;&#x8003;&#xFF1A;</p>
-<ul>
-<li><a href="http://es6.ruanyifeng.com/#docs/string#&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;" target="_blank">http://es6.ruanyifeng.com/#docs/string#&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;</a></li>
-</ul>
+                                <pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+  state = {
+    comments: [
+      {
+        name: <span class="hljs-string">&apos;peter&apos;</span>,
+        text: <span class="hljs-string">&apos;&#x4F60;&#x597D;&apos;</span>
+      },
+      {
+        name: <span class="hljs-string">&apos;billie&apos;</span>,
+        text: <span class="hljs-string">&apos;Hi&apos;</span>
+      }
+    ]
+  }
+
+
+  render () {
+    <span class="hljs-keyword">const</span> list = <span class="hljs-keyword">this</span>.state.comments.map((item, i) =&gt; (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span>&gt;</span>{`${item.name}: ${item.text}`}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+    ))
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&apos;app&apos;</span>&gt;</span>
+        {list}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    )
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App
+</code></pre>
 
                                 
                                 </section>
@@ -719,14 +738,10 @@ let str = `My Name
 
             
                 
-                <a href="destructuring.html" class="navigation navigation-prev " aria-label="Previous page: 解构赋值是什么？">
+                <a href="state.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 什么是 state ？">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="arrow-function.html" class="navigation navigation-next " aria-label="Next page: 胖箭头函数">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -735,7 +750,7 @@ let str = `My Name
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"模板字符串","level":"1.14","depth":1,"next":{"title":"胖箭头函数","level":"1.15","depth":1,"path":"faq/arrow-function.md","ref":"./faq/arrow-function.md","articles":[]},"previous":{"title":"解构赋值是什么？","level":"1.13","depth":1,"path":"faq/destructuring.md","ref":"./faq/destructuring.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/template-str.md","mtime":"2017-08-31T08:25:56.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-04T08:57:08.807Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组件内的列表和 key 如何使用？","level":"1.42","depth":1,"previous":{"title":"什么是 state ？","level":"1.41","depth":1,"path":"faq/state.md","ref":"./faq/state.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/list-key.md","mtime":"2017-09-04T08:56:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-04T08:57:08.807Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
