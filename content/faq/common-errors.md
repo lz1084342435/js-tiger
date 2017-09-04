@@ -10,3 +10,5 @@
   - 这个是 create-react-app 特有错误，意思是”react 的脚本没找到“
   - 出现的原因是，对 create-react-app 创建的项目，进行了重命名操作
   - 解决方式：删除重做。
+- module not found: './xxx.css'
+  - 文件没找着。解决方法，检查路径和文件名有没有写错

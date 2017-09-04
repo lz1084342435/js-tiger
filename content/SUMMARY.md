@@ -40,3 +40,4 @@
 - [React 的事件响应怎么玩？](./faq/event.md)
 - [Atom 中如何 emment 补齐 JSX ？](./faq/jsx-complete.md)
 - [什么是 state ？](./faq/state.md)
+- [组件内的列表和 key 如何使用？](./faq/list-key.md)
