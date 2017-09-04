@@ -6,7 +6,9 @@ JSX 跟普通 html 的区别
 
 - 不能用 class ，而要用 className
 - jsx 中也可以去插入其他的 React 组件
-- 拥有 html 没有的一些事件函数，例如 onClick/onSubmit
+- 拥有 html 没有的一些事件，例如 onClick/onSubmit
+- JSX 中还可以嵌入 JS 代码，但是需要包裹在大括号中
+
 
 具体来说，一个 React 组件中 render 的 return 语句中包裹的内容就是 JSX ，例如：
 
