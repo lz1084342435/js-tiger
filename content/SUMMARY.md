@@ -38,3 +38,5 @@
 - [组件 children 是什么？](./faq/children.md)
 - [翻转课堂尝试](./faq/flip.md)
 - [React 的事件响应怎么玩？](./faq/event.md)
+- [Atom 中如何 emment 补齐 JSX ？](./faq/jsx-complete.md)
+- [什么是 state ？](./faq/state.md)

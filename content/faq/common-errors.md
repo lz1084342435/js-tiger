@@ -1,2 +1,12 @@
 - `xxx` is not defined
   - xxx 这个变量没有被定义
+- Failed to Compile
+  - 编译失败
+- No such file or directory
+  - 没有这个文件或者文件夹
+- can not resolve '../app.css'
+  - 找不到 app.css 这个文件
+- react-scripts not found
+  - 这个是 create-react-app 特有错误，意思是”react 的脚本没找到“
+  - 出现的原因是，对 create-react-app 创建的项目，进行了重命名操作
+  - 解决方式：删除重做。
