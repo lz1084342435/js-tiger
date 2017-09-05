@@ -20,6 +20,8 @@ React 组件中的事件和 html 页面中其实很像，只不过是有一点�
 <form onSumit={this.xxx}
 ```
 
+上面 onClick 事件被触发的时候，会执行 handleClick 函数，这个函数就叫**事件响应函数** 。
+
 ### 例子
 
 ```js

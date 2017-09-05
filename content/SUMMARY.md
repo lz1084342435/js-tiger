@@ -40,4 +40,8 @@
 - [React 的事件响应怎么玩？](./faq/event.md)
 - [Atom 中如何 emment 补齐 JSX ？](./faq/jsx-complete.md)
 - [什么是 state ？](./faq/state.md)
+- [state 案例：div 变色之笨办法](./faq/state-color-dumb.md)
+- [state 案例：div 变色之聪明办法](./faq/state-color-smart.md)
+- [与运算符的使用方式是？](./faq/and.md)
 - [组件内的列表和 key 如何使用？](./faq/list-key.md)
+- [如何操作列表上的一个元素？](./faq/list-mani.md)
