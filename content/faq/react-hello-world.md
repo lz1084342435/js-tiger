@@ -11,7 +11,7 @@ npm start
 
 就可以启动这个项目了。
 
-### 把项目删成一个 Hello World
+### 一个 Hello World
 
 一个最简单的 React 项目，包含下面几个文件
 
@@ -48,11 +48,7 @@ public/index.html
 
 ```html
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>React App</title>
-  </head>
+<html>
   <body>
     <div id="root"></div>
   </body>
@@ -61,7 +57,7 @@ public/index.html
 
 ### 介绍一下上面三个文件的作用
 
-index.html 文件中基本就是空的，其中之保留一个 div ，目的是用来挂载 React 组件。
+index.html 文件中基本就是空的，关键就是保留一个 div ，目的是用来挂载 React 组件。
 
 App.js 文件是一个 **React 组件** （ component ）。未来会成为整个程序的主体。
 

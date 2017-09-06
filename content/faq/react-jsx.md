@@ -27,6 +27,29 @@ JSX 跟普通 html 的区别
 ```
 
 
+### JSX 代码中如何添加注释
+
+```
+return (
+  <div>
+    {name}
+  {/* my code */}
+  </div>
+)
+```
+
+必须是上面这种形式，不能写成
+
+```
+return (
+  <div>
+    {name}
+  // my code
+  </div>
+)
+```
+
+
 ### 全部代码
 
 

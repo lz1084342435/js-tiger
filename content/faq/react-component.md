@@ -11,7 +11,7 @@
 import React, { Component } from 'react'
 ```
 
-一个 React 组件就是一个 class （当然也可以写成 function ），它的名字首字母**必须**大写，一般组件名就和它所在的文件名统一。
+一个 React 组件就是一个 class （另外一种形式是写成 function ），它的名字首字母**必须**大写，一般组件名就和它所在的文件名统一。
 
 组件内部可以写很多东西，但是必须要写的一个就是 render 函数，所以一个最简单的 React 组件，就要写成下面这样：
 
