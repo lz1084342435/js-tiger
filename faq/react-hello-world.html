@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>如何创建一个 React 的 Hello World · GitBook</title>
+        <title>React 的 Hello World 中都包含哪些要素？ · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -458,7 +458,7 @@
                 <a href="react-hello-world.html">
             
                     
-                    如何创建一个 React 的 Hello World
+                    React 的 Hello World 中都包含哪些要素？
             
                 </a>
             
@@ -687,7 +687,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.47" data-path="list-mani.html">
+        <li class="chapter " data-level="1.47" data-path="pass-handle.html">
+            
+                <a href="pass-handle.html">
+            
+                    
+                    如何向事件处理函数中穿参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="list-mani.html">
             
                 <a href="list-mani.html">
             
@@ -730,7 +743,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >如何创建一个 React 的 Hello World</a>
+        <a href=".." >React 的 Hello World 中都包含哪些要素？</a>
     </h1>
 </div>
 
@@ -750,7 +763,7 @@
 <p>&#x5230; create-react-app &#x5E2E;&#x6211;&#x4EEC;&#x751F;&#x6210;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x8FD0;&#x884C;</p>
 <pre><code>npm start
 </code></pre><p>&#x5C31;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x4E86;&#x3002;</p>
-<h3 id="&#x628A;&#x9879;&#x76EE;&#x5220;&#x6210;&#x4E00;&#x4E2A;-hello-world">&#x628A;&#x9879;&#x76EE;&#x5220;&#x6210;&#x4E00;&#x4E2A; Hello World</h3>
+<h3 id="&#x4E00;&#x4E2A;-hello-world">&#x4E00;&#x4E2A; Hello World</h3>
 <p>&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684; React &#x9879;&#x76EE;&#xFF0C;&#x5305;&#x542B;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;</p>
 <p>src/App.js</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
@@ -776,18 +789,14 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 </span></code></pre>
 <p>public/index.html</p>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>React App<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <h3 id="&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x4E0A;&#x9762;&#x4E09;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x7528;">&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x4E0A;&#x9762;&#x4E09;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x7528;</h3>
-<p>index.html &#x6587;&#x4EF6;&#x4E2D;&#x57FA;&#x672C;&#x5C31;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x5176;&#x4E2D;&#x4E4B;&#x4FDD;&#x7559;&#x4E00;&#x4E2A; div &#xFF0C;&#x76EE;&#x7684;&#x662F;&#x7528;&#x6765;&#x6302;&#x8F7D; React &#x7EC4;&#x4EF6;&#x3002;</p>
+<p>index.html &#x6587;&#x4EF6;&#x4E2D;&#x57FA;&#x672C;&#x5C31;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x5173;&#x952E;&#x5C31;&#x662F;&#x4FDD;&#x7559;&#x4E00;&#x4E2A; div &#xFF0C;&#x76EE;&#x7684;&#x662F;&#x7528;&#x6765;&#x6302;&#x8F7D; React &#x7EC4;&#x4EF6;&#x3002;</p>
 <p>App.js &#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A; <strong>React &#x7EC4;&#x4EF6;</strong> &#xFF08; component &#xFF09;&#x3002;&#x672A;&#x6765;&#x4F1A;&#x6210;&#x4E3A;&#x6574;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x4E3B;&#x4F53;&#x3002;</p>
 <p>index.js &#x4E2D;&#x4E3B;&#x8981;&#x662F;&#x4F7F;&#x7528; ReactDom &#x8FD9;&#x4E2A;&#x5305;&#xFF0C;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x628A; App.js &#x4E2D;&#x7684; react &#x7EC4;&#x4EF6;&#xFF0C;&#x6302;&#x5230; index.html &#x4E2D;&#x7684;&#x90A3;&#x4E2A;&#x552F;&#x4E00;&#x7684; div &#x4E4B;&#x4E0A;&#x3002;</p>
 
@@ -833,7 +842,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"如何创建一个 React 的 Hello World","level":"1.29","depth":1,"next":{"title":"React 组件是什么？","level":"1.30","depth":1,"path":"faq/react-component.md","ref":"./faq/react-component.md","articles":[]},"previous":{"title":"Create-react-app 是什么？","level":"1.28","depth":1,"path":"faq/create-react-app.md","ref":"./faq/create-react-app.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/react-hello-world.md","mtime":"2017-09-01T07:20:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-05T03:17:48.692Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React 的 Hello World 中都包含哪些要素？","level":"1.29","depth":1,"next":{"title":"React 组件是什么？","level":"1.30","depth":1,"path":"faq/react-component.md","ref":"./faq/react-component.md","articles":[]},"previous":{"title":"Create-react-app 是什么？","level":"1.28","depth":1,"path":"faq/create-react-app.md","ref":"./faq/create-react-app.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/react-hello-world.md","mtime":"2017-09-05T14:11:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-06T01:52:52.124Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
