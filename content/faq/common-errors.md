@@ -12,3 +12,6 @@
   - 解决方式：删除重做。
 - module not found: './xxx.css'
   - 文件没找着。解决方法，检查路径和文件名有没有写错
+- Syntax error: Expected corresponding tag for <Logo>
+  - 语法错误，期望 <Logo> 有自己的闭合标签
+- https://github.com/happypeter/dj-demos/issues/6
