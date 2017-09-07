@@ -874,6 +874,36 @@
                                 <section class="normal markdown-section">
                                 
                                 <p>&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x662F;&#x6309;&#x7167; create-react-app &#x7ED9;&#x7684;&#x63D0;&#x793A;&#x505A;&#x5373;&#x53EF;&#x3002;</p>
+<h3 id="&#x5177;&#x4F53;&#x6B65;&#x9AA4;">&#x5177;&#x4F53;&#x6B65;&#x9AA4;</h3>
+<p>&#x9996;&#x5148;&#x8FD0;&#x884C;</p>
+<pre><code>npm run build
+</code></pre><p>&#x6839;&#x636E;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#xFF0C;&#x6211;&#x9700;&#x8981;&#x5F80; package.json &#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;</p>
+<pre><code>  &quot;homepage&quot;: &quot;http://happypeter.github.io/ccc&quot;,
+</code></pre><p>&#x518D;&#x6B21;&#x8FD0;&#x884C; <code>npm run build</code>&#xFF0C;&#x6839;&#x636E;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#xFF0C;&#x5B89;&#x88C5; gh-pages &#x8FD9;&#x4E2A;&#x5305;</p>
+<pre><code>npm i gh-pages
+</code></pre><p>&#x7136;&#x540E;&#x5230; scirpts &#x6807;&#x7B7E;&#x5185;&#xFF0C;&#x6DFB;&#x52A0;</p>
+<pre><code>    &quot;deploy&quot;: &quot;gh-pages -d build&quot;
+</code></pre><p>&#x8FD9;&#x6837;&#x5C31;&#x4E00;&#x5207; OK &#xFF0C;&#x6700;&#x7EC8;&#x7684; package.json &#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;ccc&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.1.0&quot;</span>,
+  <span class="hljs-string">&quot;homepage&quot;</span>: <span class="hljs-string">&quot;http://happypeter.github.io/ccc&quot;</span>,
+  <span class="hljs-string">&quot;private&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;dependencies&quot;</span>: {
+    <span class="hljs-string">&quot;gh-pages&quot;</span>: <span class="hljs-string">&quot;^1.0.0&quot;</span>,
+    <span class="hljs-string">&quot;react&quot;</span>: <span class="hljs-string">&quot;^15.6.1&quot;</span>,
+    <span class="hljs-string">&quot;react-dom&quot;</span>: <span class="hljs-string">&quot;^15.6.1&quot;</span>,
+    <span class="hljs-string">&quot;react-scripts&quot;</span>: <span class="hljs-string">&quot;1.0.13&quot;</span>
+  },
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;react-scripts start&quot;</span>,
+    <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;react-scripts build&quot;</span>,
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;react-scripts test --env=jsdom&quot;</span>,
+    <span class="hljs-string">&quot;eject&quot;</span>: <span class="hljs-string">&quot;react-scripts eject&quot;</span>,
+    <span class="hljs-string">&quot;deploy&quot;</span>: <span class="hljs-string">&quot;gh-pages -d build&quot;</span>
+  }
+}
+</code></pre>
 <h3 id="&#x6BCF;&#x6B21;&#x4FEE;&#x6539;&#x5B8C;">&#x6BCF;&#x6B21;&#x4FEE;&#x6539;&#x5B8C;</h3>
 <p>&#x5148;&#x8FD0;&#x884C;</p>
 <pre><code>npm run build
@@ -922,7 +952,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"如何部署项目到 gh-pages ？","level":"1.57","depth":1,"previous":{"title":"利用 git 辅助调试","level":"1.56","depth":1,"path":"faq/git-debug.md","ref":"./faq/git-debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/deploy-gh.md","mtime":"2017-09-07T06:51:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-07T06:51:38.229Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"如何部署项目到 gh-pages ？","level":"1.57","depth":1,"previous":{"title":"利用 git 辅助调试","level":"1.56","depth":1,"path":"faq/git-debug.md","ref":"./faq/git-debug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/deploy-gh.md","mtime":"2017-09-07T06:57:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-07T06:57:50.091Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
