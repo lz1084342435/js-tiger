@@ -73,3 +73,7 @@ class App extends Component {
 
 export default App
 ```
+
+### 视频
+
+- http://digicity-1253322599.costj.myqcloud.com/life-cycle.mp4
