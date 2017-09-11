@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>super() 是干嘛的？ · GitBook</title>
+        <title>React Router 前端路由 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="es6-module.html" />
     
-    
-    <link rel="prev" href="class-inheritance.html" />
+    <link rel="prev" href="lifecycle.html" />
     
 
     </head>
@@ -206,7 +204,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.10" data-path="super.html">
+        <li class="chapter " data-level="1.10" data-path="super.html">
             
                 <a href="super.html">
             
@@ -869,7 +867,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.61" data-path="router-intro.html">
+        <li class="chapter active" data-level="1.61" data-path="router-intro.html">
             
                 <a href="router-intro.html">
             
@@ -912,7 +910,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >super() 是干嘛的？</a>
+        <a href=".." >React Router 前端路由</a>
     </h1>
 </div>
 
@@ -927,36 +925,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="super-&#x65B9;&#x6CD5;&#x5728;&#x7C7B;&#x7EE7;&#x627F;&#x4E2D;&#x7684;&#x4F5C;&#x7528;">super() &#x65B9;&#x6CD5;&#x5728;&#x7C7B;&#x7EE7;&#x627F;&#x4E2D;&#x7684;&#x4F5C;&#x7528;</h3>
-<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x6765;&#x770B;&#xFF0C;&#x65E2;&#x7136;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x88AB;&#x7EE7;&#x627F;&#xFF0C;&#x90A3;&#x4E48;&#x5C5E;&#x6027;&#x5F53;&#x7136;&#x4E5F;&#x5E94;&#x8BE5;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x7EE7;&#x627F;&#x7684;&#x3002;</p>
-<pre><code>class Person {
-  constructor() {
-    this.weight = &quot;around 100kg&quot;;
-    this.height = &quot;around 170cm&quot;;
-  }
-}
-class Men extends Person {
-  constructor() {
-    super();
-    this.gender = &quot;Male&quot;;
+                                <h3 id="&#x8DEF;&#x7531;&#xFF08;-route-&#xFF09;&#x539F;&#x7406;">&#x8DEF;&#x7531;&#xFF08; Route &#xFF09;&#x539F;&#x7406;</h3>
+<p>&#x5148;&#x6765;&#x8BF4;&#x4EC0;&#x4E48;&#x662F;&#x8DEF;&#x7531;&#x3002;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A; url &#xFF0C;&#x7F51;&#x7AD9;&#x5C31;&#x4F1A;&#x77E5;&#x9053;&#x8981;&#x53BB;&#x6267;&#x884C;&#x90A3;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5C31;&#x53EB;&#x8DEF;&#x7531;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BBF;&#x95EE; example.com/about &#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x5C31;&#x80FD;&#x6253;&#x5F00; about.html &#x9875;&#x9762;&#x3002;</p>
+<p>&#x4F20;&#x7EDF;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x8DEF;&#x7531;&#x5176;&#x5B9E;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x3002;&#x5C31;&#x662F;&#x5982;&#x679C; url &#x662F; example.com/about.html &#x90A3;&#x4E48;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5C31;&#x662F;&#x6709;&#x4E00;&#x4E2A; about.html &#x9875;&#x9762;&#xFF0C;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x663E;&#x793A;&#x5373;&#x53EF;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x79CD;&#x4F20;&#x7EDF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8DEF;&#x7531;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x540E;&#x7AEF;&#x8FBE;&#x6210;&#x7684;&#x3002;</p>
+<h3 id="&#x4E3A;&#x4F55;&#x9700;&#x8981;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF1F;">&#x4E3A;&#x4F55;&#x9700;&#x8981;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF1F;</h3>
+<p>&#x4F46;&#x662F; React &#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A; html &#x9875;&#x9762;&#x3002;&#x8FD9;&#x4E00;&#x7C7B;&#x7684;&#x5E94;&#x7528;&#x53EB;&#x505A; SPA &#xFF08;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF09;&#x3002;&#x5B83;&#x7684;&#x5929;&#x7136;&#x7279;&#x70B9;&#x5C31;&#x51B3;&#x5B9A;&#xFF0C;&#x8DEF;&#x7531;&#x9700;&#x8981;&#x5728;&#x524D;&#x7AEF;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x6D89;&#x53CA;&#x5230; react-router &#x7684;&#x4F7F;&#x7528;&#x4E86;&#x3002;&#x6709;&#x4E86;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF0C;&#x660E;&#x660E;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x4E2A; html &#x7684;&#x9879;&#x76EE;&#xFF0C;&#x7528;&#x6237;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x53EF;&#x4EE5;&#x8DDF;&#x591A;&#x9875;&#x9762;&#x9879;&#x76EE;&#x4E00;&#x6837;&#x4E86;&#x3002;</p>
+<h3 id="&#x57FA;&#x672C;&#x4F8B;&#x5B50;">&#x57FA;&#x672C;&#x4F8B;&#x5B50;</h3>
+<p>react-router &#x662F;&#x4E00;&#x4E2A; npm &#x5305;&#x3002;&#x5B98;&#x7F51;&#x5728;&#xFF1A;<a href="https://reacttraining.com/react-router/web" target="_blank">https://reacttraining.com/react-router/web</a></p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</p>
+<pre><code>npm i react-router-dom
+</code></pre><p>&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
+<span class="hljs-keyword">import</span> {
+  BrowserRouter <span class="hljs-keyword">as</span> Router,
+  Route
+ } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+
+<span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../Home/Home&apos;</span>
+<span class="hljs-keyword">import</span> About <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../About/About&apos;</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+  render () {
+    <span class="hljs-keyword">return</span> (
+      &lt;Router&gt;
+        &lt;div&gt;
+          &lt;Route path=&apos;/home&apos; component={Home} /&gt;
+          &lt;Route path=&apos;/about&apos; component={About} /&gt;
+        &lt;/div&gt;
+      &lt;/Router&gt;
+    )
   }
 }
 
-let peter = new Men;
-console.log(peter.weight);
-</code></pre><p>&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709; super() &#x8C03;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x5B50;&#x7C7B;&#x4E2D;&#x5C31;&#x4E0D;&#x5141;&#x8BB8;&#x4F7F;&#x7528; this &#xFF0C;&#x62A5;&#x9519;&#x4FE1;&#x606F;&#x662F;</p>
-<pre><code>repl: &apos;this&apos; is not allowed before super()
-   8 |   constructor() {
-   9 |     // super();
-&gt; 10 |     this.gender = &quot;Male&quot;;
-     |     ^
-  11 |   }
-  12 | }
-</code></pre><p>&#x90A3;&#x4E48;&#xFF0C;super() &#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
-<p>&#x7B54;&#x6848;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#x7684;&#xFF1A;&#x5B50;&#x7C7B;&#x7684; this &#x662F;&#x57FA;&#x4E8E;&#x7236;&#x7C7B;&#x7684; this &#x7684;&#xFF08;&#x5148;&#x521B;&#x5EFA;&#x7236;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5728;&#x4E0A;&#x9762;&#x8FDB;&#x884C;&#x589E;&#x52A0;&#xFF09;
-&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;&#x7236;&#x7C7B;&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B50;&#x7C7B;&#x662F;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x3002;&#x800C; super() &#x6307;&#x7684;&#x5C31;&#x662F;&#x7236;&#x7C7B;&#x7684;
-constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#xFF0C;&#x95EE;&#x9898;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#x3002;</p>
-<p>&#x7ECF;&#x9A8C;&#x5C31;&#x662F;&#xFF1A;&#x5B50;&#x7C7B;&#x7684; constructor() &#x4E2D;&#x5FC5;&#x987B;&#x5148;&#x547C;&#x53EB; super() &#xFF0C;&#x7136;&#x540E;&#x624D;&#x80FD;&#x4F7F;&#x7528; this &#x3002;</p>
+export default App
+</code></pre>
 
                                 
                                 </section>
@@ -984,14 +989,10 @@ constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&
 
             
                 
-                <a href="class-inheritance.html" class="navigation navigation-prev " aria-label="Previous page: 如何使用类的继承？">
+                <a href="lifecycle.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 生命周期函数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="es6-module.html" class="navigation navigation-next " aria-label="Next page: ES6 模块怎么用？">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1000,7 +1001,7 @@ constructor() &#x6240;&#x4EE5;&#x6DFB;&#x52A0;&#x4E86; super() &#x5728;&#x5B50;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"super() 是干嘛的？","level":"1.10","depth":1,"next":{"title":"ES6 模块怎么用？","level":"1.11","depth":1,"path":"faq/es6-module.md","ref":"./faq/es6-module.md","articles":[]},"previous":{"title":"如何使用类的继承？","level":"1.9","depth":1,"path":"faq/class-inheritance.md","ref":"./faq/class-inheritance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/super.md","mtime":"2017-08-31T06:26:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T02:48:33.412Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React Router 前端路由","level":"1.61","depth":1,"previous":{"title":"生命周期函数","level":"1.60","depth":1,"path":"faq/lifecycle.md","ref":"./faq/lifecycle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/router-intro.md","mtime":"2017-09-11T02:48:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T02:48:33.412Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
