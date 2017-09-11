@@ -43,3 +43,7 @@ npm config set registry https://registry.npm.taobao.org
 
 - public 文件夹，放 html 和图标的
 - src 文件夹，所有 js 代码都放到这里
+
+### 视频
+
+https://haoqicat.com/react-baby-v2

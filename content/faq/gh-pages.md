@@ -36,7 +36,3 @@ git push -u origin gh-pages
 ```
 
 等待一会儿，就可以到  https://happypeter.github.io/dj-demo 下看到网页了。
-
-### 视频
-
-http://digicity-1253322599.costj.myqcloud.com/deploy-gh.mp4

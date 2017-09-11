@@ -15,3 +15,6 @@
 - Syntax error: Expected corresponding tag for <Logo>
   - 语法错误，期望 <Logo> 有自己的闭合标签
 - https://github.com/happypeter/dj-demos/issues/6
+
+- Would you like to run the app on another port instead? (Y/n)
+  - 你是否希望在另外一个端口上运行此 app ?

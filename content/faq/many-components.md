@@ -11,3 +11,7 @@
 ### 最终代码
 
 https://github.com/happypeter/dj-demos/tree/master/react-demo
+
+### 视频
+
+https://haoqicat.com/react-baby-v2

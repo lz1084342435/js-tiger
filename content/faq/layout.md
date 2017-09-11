@@ -40,8 +40,8 @@ Cart
 
 ### 代码
 
-layout
+https://github.com/happypeter/mozan/commit/f386221b78f933d99f7b629873fdfd5bbe7972b7
 
 ### 视频
 
-layout
+http://digicity-1253322599.costj.myqcloud.com/layout.mp4

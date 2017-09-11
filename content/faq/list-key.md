@@ -98,3 +98,7 @@ this.state.sizes.map((item, i) =>{
 ### 代码
 
 key-demo
+
+### 视频
+
+https://haoqicat.com/react-baby-v2

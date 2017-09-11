@@ -37,4 +37,4 @@ this.props.text
 
 - 代码： https://github.com/happypeter/dj-demos/tree/master/props-demo
 
-- 视频：props
+- 视频：https://haoqicat.com/react-baby-v2

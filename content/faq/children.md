@@ -19,3 +19,7 @@ this.props.children
 ### 案例
 
 - https://github.com/happypeter/dj-demos/tree/master/children-demo
+
+### 视频
+
+https://haoqicat.com/react-baby-v2
