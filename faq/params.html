@@ -1089,6 +1089,21 @@ example.com/post/2
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Post
 </code></pre>
 <p>&#x89C6;&#x9891;&#xFF1A;<a href="http://digicity-1253322599.costj.myqcloud.com/show-post.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/show-post.mp4</a></p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x4E0A;&#x9762;&#x7684;&#x6848;&#x4F8B;&#x5199;&#xFF0C;&#x6765;&#x628A;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&#x505A;&#x7684;&#x529F;&#x80FD;&#x5B8C;&#x6574;&#x4E9B;&#x3002;</p>
+<h3 id="router-&#x914D;&#x5408;-layout-&#x6587;&#x4EF6;&#x4F7F;&#x7528;">router &#x914D;&#x5408; Layout &#x6587;&#x4EF6;&#x4F7F;&#x7528;</h3>
+<p>App.js &#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5199;</p>
+<pre><code>&lt;Router&gt;
+  &lt;Layout&gt;
+    &lt;Main /&gt;
+  &lt;/Layout&gt;
+&lt;/Router&gt;
+</code></pre><p>Main.js &#x4E2D;</p>
+<pre><code class="lang-js">&lt;div className=<span class="hljs-string">&apos;main&apos;</span>&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/post/:id&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Post}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
+<p>&#x89C6;&#x9891;&#xFF1A;<a href="http://digicity-1253322599.costj.myqcloud.com/router-layout.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/router-layout.mp4</a></p>
 
                                 
                                 </section>
@@ -1128,7 +1143,7 @@ example.com/post/2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"路由传参数","level":"1.65","depth":1,"previous":{"title":"何时使用哈希历史？","level":"1.64","depth":1,"path":"faq/hash-history.md","ref":"./faq/hash-history.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/params.md","mtime":"2017-09-11T07:49:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T07:51:22.478Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"路由传参数","level":"1.65","depth":1,"previous":{"title":"何时使用哈希历史？","level":"1.64","depth":1,"path":"faq/hash-history.md","ref":"./faq/hash-history.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/params.md","mtime":"2017-09-11T08:34:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T08:35:40.733Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
