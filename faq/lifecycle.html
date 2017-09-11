@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>数组的 map 方法 · GitBook</title>
+        <title>生命周期函数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="array-filter.html" />
     
-    
-    <link rel="prev" href="array-find.html" />
+    <link rel="prev" href="auth.html" />
     
 
     </head>
@@ -297,7 +295,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.17" data-path="array-map.html">
+        <li class="chapter " data-level="1.17" data-path="array-map.html">
             
                 <a href="array-map.html">
             
@@ -856,7 +854,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.60" data-path="lifecycle.html">
+        <li class="chapter active" data-level="1.60" data-path="lifecycle.html">
             
                 <a href="lifecycle.html">
             
@@ -899,7 +897,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >数组的 map 方法</a>
+        <a href=".." >生命周期函数</a>
     </h1>
 </div>
 
@@ -914,24 +912,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>map &#x7684;&#x82F1;&#x6587;&#x672C;&#x610F;&#x662F;&#xFF1A;&#x6620;&#x5C04;&#x3002;map &#x628A;&#x539F;&#x59CB;&#x6570;&#x7EC4;&#x201C;&#x53D8;&#x5F62;&#x4E86;&#x201D;&#xFF1A;</p>
+                                <p>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x4E5F;&#x662F; React &#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#x3002;</p>
+<p>&#x4E00;&#x4E2A; React &#x7EC4;&#x4EF6;&#x662F;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#xFF08;&#x4ECE;&#x65E0;&#x5230;&#x6709;&#xFF0C;&#x4ECE;&#x6709;&#x5230;&#x65B0;&#xFF0C;&#x4ECE;&#x65B0;&#x5230;&#x65E0;&#xFF09;&#x3002;</p>
+<p>&#x751F;&#x547D;&#x5468;&#x671F;&#x662F;&#x4EE5;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#x5927;&#x4E8B;&#x4EF6;&#x4E3A;&#x6807;&#x5FD7;&#x7684;&#xFF1A;</p>
 <ul>
-<li>&#x8F93;&#x51FA;&#x4F9D;&#x7136;&#x662F;&#x6570;&#x7EC4;</li>
-<li>&#x8F93;&#x51FA;&#x7684;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x4E0D;&#x53D8;</li>
+<li>&#x9996;&#x5148;&#x662F;&#x663E;&#x793A;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6302;&#x8F7D;&#xFF08; mount &#xFF09;&#x5230;&#x9875;&#x9762;&#x4E0A;</li>
+<li>&#x5F53; props &#x6216;&#x8005; state &#x88AB;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#xFF0C;render &#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x518D;&#x6B21;&#x6267;&#x884C;</li>
+<li>&#x7EC4;&#x4EF6;&#x4ECE;&#x9875;&#x9762;&#x4E0A;&#x6D88;&#x5931;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5378;&#x8F7D;&#xFF08; unmount &#xFF09;</li>
 </ul>
-<h3 id="&#x6253;&#x602A;">&#x6253;&#x602A;</h3>
-<p>&#x9898;&#xFF1A;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</p>
-<pre><code>let a = [1, 2, 3]
-</code></pre><p>&#x8981;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4; b &#xFF0C;&#x503C;&#x4E3A;</p>
-<pre><code>[2, 4, 6]
-</code></pre><h3 id="&#x7B54;&#x6848;">&#x7B54;&#x6848;</h3>
-<pre><code>let a = [1, 2, 3]
+<p>&#x56F4;&#x7ED5;&#x4E0A;&#x9762;&#x8FD9;&#x51E0;&#x4E2A;&#x4E8B;&#x4EF6;&#x7684;&#x524D;&#x540E;&#xFF0C;&#x6709;&#x51E0;&#x4E2A; React &#x9884;&#x5148;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x89E6;&#x53D1;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x53EB;&#x505A;<strong>&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;</strong>&#x3002;</p>
+<h3 id="&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;">&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</h3>
+<ul>
+<li>componentWillMount &#xFF0C;&#x7EC4;&#x4EF6;&#x5373;&#x5C06;&#x6302;&#x8F7D;&#xFF0C;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x70B9;&#x662F;&#xFF1A;&#x7EC4;&#x4EF6;&#x88AB;&#x6302;&#x8F7D;&#x5230;&#x9875;&#x9762;&#x4E0A;&#x4E4B;&#x524D;&#x7684;&#x4E00;&#x77AC;&#x95F4;</li>
+<li>componentDidMount &#xFF0C;&#x7EC4;&#x4EF6;&#x5DF2;&#x6302;&#x8F7D;&#xFF0C;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x662F;&#x7EC4;&#x4EF6;&#x521A;&#x521A;&#x88AB;&#x6302;&#x8F7D;&#x5230;&#x9875;&#x9762;&#x540E;&#xFF08;render &#x88AB;&#x6267;&#x884C;&#x540E;&#xFF09;&#x7684;&#x4E00;&#x77AC;&#x95F4;</li>
+<li>componentWillUnmount &#xFF0C;&#x7EC4;&#x4EF6;&#x5373;&#x5C06;&#x88AB;&#x5378;&#x8F7D;&#xFF0C;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x70B9;&#x662F;&#xFF0C;&#x7EC4;&#x4EF6;&#x4ECE;&#x9875;&#x9762;&#x4E0A;&#x6D88;&#x5931;&#x4E4B;&#x524D;</li>
+<li>&#x5176;&#x4ED6;&#x7684;&#x8FD8;&#x662F;&#xFF0C;&#x6BD4;&#x5982; componentWillReceiveProps &#x7B49;&#x7B49;</li>
+</ul>
+<h3 id="&#x4F5C;&#x7528;">&#x4F5C;&#x7528;</h3>
+<ul>
+<li>&#x81EA;&#x52A8;&#x89E6;&#x53D1; http &#x8BF7;&#x6C42;</li>
+<li>&#x81EA;&#x52A8;&#x6E05;&#x7406;&#x7A0B;&#x5E8F;&#x5783;&#x573E;</li>
+</ul>
+<p>&#x4F5C;&#x7528;&#x5F88;&#x591A;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x6709;&#x5F88;&#x591A;&#x5B9E;&#x9645;&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x3002;</p>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
 
-let b = a.map(t =&gt; t*2)
-console.log(b)
-</code></pre><h3 id="&#x7406;&#x89E3;&#x4E0A;&#x9762;&#x7684;&#x8BED;&#x6CD5;">&#x7406;&#x89E3;&#x4E0A;&#x9762;&#x7684;&#x8BED;&#x6CD5;</h3>
-<p>&#x4E0A;&#x9762;&#x7684;&#x5199;&#x6CD5;&#x4F53;&#x73B0;&#x4E86;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x7684;&#x601D;&#x60F3;&#x3002;&#x800C;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x548C;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x4E00;&#x6837;&#xFF0C;&#x90FD;&#x662F;&#x4E00;&#x79CD;&#x4F18;&#x79C0;&#x7684;&#x7F16;&#x7A0B;&#x8303;&#x5F0F;&#x3002;</p>
-<p>&#x8DDF; map &#x7C7B;&#x4F3C;&#x7684;&#x4F8B;&#x5B50;&#x8FD8;&#x6709; filter/reduce &#x7B49;&#x3002;</p>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+  state = {
+    count: <span class="hljs-number">0</span>
+  }
+  componentWillMount = () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;componentWillMount....&apos;</span>)
+  }
+
+  componentDidMount = () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;componentDidMount....&apos;</span>)
+  }
+
+  handleClick = () =&gt; {
+    <span class="hljs-keyword">this</span>.setState({
+      count: <span class="hljs-keyword">this</span>.state.count + <span class="hljs-number">1</span>
+    })
+  }
+
+  componentWillUpdate = ()  =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;componentWillUpdate...&apos;</span>)
+  }
+
+  componentDidUpdate = () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;componentDidUpdate...&apos;</span>)
+  }
+
+  render () {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;render.......&apos;</span>)
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&apos;app&apos;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handleClick}</span>
+          <span class="hljs-attr">className</span>=<span class="hljs-string">&apos;count&apos;</span>&gt;</span>
+          {this.state.count}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App
+</code></pre>
 
                                 
                                 </section>
@@ -959,14 +1007,10 @@ console.log(b)
 
             
                 
-                <a href="array-find.html" class="navigation navigation-prev " aria-label="Previous page: 数组的 find 方法">
+                <a href="auth.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 登录效果实现">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="array-filter.html" class="navigation navigation-next " aria-label="Next page: 数组的 filter 方法如何用？">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -975,7 +1019,7 @@ console.log(b)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数组的 map 方法","level":"1.17","depth":1,"next":{"title":"数组的 filter 方法如何用？","level":"1.18","depth":1,"path":"faq/array-filter.md","ref":"./faq/array-filter.md","articles":[]},"previous":{"title":"数组的 find 方法","level":"1.16","depth":1,"path":"faq/array-find.md","ref":"./faq/array-find.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/array-map.md","mtime":"2017-09-01T01:37:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T01:34:30.238Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"生命周期函数","level":"1.60","depth":1,"previous":{"title":"登录效果实现","level":"1.59","depth":1,"path":"faq/auth.md","ref":"./faq/auth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/lifecycle.md","mtime":"2017-09-11T01:34:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T01:34:30.238Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
