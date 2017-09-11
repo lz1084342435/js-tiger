@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>数组的 find 方法 · GitBook</title>
+        <title>exact 如何使用？  · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="array-map.html" />
+    <link rel="next" href="link.html" />
     
     
-    <link rel="prev" href="arrow-function.html" />
+    <link rel="prev" href="router-intro.html" />
     
 
     </head>
@@ -284,7 +284,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.16" data-path="array-find.html">
+        <li class="chapter " data-level="1.16" data-path="array-find.html">
             
                 <a href="array-find.html">
             
@@ -882,7 +882,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.62" data-path="exact.html">
+        <li class="chapter active" data-level="1.62" data-path="exact.html">
             
                 <a href="exact.html">
             
@@ -938,7 +938,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >数组的 find 方法</a>
+        <a href=".." >exact 如何使用？ </a>
     </h1>
 </div>
 
@@ -953,13 +953,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>ES6 &#x5BF9;&#x6570;&#x7EC4;&#x7684;&#x6269;&#x5C55;&#x4E2D;&#xFF0C;&#x6709; find() &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x7528;&#x4E8E;&#x627E;&#x51FA;<strong>&#x7B2C;&#x4E00;&#x4E2A;</strong>&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x7EC4;&#x6210;&#x5458;&#x3002;</p>
-<p>find() &#x4E2D;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x88AB;&#x4F5C;&#x4E3A;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x53EB;&#x505A;&#x4E00;&#x4E2A;<strong>&#x56DE;&#x8C03;&#x51FD;&#x6570;</strong> &#xFF08; callback function )&#x3002;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> data = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>].find(value =&gt; value &gt; <span class="hljs-number">9</span>) <span class="hljs-comment">// 10</span>
-
-<span class="hljs-built_in">console</span>.log(data)
-</code></pre>
-<p>&#x4E0A;&#x9762;&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53D1;&#x6325;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x3002;</p>
+                                <p>&#x5982;&#x679C;&#x8DEF;&#x7531;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code>&lt;Router&gt;
+  &lt;div&gt;
+    &lt;Route path=&apos;/&apos; component={Home} /&gt;
+    &lt;Route path=&apos;/about&apos; component={About} /&gt;
+  &lt;/div&gt;
+&lt;/Router&gt;
+</code></pre><p>&#x90A3;&#x4E48;&#x5F53;&#x6211;&#x4EEC;&#x8BBF;&#x95EE; <code>/about</code> &#x5F53;&#x7136;&#xFF0C;About &#x7EC4;&#x4EF6;&#x4F1A;&#x663E;&#x793A;&#xFF0C;&#x4F46;&#x662F; router &#x5728;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x4E8E; <code>/about</code> &#x4E2D;&#x4E5F;&#x5305;&#x542B; <code>/</code> &#x6240;&#x4EE5;&#xFF0C;Home &#x4E5F;&#x4F1A;&#x88AB;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5E0C;&#x671B;&#x6709;&#x8FD9;&#x79CD;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0; <code>exact</code> &#x6765;&#x89E3;&#x51B3;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5199;&#x6210;</p>
+<pre><code>&lt;Router&gt;
+  &lt;div&gt;
+    &lt;Route exact path=&apos;/&apos; component={Home} /&gt;
+    &lt;Route path=&apos;/about&apos; component={About} /&gt;
+  &lt;/div&gt;
+&lt;/Router&gt;
+</code></pre><p>&#x90A3;&#x4E48;&#x6587;&#x4EF6;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#x3002;<code>exact</code> &#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#xFF1A;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x3002;</p>
 
                                 
                                 </section>
@@ -987,12 +997,12 @@
 
             
                 
-                <a href="arrow-function.html" class="navigation navigation-prev " aria-label="Previous page: 胖箭头函数">
+                <a href="router-intro.html" class="navigation navigation-prev " aria-label="Previous page: React Router 前端路由">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="array-map.html" class="navigation navigation-next " aria-label="Next page: 数组的 map 方法">
+                <a href="link.html" class="navigation navigation-next " aria-label="Next page: link 的使用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1003,7 +1013,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数组的 find 方法","level":"1.16","depth":1,"next":{"title":"数组的 map 方法","level":"1.17","depth":1,"path":"faq/array-map.md","ref":"./faq/array-map.md","articles":[]},"previous":{"title":"胖箭头函数","level":"1.15","depth":1,"path":"faq/arrow-function.md","ref":"./faq/arrow-function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/array-find.md","mtime":"2017-09-01T01:51:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T03:21:05.432Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"exact 如何使用？ ","level":"1.62","depth":1,"next":{"title":"link 的使用","level":"1.63","depth":1,"path":"faq/link.md","ref":"./faq/link.md","articles":[]},"previous":{"title":"React Router 前端路由","level":"1.61","depth":1,"path":"faq/router-intro.md","ref":"./faq/router-intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/exact.md","mtime":"2017-09-11T03:10:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T03:21:05.432Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
