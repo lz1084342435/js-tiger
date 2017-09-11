@@ -59,3 +59,8 @@
 - [如何部署项目到 gh-pages ？](./faq/deploy-gh.md)
 - [登录效果实现](./faq/auth.md)
 - [生命周期函数](./faq/lifecycle.md)
+- [React Router 前端路由](./faq/router-intro.md)
+- [exact 如何使用？ ](./faq/exact.md)
+- [link 的使用](./faq/link.md)
+- [何时使用哈希历史？](./faq/hash-history.md)
+- [路由传参数](./faq/params.md)
