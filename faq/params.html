@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>关于 clearfix 和 Flexbox · GitBook</title>
+        <title>路由传参数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="props.html" />
     
-    
-    <link rel="prev" href="common-errors.html" />
+    <link rel="prev" href="hash-history.html" />
     
 
     </head>
@@ -531,7 +529,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.35" data-path="clear.html">
+        <li class="chapter " data-level="1.35" data-path="clear.html">
             
                 <a href="clear.html">
             
@@ -921,7 +919,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.65" data-path="params.html">
+        <li class="chapter active" data-level="1.65" data-path="params.html">
             
                 <a href="params.html">
             
@@ -964,7 +962,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >关于 clearfix 和 Flexbox</a>
+        <a href=".." >路由传参数</a>
     </h1>
 </div>
 
@@ -979,20 +977,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>clearfix &#x89E3;&#x51B3;&#x4E24;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;</p>
-<ul>
-<li>margin &#x91CD;&#x53E0;&#x95EE;&#x9898;</li>
-<li>float &#x5BFC;&#x81F4;&#x7236;&#x5143;&#x7D20;&#x9AD8;&#x5EA6;&#x4E3A;0</li>
-</ul>
-<p>&#x4F46;&#x662F;&#x6709;&#x4E86; Flexbox &#x6280;&#x672F;&#x4E4B;&#x540E;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x57FA;&#x672C;&#x4E0D;&#x5B58;&#x5728;&#x4E86;&#x3002;</p>
-<p>&#x5C31;&#x50CF;&#x300A;Flexbox &#x821E;&#x5A18;&#x300B;&#x8BFE;&#x7A0B;&#x7684;&#x4ECB;&#x7ECD;&#x6240;&#x8BF4;&#x7684;&#xFF1A;</p>
-<blockquote>
-<p>&#x8FD8;&#x5728;&#x5B66;&#x4E60; float &#x548C; clearfix &#x6280;&#x5DE7;&#x6765;&#x8BBE;&#x7F6E;&#x5E03;&#x5C40;&#x5417;&#xFF1F;&#x4F60;&#x53EF;&#x80FD;&#x6B63;&#x5728;&#x6D6A;&#x8D39;&#x81EA;&#x5DF1;&#x7684;&#x65F6;&#x95F4;&#x54E6;</p>
-</blockquote>
-<h3 id="flexbox-&#x8BFE;&#x7A0B;">Flexbox &#x8BFE;&#x7A0B;</h3>
-<ul>
-<li><a href="https://haoqicat.com/flexbox-dancer" target="_blank">https://haoqicat.com/flexbox-dancer</a></li>
-</ul>
+                                <p>&#x6211;&#x4EEC;&#x8981;&#x5C55;&#x793A;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F8B;&#x5982;&#x535A;&#x5BA2;&#x5C31;&#x4F1A;&#x7528;&#x5230;&#x5982;&#x4E0B;&#x7684; url</p>
+<pre><code>example.com/post/1
+example.com/post/2
+...
+</code></pre><p>&#x90A3;&#x4E48;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x7531;&#x5982;&#x4F55;&#x5199;&#x5462;&#xFF1F;&#x8FD9;&#x4E2A;&#x5C31;&#x6D89;&#x53CA;&#x5230;&#x4E86;&#x8DEF;&#x7531;&#x4F20;&#x53C2;&#x7684;&#x6280;&#x5DE7;&#x3002;</p>
+<h3 id="&#x5B9E;&#x73B0;&#x9996;&#x9875;&#x4E0A;&#x7684;&#x6587;&#x7AE0;&#x5217;&#x8868;">&#x5B9E;&#x73B0;&#x9996;&#x9875;&#x4E0A;&#x7684;&#x6587;&#x7AE0;&#x5217;&#x8868;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
+<span class="hljs-keyword">import</span> {
+  BrowserRouter <span class="hljs-keyword">as</span> Router,
+  Route,
+  Link
+ } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+  state = {
+    posts: [
+      {
+        id: <span class="hljs-string">&apos;134&apos;</span>,
+        title: <span class="hljs-string">&apos;Git &#x4F7F;&#x7528;&#x6280;&#x5DE7;&apos;</span>,
+        content: <span class="hljs-string">&apos;main content&apos;</span>
+      },
+      {
+        id: <span class="hljs-string">&apos;256&apos;</span>,
+        title: <span class="hljs-string">&apos;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x6280;&#x5DE7;&apos;</span>,
+        content: <span class="hljs-string">&apos;main content&apos;</span>
+      },
+      {
+        id: <span class="hljs-string">&apos;545&apos;</span>,
+        title: <span class="hljs-string">&apos;Github &#x57FA;&#x7840;&apos;</span>,
+        content: <span class="hljs-string">&apos;main content&apos;</span>
+      }
+    ]
+  }
+
+  render () {
+
+    <span class="hljs-keyword">const</span> postList = <span class="hljs-keyword">this</span>.state.posts.map((t, i) =&gt; (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{i}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">{`</span>/<span class="hljs-attr">post</span>/${<span class="hljs-attr">t.id</span>}`}&gt;</span>
+          {t.title}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+    ))
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            {postList}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>
+    )
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App
+</code></pre>
 
                                 
                                 </section>
@@ -1020,14 +1064,10 @@
 
             
                 
-                <a href="common-errors.html" class="navigation navigation-prev " aria-label="Previous page: 常见运行错误有哪些？">
+                <a href="hash-history.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 何时使用哈希历史？">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="props.html" class="navigation navigation-next " aria-label="Next page: 组件属性如何用">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1036,7 +1076,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"关于 clearfix 和 Flexbox","level":"1.35","depth":1,"next":{"title":"组件属性如何用","level":"1.36","depth":1,"path":"faq/props.md","ref":"./faq/props.md","articles":[]},"previous":{"title":"常见运行错误有哪些？","level":"1.34","depth":1,"path":"faq/common-errors.md","ref":"./faq/common-errors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/clear.md","mtime":"2017-09-04T02:42:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T06:26:16.974Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"路由传参数","level":"1.65","depth":1,"previous":{"title":"何时使用哈希历史？","level":"1.64","depth":1,"path":"faq/hash-history.md","ref":"./faq/hash-history.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/params.md","mtime":"2017-09-11T06:22:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-11T06:26:16.974Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
