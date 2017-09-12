@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>link 的使用 · GitBook</title>
+        <title>React 中展示 API 数据 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="hash-history.html" />
     
-    
-    <link rel="prev" href="exact.html" />
+    <link rel="prev" href="server.html" />
     
 
     </head>
@@ -895,7 +893,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.63" data-path="link.html">
+        <li class="chapter " data-level="1.63" data-path="link.html">
             
                 <a href="link.html">
             
@@ -960,7 +958,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.68" data-path="react-api.html">
+        <li class="chapter active" data-level="1.68" data-path="react-api.html">
             
                 <a href="react-api.html">
             
@@ -1003,7 +1001,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >link 的使用</a>
+        <a href=".." >React 中展示 API 数据</a>
     </h1>
 </div>
 
@@ -1018,27 +1016,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x7528;&#x4E86; React Router &#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x4E0D;&#x8981;&#x518D;&#x7528; a &#x6807;&#x7B7E;&#x4E86;&#xFF08;&#x9664;&#x975E;&#x8981;&#x94FE;&#x63A5;&#x5230;&#x5916;&#x7AD9;&#xFF09;&#x3002;</p>
-<p>&#x800C;&#x8981;&#x4F7F;&#x7528; link &#x3002;</p>
-<p>Link &#x5728;&#x9875;&#x9762;&#x4E0A;&#x663E;&#x793A;&#x540E;&#xFF0C;&#x901A;&#x8FC7; Chrome &#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5C31;&#x53D8;&#x6210;&#x4E86; a &#x6807;&#x7B7E;&#x3002;&#x4F46;&#x662F;&#xFF0C;Link &#x8DDF; a &#x6807;&#x7B7E;&#x6709;&#x660E;&#x663E;&#x533A;&#x522B;&#xFF0C;&#x5C31;&#x662F;&#x70B9; Link &#x8FDB;&#x884C;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#xFF0C;&#x9875;&#x9762;&#x4E0D;&#x5237;&#x65B0;&#x3002;&#x800C;&#x9875;&#x9762;&#x5237;&#x65B0;&#x9664;&#x4E86;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x4E0D;&#x597D;&#x4E4B;&#x5916;&#xFF0C;&#x91CD;&#x8981;&#x7684;&#x662F;&#x4F1A;&#x5BFC;&#x81F4; state &#x503C;&#x5168;&#x90E8;&#x91CD;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x4F7F;&#x7528; a &#x6807;&#x7B7E;&#x3002;</p>
-<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
-<p>Header.js</p>
-<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
-<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Header</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  render () {
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&apos;header&apos;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&apos;/&apos;</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&apos;/about&apos;</span>&gt;</span>&#x5173;&#x4E8E;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-    )
-  }
-}
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Header
-</code></pre>
+                                <p>&#x6765;&#x7EE7;&#x7EED;&#x524D;&#x9762;&#x535A;&#x5BA2;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x628A;&#x6570;&#x636E;&#x79FB;&#x52A8;&#x5230;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF08; db.json &#xFF09;&#x4E2D;&#xFF0C;&#x540C;&#x65F6;&#x901A;&#x8FC7; json-server &#x63D0;&#x4F9B;&#x7ED9;&#x4E86;&#x6211;&#x4EEC;&#x4E00;&#x5957; API &#x3002;&#x73B0;&#x5728;&#x6765;&#x770B;&#x4E00;&#x4E0B; React &#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x5982;&#x4F55;&#x4F7F;&#x7528; API &#x3002;</p>
+<h3 id="&#x89C6;&#x9891;">&#x89C6;&#x9891;</h3>
+<p><a href="http://digicity-1253322599.costj.myqcloud.com/react-api.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/react-api.mp4</a></p>
 
                                 
                                 </section>
@@ -1066,14 +1046,10 @@
 
             
                 
-                <a href="exact.html" class="navigation navigation-prev " aria-label="Previous page: exact 如何使用？ ">
+                <a href="server.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: json-sever 搭建 API">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="hash-history.html" class="navigation navigation-next " aria-label="Next page: 何时使用哈希历史？">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1082,7 +1058,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"link 的使用","level":"1.63","depth":1,"next":{"title":"何时使用哈希历史？","level":"1.64","depth":1,"path":"faq/hash-history.md","ref":"./faq/hash-history.md","articles":[]},"previous":{"title":"exact 如何使用？ ","level":"1.62","depth":1,"path":"faq/exact.md","ref":"./faq/exact.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/link.md","mtime":"2017-09-11T03:30:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-12T03:16:11.660Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React 中展示 API 数据","level":"1.68","depth":1,"previous":{"title":"json-sever 搭建 API","level":"1.67","depth":1,"path":"faq/server.md","ref":"./faq/server.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/react-api.md","mtime":"2017-09-12T03:15:43.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-12T03:16:11.660Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
