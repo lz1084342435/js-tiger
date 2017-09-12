@@ -18,3 +18,7 @@
 
 - Would you like to run the app on another port instead? (Y/n)
   - 你是否希望在另外一个端口上运行此 app ?
+
+- TypeError: Cannot read property 'title' of undefined
+  - 类型错误：不能读取一个未定义变量的属性 title
+  - 注意，这里不是 title 没有定义，而是 xxx.title 中的 xxx 没有定义

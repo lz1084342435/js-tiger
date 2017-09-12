@@ -64,3 +64,8 @@
 - [link 的使用](./faq/link.md)
 - [何时使用哈希历史？](./faq/hash-history.md)
 - [路由传参数](./faq/params.md)
+- [axios 请求 API](./faq/axios.md)
+- [json-sever 搭建 API](./faq/server.md)
+- [React 中展示 API 数据](./faq/react-api.md)
+- [switch 的作用是？](./faq/switch.md)
+- [案例：十条小狗](./faq/ten-dogs.md)
