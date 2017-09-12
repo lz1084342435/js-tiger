@@ -973,6 +973,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.69" data-path="switch.html">
+            
+                <a href="switch.html">
+            
+                    
+                    switch 的作用是？
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -1018,7 +1031,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x6211;&#x4EEC;&#x8981;&#x5C55;&#x793A;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F8B;&#x5982;&#x535A;&#x5BA2;&#x5C31;&#x4F1A;&#x7528;&#x5230;&#x5982;&#x4E0B;&#x7684; url</p>
+                                <h3 id="&#x57FA;&#x672C;&#x7528;&#x6CD5;">&#x57FA;&#x672C;&#x7528;&#x6CD5;</h3>
+<p>&#x5148;&#x5199;&#x4E00;&#x4E2A;&#x7A7F;&#x53C2;&#x6570;&#x7684; Hello World &#x3002;</p>
+<p>&#x4EE3;&#x7801;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
+<span class="hljs-keyword">import</span> {
+  BrowserRouter <span class="hljs-keyword">as</span> Router,
+  Route,
+  Link
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Post</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render () {
+    <span class="hljs-keyword">const</span> { title } = <span class="hljs-keyword">this</span>.props.match.params
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&apos;Post&apos;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+          {title}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+
+  render () {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&apos;/post/git&apos;</span>&gt;</span>Git &#x6587;&#x7AE0;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&apos;/post/cli&apos;</span>&gt;</span>Cli &#x6587;&#x7AE0;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&apos;/post/:title&apos;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Post}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span>
+    )
+  }
+}
+
+export default App
+</span></code></pre>
+<p>&#x89C6;&#x9891;&#xFF1A;<a href="http://digicity-1253322599.costj.myqcloud.com/router-params-hello.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/router-params-hello.mp4</a></p>
+<h3 id="&#x6253;&#x602A;">&#x6253;&#x602A;</h3>
+<p>&#x6211;&#x4EEC;&#x8981;&#x5C55;&#x793A;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F8B;&#x5982;&#x535A;&#x5BA2;&#x5C31;&#x4F1A;&#x7528;&#x5230;&#x5982;&#x4E0B;&#x7684; url</p>
 <pre><code>example.com/post/1
 example.com/post/2
 ...
@@ -1190,7 +1248,7 @@ example.com/post/2
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"路由传参数","level":"1.65","depth":1,"next":{"title":"axios 请求 API","level":"1.66","depth":1,"path":"faq/axios.md","ref":"./faq/axios.md","articles":[]},"previous":{"title":"何时使用哈希历史？","level":"1.64","depth":1,"path":"faq/hash-history.md","ref":"./faq/hash-history.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/params.md","mtime":"2017-09-12T01:35:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-12T03:22:16.161Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"路由传参数","level":"1.65","depth":1,"next":{"title":"axios 请求 API","level":"1.66","depth":1,"path":"faq/axios.md","ref":"./faq/axios.md","articles":[]},"previous":{"title":"何时使用哈希历史？","level":"1.64","depth":1,"path":"faq/hash-history.md","ref":"./faq/hash-history.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/params.md","mtime":"2017-09-12T06:27:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-12T06:28:42.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

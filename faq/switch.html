@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>React Router 前端路由 · GitBook</title>
+        <title>switch 的作用是？ · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="exact.html" />
     
-    
-    <link rel="prev" href="lifecycle.html" />
+    <link rel="prev" href="react-api.html" />
     
 
     </head>
@@ -869,7 +867,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.61" data-path="router-intro.html">
+        <li class="chapter " data-level="1.61" data-path="router-intro.html">
             
                 <a href="router-intro.html">
             
@@ -973,7 +971,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.69" data-path="switch.html">
+        <li class="chapter active" data-level="1.69" data-path="switch.html">
             
                 <a href="switch.html">
             
@@ -1016,7 +1014,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >React Router 前端路由</a>
+        <a href=".." >switch 的作用是？</a>
     </h1>
 </div>
 
@@ -1031,47 +1029,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x8DEF;&#x7531;&#xFF08;-route-&#xFF09;&#x539F;&#x7406;">&#x8DEF;&#x7531;&#xFF08; Route &#xFF09;&#x539F;&#x7406;</h3>
-<p>&#x5148;&#x6765;&#x8BF4;&#x4EC0;&#x4E48;&#x662F;&#x8DEF;&#x7531;&#x3002;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A; url &#xFF0C;&#x7F51;&#x7AD9;&#x5C31;&#x4F1A;&#x77E5;&#x9053;&#x8981;&#x53BB;&#x6267;&#x884C;&#x90A3;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5C31;&#x53EB;&#x8DEF;&#x7531;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BBF;&#x95EE; example.com/about &#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x5C31;&#x80FD;&#x6253;&#x5F00; about.html &#x9875;&#x9762;&#x3002;</p>
-<p>&#x4F20;&#x7EDF;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x8DEF;&#x7531;&#x5176;&#x5B9E;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x3002;&#x5C31;&#x662F;&#x5982;&#x679C; url &#x662F; example.com/about.html &#x90A3;&#x4E48;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5C31;&#x662F;&#x6709;&#x4E00;&#x4E2A; about.html &#x9875;&#x9762;&#xFF0C;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x663E;&#x793A;&#x5373;&#x53EF;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x79CD;&#x4F20;&#x7EDF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8DEF;&#x7531;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x540E;&#x7AEF;&#x8FBE;&#x6210;&#x7684;&#x3002;</p>
-<h3 id="&#x4E3A;&#x4F55;&#x9700;&#x8981;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF1F;">&#x4E3A;&#x4F55;&#x9700;&#x8981;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF1F;</h3>
-<p>&#x4F46;&#x662F; React &#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A; html &#x9875;&#x9762;&#x3002;&#x8FD9;&#x4E00;&#x7C7B;&#x7684;&#x5E94;&#x7528;&#x53EB;&#x505A; SPA &#xFF08;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF09;&#x3002;&#x5B83;&#x7684;&#x5929;&#x7136;&#x7279;&#x70B9;&#x5C31;&#x51B3;&#x5B9A;&#xFF0C;&#x8DEF;&#x7531;&#x9700;&#x8981;&#x5728;&#x524D;&#x7AEF;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x6D89;&#x53CA;&#x5230; react-router &#x7684;&#x4F7F;&#x7528;&#x4E86;&#x3002;&#x6709;&#x4E86;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF0C;&#x660E;&#x660E;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x4E2A; html &#x7684;&#x9879;&#x76EE;&#xFF0C;&#x7528;&#x6237;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x53EF;&#x4EE5;&#x8DDF;&#x591A;&#x9875;&#x9762;&#x9879;&#x76EE;&#x4E00;&#x6837;&#x4E86;&#x3002;</p>
-<h3 id="&#x57FA;&#x672C;&#x4F8B;&#x5B50;">&#x57FA;&#x672C;&#x4F8B;&#x5B50;</h3>
-<p>react-router &#x662F;&#x4E00;&#x4E2A; npm &#x5305;&#x3002;&#x5B98;&#x7F51;&#x5728;&#xFF1A;<a href="https://reacttraining.com/react-router/web" target="_blank">https://reacttraining.com/react-router/web</a></p>
-<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</p>
-<pre><code>npm i react-router-dom
-</code></pre><p>&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x3002;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
-<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
-<span class="hljs-keyword">import</span> {
-  BrowserRouter <span class="hljs-keyword">as</span> Router,
-  Route
- } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
-
-<span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../Home/Home&apos;</span>
-<span class="hljs-keyword">import</span> About <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../About/About&apos;</span>
-
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-
-  render () {
-    <span class="hljs-keyword">return</span> (
-      &lt;Router&gt;
-        &lt;div&gt;
-          &lt;Route path=&apos;/home&apos; component={Home} /&gt;
-          &lt;Route path=&apos;/about&apos; component={About} /&gt;
-        &lt;/div&gt;
-      &lt;/Router&gt;
-    )
-  }
-}
-
-export default App
-</code></pre>
-<h3 id="&#x89C6;&#x9891;">&#x89C6;&#x9891;</h3>
-<ul>
-<li><a href="http://digicity-1253322599.costj.myqcloud.com/router-intro.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/router-intro.mp4</a></li>
-</ul>
+                                <p>&#x6709;&#x4E86; exact &#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x8FD8;&#x662F;&#x5E94;&#x4ED8;&#x4E0D;&#x6765;</p>
+<pre><code>&lt;Route path=&quot;/about&quot; component={About}/&gt;
+&lt;Route path=&quot;/:user&quot; component={User}/&gt;
+&lt;Route component={NoMatch}/&gt;
+</code></pre><p>&#x6240;&#x4EE5;&#x9700;&#x8981; switch &#x3002;</p>
+<h3 id="switch-&#x7684;&#x4F5C;&#x7528;">switch &#x7684;&#x4F5C;&#x7528;</h3>
+<p>&#x4E00;&#x65E6;&#x4E0A;&#x9762;&#x7684; Route &#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x90A3;&#x4E48;&#x4E4B;&#x540E;&#x7684; Route &#x5C31;&#x76F4;&#x63A5;&#x5FFD;&#x7565;&#x3002;</p>
+<h3 id="&#x5176;&#x4ED6;-react-router-&#x6280;&#x5DE7;">&#x5176;&#x4ED6; React-Router &#x6280;&#x5DE7;</h3>
+<p>&#x5176;&#x4ED6;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x6280;&#x5DE7;&#xFF0C;&#x4F8B;&#x5982; redirect &#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E9B;&#x6211;&#x4EEC;&#x653E;&#x5230;&#x540E;&#x7EED;&#x8D1F;&#x8D23;&#x6848;&#x4F8B;&#x4E2D;&#x53BB;&#x8BB2;&#x3002;&#x90A3;&#x4E48; React-Router &#x57FA;&#x7840;&#x5B66;&#x4E60;&#x5C31;&#x544A;&#x4E00;&#x6BB5;&#x843D;&#x3002;</p>
 
                                 
                                 </section>
@@ -1099,14 +1065,10 @@ export default App
 
             
                 
-                <a href="lifecycle.html" class="navigation navigation-prev " aria-label="Previous page: 生命周期函数">
+                <a href="react-api.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: React 中展示 API 数据">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="exact.html" class="navigation navigation-next " aria-label="Next page: exact 如何使用？ ">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1115,7 +1077,7 @@ export default App
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React Router 前端路由","level":"1.61","depth":1,"next":{"title":"exact 如何使用？ ","level":"1.62","depth":1,"path":"faq/exact.md","ref":"./faq/exact.md","articles":[]},"previous":{"title":"生命周期函数","level":"1.60","depth":1,"path":"faq/lifecycle.md","ref":"./faq/lifecycle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/router-intro.md","mtime":"2017-09-11T07:24:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-12T06:28:42.248Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"switch 的作用是？","level":"1.69","depth":1,"previous":{"title":"React 中展示 API 数据","level":"1.68","depth":1,"path":"faq/react-api.md","ref":"./faq/react-api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/switch.md","mtime":"2017-09-12T03:46:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-12T06:28:42.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
