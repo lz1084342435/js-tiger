@@ -22,7 +22,6 @@ npm i react-router-dom
 
 进行安装。
 
-
 ```js
 import React, { Component } from 'react'
 import './app.css'
@@ -51,7 +50,6 @@ class App extends Component {
 
 export default App
 ```
-
 
 ### 视频
 
