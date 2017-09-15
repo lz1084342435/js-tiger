@@ -22,3 +22,6 @@
 - TypeError: Cannot read property 'title' of undefined
   - 类型错误：不能读取一个未定义变量的属性 title
   - 注意，这里不是 title 没有定义，而是 xxx.title 中的 xxx 没有定义
+- img elements must have an alt prop, either with meaningful text, or an empty string for decorative images 
+
+  - img 元素必须有一个 alt 属性，或者是一个有意义的文字，或者对于装饰性的图片也可以用一个空字符串。
