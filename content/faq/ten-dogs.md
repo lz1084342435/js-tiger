@@ -65,6 +65,6 @@ http://digicity-1253322599.costj.myqcloud.com/dog9-delete.mp4
 
 ### 步骤七：显示小狗详情
 
-dog10-detailhttp://digicity-1253322599.costj.myqcloud.com/dog10-detail.mp4
+http://digicity-1253322599.costj.myqcloud.com/dog10-detail.mp4
 
 - https://github.com/happypeter/dj-demos/tree/master/ten-dogs
