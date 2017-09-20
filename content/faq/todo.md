@@ -18,15 +18,24 @@ http://digicity-1253322599.costj.myqcloud.com/todo2-complete.mp4
 
 ### 步骤三：制作 Form
 
-- todo3-form
+http://digicity-1253322599.costj.myqcloud.com/todo3-form.mp4
 
 ### 步骤四：制作 Actions
 
-- todo4-actions
+http://digicity-1253322599.costj.myqcloud.com/todo4-actions.mp4
 
 ### 步骤五：提交 todo （待办事项）
 
-- todo5-add-todo
+
+http://digicity-1253322599.costj.myqcloud.com/todo5-add-todo.mp4
+
+### 步骤六：完成一个待办
+
+http://digicity-1253322599.costj.myqcloud.com/todo6-complete-todo.mp4
+
+### 步骤七：筛选
+
+http://digicity-1253322599.costj.myqcloud.com/todo7-filter.mp4
 
 ### 代码
 
