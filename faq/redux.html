@@ -1125,6 +1125,39 @@
 <p>You can use as little, or as much of Redux, as you like.</p>
 </blockquote>
 <p>&#x7FFB;&#x8BD1;&#xFF1A;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x70B9;&#x70B9;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x5F88;&#x591A; redux &#x3002;</p>
+<h3 id="redux-&#x57FA;&#x672C;&#x539F;&#x7406;">redux &#x57FA;&#x672C;&#x539F;&#x7406;</h3>
+<p>redux &#x662F;&#x4E00;&#x4E2A;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x6570;&#x636E;&#x5BB9;&#x5668;&#xFF0C;&#x6D89;&#x53CA;&#x5230;&#x4E09;&#x5927;&#x6982;&#x5FF5;&#xFF1A;</p>
+<ul>
+<li>store &#xFF0C;&#x5B57;&#x9762;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#xFF0C;&#x5B9E;&#x9645;&#x4E2D;&#x626E;&#x6F14; redux &#x5FC3;&#x810F;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x7EDF;&#x4E00;&#x534F;&#x8C03; redux &#x5404;&#x90E8;&#x5206;&#x529F;&#x80FD;</li>
+<li>action&#xFF0C;&#x5B57;&#x9762;&#x610F;&#x601D;&#x662F;&#xFF0C;&#x884C;&#x4E3A;&#x3002;&#x5B9E;&#x9645;&#x5C31;&#x662F;&#x4E00;&#x4E2A; js &#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#xFF0C;&#x884C;&#x4E3A;&#x7C7B;&#x578B;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x6570;&#x636E;&#x3002;</li>
+<li>reducer&#xFF0C;&#x540D;&#x5B57;&#x6765;&#x81EA;&#x4E8E;&#x6570;&#x7EC4;&#x7684; reduce &#x65B9;&#x6CD5;&#xFF0C;reducer &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F5C;&#x7528;&#x662F;&#x7528;&#x6765;&#x4FEE;&#x6539; store &#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p>&#x4E09;&#x5927;&#x6982;&#x5FF5;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<ul>
+<li>&#x7528;&#x6237;&#x89E6;&#x53D1;&#x9875;&#x9762;&#x4E8B;&#x4EF6;&#xFF0C;&#x4ECE;&#x800C;&#x53D1;&#x51FA; &#xFF08;dispatch&#xFF09;&#x4E00;&#x4E2A; action</li>
+<li>action &#x4F1A;&#x88AB; reducer &#x63A5;&#x6536;&#x5230;</li>
+<li>reducer &#x5C31;&#x4F1A;&#x4FEE;&#x6539; store &#x4E2D;&#x7684;&#x6570;&#x636E;</li>
+</ul>
+<p>&#x89C6;&#x9891;&#xFF1A; redux-1-intro
+<a href="http://digicity-1253322599.costj.myqcloud.com/redux-1-intro.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/redux-1-intro.mp4</a></p>
+<h3 id="&#x6DFB;&#x52A0;&#x8BC4;&#x8BBA;&#x529F;&#x80FD;">&#x6DFB;&#x52A0;&#x8BC4;&#x8BBA;&#x529F;&#x80FD;</h3>
+<p>&#x89C6;&#x9891;&#xFF1A;redux-2-comment
+<a href="http://digicity-1253322599.costj.myqcloud.com/redux-2-comment.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/redux-2-comment.mp4</a></p>
+<h3 id="&#x6DFB;&#x52A0;-css">&#x6DFB;&#x52A0; css</h3>
+<p>&#x89C6;&#x9891;&#xFF1A; redux-3-css
+<a href="http://digicity-1253322599.costj.myqcloud.com/redux-3-css.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/redux-3-css.mp4</a></p>
+<h3 id="&#x6570;&#x636E;&#x5B58;&#x5165;-store">&#x6570;&#x636E;&#x5B58;&#x5165; store</h3>
+<p>&#x89C6;&#x9891;&#xFF1A; redux-4-store
+<a href="http://digicity-1253322599.costj.myqcloud.com/redux-4-store.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/redux-4-store.mp4</a></p>
+<h3 id="&#x4FEE;&#x6539;-store-&#x4E2D;&#x7684;&#x6570;&#x636E;">&#x4FEE;&#x6539; store &#x4E2D;&#x7684;&#x6570;&#x636E;</h3>
+<p>&#x6D41;&#x7A0B;&#xFF1A;&#x5148;&#x8981;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x53D1;&#x51FA;&#x4E00;&#x4E2A; action &#xFF0C;&#x4E00;&#x4E2A; action &#x5C31;&#x957F;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x6837;</p>
+<pre><code>{ type: &apos;ADD_COMMENT&apos;, text: &apos;hello&apos; }
+</code></pre><p>action &#x53D1;&#x51FA;&#x540E;&#xFF0C;reducer &#x4F1A;&#x63A5;&#x6536;&#x5230;&#xFF0C;&#x5E76;&#x6839;&#x636E; action.type &#x6765;&#x51B3;&#x5B9A;&#x8981;&#x6267;&#x884C; reducer &#x51FD;&#x6570;&#x4E2D;&#x7684;&#x54EA;&#x4E00;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#xFF0C;&#x540C;&#x65F6;&#x7ED3;&#x5408; action &#x4E2D;&#x643A;&#x5E26;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;&#x6765;&#x771F;&#x6B63;&#x4FEE;&#x6539;&#x539F;&#x6709; state &#x3002;</p>
+<p>&#x89C6;&#x9891;&#xFF1A;redux-5-dispatch
+<a href="http://digicity-1253322599.costj.myqcloud.com/redux-5-dispatch.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/redux-5-dispatch.mp4</a></p>
+<h3 id="&#x8BA2;&#x9605;&#x6570;&#x636E;&#x53D8;&#x5316;">&#x8BA2;&#x9605;&#x6570;&#x636E;&#x53D8;&#x5316;</h3>
+<p>&#x89C6;&#x9891;&#xFF1A;redux-6-subscribe
+<a href="http://digicity-1253322599.costj.myqcloud.com/redux-6-subscribe.mp4" target="_blank">http://digicity-1253322599.costj.myqcloud.com/redux-6-subscribe.mp4</a></p>
 
                                 
                                 </section>
@@ -1164,7 +1197,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"redux 最简应用方案","level":"1.76","depth":1,"previous":{"title":"蚂蚁设计","level":"1.75","depth":1,"path":"faq/ant.md","ref":"./faq/ant.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/redux.md","mtime":"2017-09-29T01:14:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-29T01:14:49.753Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"redux 最简应用方案","level":"1.76","depth":1,"previous":{"title":"蚂蚁设计","level":"1.75","depth":1,"path":"faq/ant.md","ref":"./faq/ant.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"faq/redux.md","mtime":"2017-09-29T03:16:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-29T03:17:07.207Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
