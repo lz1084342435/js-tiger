@@ -8,7 +8,7 @@ db.dishes.insert({name: '黑森林', poster: 'http://media.haoduoshipin.com/yumm
 
 ```
 
-### 用户
+### 用户111
 
 ```
 db.users.insert({username: 'happypeter', avatar: 'https://avatars3.githubusercontent.com/u/72467?v=4&s=460', slogan: '心怀耿耿，义气铮铮' })
